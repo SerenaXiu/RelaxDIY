@@ -408,12 +408,15 @@ img {
 	
 	
 	<div class="container-contact">
-		<form action="mailto: judyta.krzyzak@gmail.com" method="post" enctype="text/plain">
+		<form method="post" name="myemailform" action="contactform.php" enctype="text/plain">
 			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="firstname" placeholder="Your name..">
+			<input type="text" id="fname" name="fname" placeholder="Your name..">
 
 			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+			<input type="text" id="lname" name="lname" placeholder="Your last name..">
+			
+			<label for="email">Email Address</label>
+			<input type="text" id="email" name="email" placeholder="Your email address.." maxlength="80">
 
 			<label for="country">Country</label>
 				<select id="country" name="country">
@@ -426,22 +429,19 @@ img {
 				  <option value="austria">Austria</option>
 				</select>
 
-			<label for="subject">Subject</label>
-			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Write something.." style="height:150px"></textarea>
 
-					<input type="submit" value="Submit">
+			<input type="submit" value="Submit">
 		</form>
 	</div>
 
 
-
-
 	</main>
 
-
-
-		<footer class="footer">			
-               Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
-		</footer>	
+	<footer class="footer">			
+		Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
+	</footer>
+		
 </body>
 </html>
