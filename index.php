@@ -2,33 +2,35 @@
   session_start();
 ?>
 <!DOCTYPE html>
-<head>
-  <title>CSS Website Layout</title>
-  <html lang="de">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
 <style>
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Bell MT, Helvetica, sans-serif;
-  letter-spacing: 3px;
-  background-image: url("unbenannt.jpg");
-  margin: 0;
-}
 
+ box-sizing: {
+	
+	border-box;
+ }
+
+ body {
+	
+ width:100%;
+ height: 100%;
+ background-image: url("unbenannt.jpg");
+ font-family: Bell MT, Helvetica;
+ letter-spacing: 3px;
+ margin:0;	
+ }
+ 
 .navbar {
   overflow: hidden;
-  background-color: #fff;
+  background-color: #FEFFFA;
   box-shadow: 0 3px 20px 0 black;
   width: 100%;
-  
-
 }
-
 .navbar a {
   float: left;
   font-size: 15px;
@@ -38,148 +40,9 @@ body {
   text-decoration: none;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 15px;  
-  letter-spacing: 3px;
-  border: none;
-  outline: none;
-  color: black;
-  padding: 10px 12px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #F0F0EF;
 }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 130px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.footer {
-    position:fixed;bottom:0;
-	background-color: #fff;
-   
-    display:block;
-	padding: 6px 8px;
-	box-shadow: 0 3px 20px 0 black;
-	 width: 100%;
-
-}
-
-img {
-	box-shadow: 0 6px 25px 0 black;
-
-}
-
-div.absolute {
-  position: absolute;
-  top: 40px;
-  right: 100px;
-  border: none;
-}
-
-
-
-.fakeimg {
-  background-color: white;
-  width: 100%;
-}
-
-h2 { 
-   position: absolute; 
-   right: 0;
-   top: 355px; 
-   margin-right: 90px; 
-   width: 100%; 
-   font-family: Bell MT, Helvetica, sans-serif;
-   letter-spacing: 3px;
-   text-shadow: 0 3px 20px 3px black;
-   color: white;
-   font-size: 30px;
-}
-
-h3 { 
-   right: 0;
-   top: 355px; 
-   margin-left: 20px; 
-   margin-bottom: 70px; 
-   font-family: Bell MT, Helvetica, sans-serif;
-   letter-spacing: 3px;
-   text-shadow: 0 3px 20px 0 black;
-   color: black;
-   font-size: 15px;
-}
-
-
-
-.container {
-  border: none;
-  border-radius:20px;
-  padding: 0px;
-  width: 20%;
- margin-right: auto;
- margin-left: 00px;
- margin-top: 50px;
-
-}
-
-.search-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-#bgNew2 {
-width: 400px;
-height: 300px;
-margin-top: 50px;
-position:relative;
-margin-left: auto;
-margin-right: auto;
-}
-
-#bgNew2 p {
-font-size: 18px;
-font-weight: bold;
-background: rgba(255, 255, 255, 0.8);
-margin-left: auto;
-margin-right: auto;
-margin-top: 50px;
-padding: 20px;
-border-radius:20px;
-box-shadow: 0 8px 20px 3px grey;
-}
-
 
 .sidenav {
   height: 100%;
@@ -221,368 +84,311 @@ box-shadow: 0 8px 20px 3px grey;
   .sidenav a {font-size: 15px;}
 }
 
-.column {
+
+.dropdown {
   float: left;
-  width: 33%;
-  padding: 0px;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;  
+  letter-spacing: 3px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 10px 12px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 80%;
-    float: none;
-	
-	margin-top: 50px;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top:37px;
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  tr:nth-child(2n){background-color: #f2f2f2}
-  th {
-    background-color: #4CAF50;
-    color: white;
-  }
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 
-  input[type=password], input[type=email], input[type=url], select {
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button {
+  background-color: grey;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  float:right;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 30%;
+  height:40%;
+  border-radius:10px;
+
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 16px;
+  margin-top:0px; 
+  background-color: white;
+  border:none;
+
+}
+
+ input[type=text1], input[type=password1] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: -10px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+.fakeimg {
+  background-color: white;
+  width: 100%;
+}
+
+img {
+    width: 100%;
+	height:100%;
+	
+	box-shadow: 0 6px 25px 0 black;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top:23px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
- margin-top:23px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
+ .footer {
+    position:fixed;bottom:0;
+	background-color: #fff;
+    display:block;
+	padding: 6px 8px;
+	box-shadow: 0 3px 20px 0 black;
+	width: 100%;
+	text-align:center;
 }
 
-input[type=button] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top:23px;
-}
-input[type=button]:hover {
-  background-color: #45a049;
-}
+ 
+
 
 </style>
-</head>
+
 <body>
 
-<div class="navbar">
-
-	
-	
-	
-	<div class="navbar">
-	<div id="mySidenav" class="sidenav">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="about.html">About</a>
-  <a href="#">Courses</a>
-  <a href="#">Clients</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-
-<span style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-
-
-	<a class="active" href="homepage.html"><i class="fa fa-fw fa-home"></i>HOME</a>
-
-<div class="dropdown">
-    <button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://www.origami-fun.com/origami-online.html" target= "blank">Origami</a>
-      <a href="https://www.zumba.com" target= "blank">Zumba</a>
-      <a href="https://photographycourse.net/"target= "blank">Photography</a>
-    </div>
-
-
-  </div>
-  
-
-<a href="index.php?content=login" style="float:right"><i class="fa fa-fw fa-user"></i> LOGIN</a>
-<?php
-    // Include the right Nav-Bar depending if the user is logged in
-    if (isset($_SESSION['login'])){
-      include("loginnav.inc.php");
-    }
-    else
-    {
-      include('nav.inc.php');
-    }
-  ?>
-  
-  <?php
-      if (isset($_REQUEST['content'])){
-        include($_REQUEST['content'].".inc.php");
-      }
-      else
-      {
-        include('main.inc.php');
-      }
-    ?>
-
-
-
-<a href="shoppingcart.html"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
-
-<div class="dropdown" style="float:right">
-    <button class="dropbtn"><i class="fa fa-search"></i>
-   
-    </button>
-    <div class="dropdown-content">
-	<div class="search-container">
-			<form method="get" action="http://google.com/search">
-				<input type="text" placeholder="Search..." name="q">
-				<button class="search-button"></button>
-			</form>
-		</div>
-      
-    </div>
-  </div>
-
-
-<a class="active" href="contact.html"><i class="fa fa-fw fa-envelope"></i> CONTACT</a>
-<div class="dropdown">
-	<button class="dropbtn"><i class="fa fa-users"></i></i> TEAM
-	<i class="fa fa-caret-down"></i>
-    </button>
-	<div class="dropdown-content">
-      <a href="#">Elisabeth</a>
-      <a href="#">Anna</a>
-      <a href="#">Gaelle</a>
-	  <a href="https://about.me/judytakrz" target= "blank">Judyta</a>
-	  <a href="#">Serena</a>
-	  <a href="#">Thomas</a>
-	  
-    </div>
-	
-</div>
-</div>
-     </div>
-		  </div>
+	<header>
+			<nav class="navbar">
 			
-		
-		<div class="fakeimg" style="height:600px;">
-		<img src="slide1.jpg" style="height:100%; width:100%">
-		<h2 align="right">
-		</br>
-		</br>
-		</br>
-		</br>
-		Something incredible is waiting to be discovered
-		
-		</h2>
-		
-		
-		<h2>What are we offering?</h2>
-		
-	<div>
-		<div class="column" style="background-color:transparent;">
-			<main id="bgNew2"><p>
-			50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div class="column" style="background-color:transparent;">
-		<h2>Column 2</h2>
-			<main id="bgNew2"><p>50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div class="column" style="background-color:transparent;">
-		<h2>Column 3</h2>
-			<main id="bgNew2"><p>50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-	
-		<div class="column" style="background-color:transparent;">
-			<main id="bgNew2"><p>
-			50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div class="column" style="background-color:transparent;">
-		<h2>Column 2</h2>
-			<main id="bgNew2"><p>50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div class="column" style="background-color:transparent;">
-		<h2>Column 3</h2>
-			<main id="bgNew2"><p>50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div>
-		<div class="column" style="background-color:transparent;">
-			<main id="bgNew2"><p>
-			50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div class="column" style="background-color:transparent;">
-		<h2>Column 2</h2>
-			<main id="bgNew2"><p>50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		
-		<div class="column" style="background-color:transparent;">
-		<h2>Column 3</h2>
-			<main id="bgNew2"><p>50% Lorem ipsum dolor sit amet, 
-			consectetuer adipiscing elit, sed diam nonummy nibh 
-			euismod tincidunt ut laoreet dolore magna aliquam erat 
-			volutpat. Ut wisi enim ad minim veniam, quis Lorem 
-			ipsum dolor sit amet, consectetuer adipiscing elit, 
-			sed diam nonummy nibh eui</p></main>
-		</div>
-		</div>
-		
-		<div>
-		
-		<h3> Some text...
-		</br>
-		</br>
-		</br>
-		</br>
-		is comming here,
-		</br>
-		</br>
-		</br>
-		</br>
-		or maybe some pictures,
-		</br>
-		</br>
-		</br>
-		</br>
-		who knows...
-		
-		The distinction between the decorative and fine arts essentially arose 
-		from the post-Renaissance art of the West, where the distinction is for 
-		the most part meaningful. This distinction is much less meaningful when 
-		considering the art of other cultures and periods, where the most valued 
-		works, or even all works, include those in decorative media. For example, 
-		Islamic art in many periods and places consists entirely of the decorative
-		arts, often using geometric and plant forms, as does the art of many 
-		traditional cultures. The distinction between decorative and fine arts is 
-		not very useful for appreciating Chinese art, and neither is it for 
-		understanding Early Medieval art in Europe. In that period in Europe, fine 
-		arts such as manuscript illumination and monumental sculpture existed, but 
-		the most prestigious works tended to be in goldsmith work, in cast metals such
-		as bronze, or in other techniques such as ivory carving. Large-scale 
-		wall-paintings were much less regarded, crudely executed, and rarely mentioned 
-		in contemporary sources. They were probably seen as an inferior substitute for 
-		mosaic, which for the period must be considered a fine art, though in recent 
-		centuries mosaics have tended to be considered decorative. The term "ars sacra"
-		("sacred arts") is sometimes used for medieval Christian art executed in metal, 
-		ivory, textiles, and other more valuable materials but not for rarer secular 
-		works from that period.
-		</h3>
-		</div>
+				<div id="mySidenav" class="sidenav">
+					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					  <a href="myprofile.html" style="border-bottom:solid; border-width: thin;">My profile</a>
+					  <a href="about.html">About</a>
+					  <a href="courses.html">Courses</a>
+					  <a href="partners.html">Partners</a>
+					  <a href="contact.html">Contact</a>					  
+					  <a href="prices.html">Prices</a>
+					  <a href="impressum.html">Impressum</a>
+				</div>
 
+				<span style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
 
-</map>
-		
-		</div></div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-    
+						<script>
+						function openNav() {
+						  document.getElementById("mySidenav").style.width = "250px";
+						}
+
+						function closeNav() {
+						  document.getElementById("mySidenav").style.width = "0";
+						}
+						</script>
+						
+				<a href="homepage.html"><i class="fa fa-fw fa-home"></i> HOME</a>
+				<div class="dropdown">
+					<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+					  <a href="origami.html">Origami</a>
+					  <a href="https://www.zumba.com" target= "blank">Zumba</a>
+					  <a href="photography.html"target= "blank">Photography</a>
+					  <a href="cooking.html"target= "blank">Cooking</a>
+					  <a href="daemons.html"target= "blank">Daemons</a>
+					  <a href="writing.html"target= "blank">Writing</a>
+					</div>
+				</div>
+				
+				  <a class="active" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+				
+				<div class="dropdown">
+					<button class="dropbtn"><i class="fa fa-users"></i></i> TEAM <i class="fa fa-caret-down"></i></button>
+						<div class="dropdown-content">
+						
+						  <a href="anna.html">Anna</a>
+						  <a href="elisabeth.html">Elisabeth</a>
+						  <a href="gaelle.html">Gaelle</a>
+						  <a href="judyta.html">Judyta</a>
+						  <a href="serena.html">Serena</a>
+						  <a href="thomas.html">Thomas</a>
+						  
+						</div>
+						
+				</div>
+				
+				<button onclick="document.getElementById('id01').style.display='block'" 
+				style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black; font-size:15px; letter-spacing:3px">
+				<i class="fa fa-fw fa-user"></i>  LOGIN </button>
+							
+					<div id="id01" class="modal">
+					
+					  <form class="modal-content animate" action="/action_page.php">
+					  
+						<div class="imgcontainer">
+						  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+						</div>
+						
+						<div class="container">
+						
+						  <label for="uname"><b>Username</b></label>
+						  <input type="text1" placeholder="Enter Username" name="uname" required>
+
+						  <label for="psw"><b>Password</b></label>
+						  <input type="password1" placeholder="Enter Password" name="psw" required>
+							
+						  <button type="submit">Login</button>
+						  
+						  <label><span><a href="#">Forgot password?</a></span></label>
+						  
+						</div>
+						
+					  </form>
+					  
+					</div>	
+
+					<script>
+					// Get the modal
+					var modal = document.getElementById('id01');
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+						if (event.target == modal) {
+							modal.style.display = "none";
+						}
+					}
+					</script>					
 			
-         <div class="footer">
-           <center>
-               Copyright © 2019 <a href="https://about.me/judytakrz">relaxDIY.com</a>
-           </center>
-         </div>
+			<a href="shoppingcart.html"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
 			
-      </div>
-
+			<div class="dropdown" style="float:right">
+				<button class="dropbtn"><i class="fa fa-search"></i></button>
+					<div class="dropdown-content" style="margin-top:33px; background-color:transparent; 
+					box-shadow:none; border:none;">	
+						<form method="get" action="http://google.com/search">
+							<input type="text" placeholder="Search..." name="q" 
+							style="width:220px; height:40px; letter-spacing:2px; padding: 12px 13px; border-radius:0px;">
+						</form>
+					</div>      
+			</div>
 	
-	
-  </main>
-</div>
+			</nav>
+
+	</header>
+
+	<main>
+		<div class="fakeimg" style="height:550px;">
+			<img src="slide1.jpg">
+		</div>
+
+	</main>
 
 
 
-
-
-
-
-
-
+		<footer class="footer">			
+               Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
+		</footer>	
 </body>
 </html>
