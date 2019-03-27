@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include ('validate.inc.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +17,6 @@
  }
 
  body {
-	
  width:100%;
  height: 100%;
  background-image: url("unbenannt.jpg");
@@ -166,7 +166,6 @@ button:hover {
   width: 30%;
   height:40%;
   border-radius:10px;
-
 }
 
 .imgcontainer {
@@ -212,6 +211,17 @@ button:hover {
   animation: animatezoom 0.6s
 }
 
+.modal-content animate{
+     background-color: #fefefe;
+     margin: 5% auto 15% auto;
+     border: 1px solid #888;
+     width: 30%;
+     height:40%;
+     border-radius:10px;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+ }
+
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
@@ -234,7 +244,8 @@ img {
 	box-shadow: 0 6px 25px 0 black;
 }
 
-input[type=text], select, textarea {
+/*used by login popup window for username and password input fields*/
+input[type=text], select, textarea, [type=password]{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -255,9 +266,6 @@ input[type=text], select, textarea {
 	width: 100%;
 	text-align:center;
 }
-
- 
-
 
 </style>
 
@@ -302,10 +310,10 @@ input[type=text], select, textarea {
 					</div>
 				</div>
 				
-				  <a class="active" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+                <a class="active" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 				
 				<div class="dropdown">
-					<button class="dropbtn"><i class="fa fa-users"></i></i> TEAM <i class="fa fa-caret-down"></i></button>
+					<button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 						<div class="dropdown-content">
 						
 						  <a href="anna.html">Anna</a>
@@ -318,36 +326,48 @@ input[type=text], select, textarea {
 						</div>
 						
 				</div>
-				
-				<button onclick="document.getElementById('id01').style.display='block'" 
-				style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black; font-size:15px; letter-spacing:3px">
-				<i class="fa fa-fw fa-user"></i>  LOGIN </button>
+
+<!--                toggle logout / login button-->
+                <?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>
+                    <form action="logout.inc.php" method="post">
+                    <button style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
+				    font-size:15px; letter-spacing:3px" id="logout_btn">
+                    <i class="fa fa-fw fa-user"></i> LOGOUT </button>
+                    </form>
+                <?php else:?>
+                    <button onclick="document.getElementById('id01').style.display='block'"
+                    style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
+				    font-size:15px; letter-spacing:3px" id="login_btn">
+                    <i class="fa fa-fw fa-user"></i> LOGIN </button>
+                <?php endif; ?>
+
 							
 					<div id="id01" class="modal">
 					
-					  <form class="modal-content animate" action="/action_page.php">
+					  <form class="modal-content animate" method="post">
 					  
 						<div class="imgcontainer">
 						  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 						</div>
 						
 						<div class="container">
-						
-						  <label for="uname"><b>Username</b></label>
-						  <input type="text1" placeholder="Enter Username" name="uname" required>
+                        <form action="validate.inc.php" method="post">
+						  <label for="username"><b>Username</b></label>
+						  <input type="text" placeholder="Enter Username" name="username" required>
 
-						  <label for="psw"><b>Password</b></label>
-						  <input type="password1" placeholder="Enter Password" name="psw" required>
+						  <label for="password"><b>Password</b></label><br>
+						  <input type="password" placeholder="Enter Password" name="password" required>
 							
-						  <button type="submit">Login</button>
-						  
+						  <button type="submit" name="login_submit" id="login_submit">Login</button>
+
 						  <label><span><a href="#">Forgot password?</a></span></label>
-						  
+
+                        </form>
+
 						</div>
-						
 					  </form>
-					  
-					</div>	
+
+					</div>
 
 					<script>
 					// Get the modal
@@ -359,7 +379,7 @@ input[type=text], select, textarea {
 							modal.style.display = "none";
 						}
 					}
-					</script>					
+					</script>
 			
 			<a href="shoppingcart.html"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
 			
@@ -373,7 +393,18 @@ input[type=text], select, textarea {
 						</form>
 					</div>      
 			</div>
-	
+
+<!--            if user is logged in, write Welcome, else echo error message    -->
+            <div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">
+                <?php
+                if (isset($_SESSION['username'])) {
+                    echo "Welcome back, ".$_SESSION['username'];
+                }
+                else if (isset($error)) {
+                    echo $error;
+                }
+                ?>
+            </div>
 			</nav>
 
 	</header>
