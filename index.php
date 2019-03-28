@@ -31,6 +31,7 @@
   box-shadow: 0 3px 20px 0 black;
   width: 100%;
 }
+
 .navbar a {
   float: left;
   font-size: 15px;
@@ -152,7 +153,7 @@ button:hover {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 105%;
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
@@ -297,7 +298,7 @@ input[type=text], select, textarea, [type=password]{
 						}
 						</script>
 						
-				<a href="homepage.html"><i class="fa fa-fw fa-home"></i> HOME</a>
+				<a href="index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
 				<div class="dropdown">
 					<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 					<div class="dropdown-content">
