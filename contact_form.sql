@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 28. Mrz 2019 um 14:49
+-- Erstellungszeit: 31. Mrz 2019 um 09:15
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -29,12 +29,43 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customerqueries` (
-  `FirstName` varchar(30) COLLATE utf8_german2_ci NOT NULL,
-  `LastName` varchar(30) COLLATE utf8_german2_ci NOT NULL,
-  `Email` varchar(40) COLLATE utf8_german2_ci NOT NULL,
-  `Country` varchar(30) COLLATE utf8_german2_ci NOT NULL,
-  `Message` text COLLATE utf8_german2_ci NOT NULL
+  `ID` bigint(20) UNSIGNED NOT NULL,
+  `fname` varchar(30) COLLATE utf8_german2_ci NOT NULL,
+  `lame` varchar(30) COLLATE utf8_german2_ci NOT NULL,
+  `email` varchar(40) COLLATE utf8_german2_ci NOT NULL,
+  `country` varchar(30) COLLATE utf8_german2_ci NOT NULL,
+  `message` text COLLATE utf8_german2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_german2_ci;
+
+--
+-- Daten für Tabelle `customerqueries`
+--
+
+INSERT INTO `customerqueries` (`ID`, `fname`, `lame`, `email`, `country`, `message`) VALUES
+(1, 'fname', 'lname', 'email', 'country', 'message'),
+(2, 'fname', 'lname', 'email', 'country', 'message'),
+(3, 'fname', 'lname', 'email', 'country', 'message'),
+(4, 'fname', 'lname', 'email', 'country', 'message');
+
+--
+-- Indizes der exportierten Tabellen
+--
+
+--
+-- Indizes für die Tabelle `customerqueries`
+--
+ALTER TABLE `customerqueries`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `customerqueries`
+--
+ALTER TABLE `customerqueries`
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

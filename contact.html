@@ -191,7 +191,7 @@ button:hover {
  margin-right: auto;
  margin-left: auto;
  box-shadow: 0 3px 10px 0 black;
- margin-top: 50px;
+ margin-top: 45px;
 }
 
 input[type=text], select, textarea {
@@ -406,31 +406,32 @@ img {
 
 	<main>
 	
-	// Contact Form
+	<!-- Contact Form -->
 	<div class="container-contact">
 		<form action="contactform_insert.php" method="post" name="contactform" enctype="text/plain">
 			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="fname" placeholder="Your name..">
+			<input type="text" id="fname" name="fname" required placeholder="Your name..">
 
 			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lname" placeholder="Your last name..">
+			<input type="text" id="lname" name="lname" required placeholder="Your last name..">
 			
 			<label for="email">Email Address</label>
-			<input type="text" id="email" name="email" placeholder="Your email address.." maxlength="80">
+			<input type="text" id="email" name="email" required placeholder="Your email address.." maxlength="80">
 
-			<label for="country">Country</label>
+			<label for="country" required>Country</label>
 				<select id="country" name="country">
-				  <option value="poland">Poland</option>
-				  <option value="sweden">Sweden</option>
-				  <option value="norway">Norway</option>
+				  <option value="austria">Austria</option>
 				  <option value="iceland">Iceland</option>
+				  <option value="norway">Norway</option>
+				  <option value="poland">Poland</option>
 				  <option value="portugal">Portugal</option>
 				  <option value="scottland">Scottland</option>
-				  <option value="austria">Austria</option>
+				  <option value="sweden">Sweden</option>
+				  <option value="uk">United Kingdom</option>
 				</select>
 
-			<label for="message">Message</label>
-			<textarea id="message" name="message" placeholder="Write something.." style="height:150px"></textarea>
+			<label for="message" required>Message</label>
+			<textarea id="message" name="message" placeholder="Let us know how we can be of assistance.." style="height:150px")"></textarea>
 
 			<input type="submit" value="Submit">
 		</form>
