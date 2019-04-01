@@ -1,9 +1,6 @@
 <?php
   session_start();
 ?>
-
-<!--Files needed for login and registration: validate.inc.php, register.inc.php-->
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,6 +16,7 @@
  }
 
  body {
+	
  width:100%;
  height: 100%;
  background-image: url("unbenannt.jpg");
@@ -33,7 +31,6 @@
   box-shadow: 0 3px 20px 0 black;
   width: 100%;
 }
-
 .navbar a {
   float: left;
   font-size: 15px;
@@ -155,7 +152,7 @@ button:hover {
   left: 0;
   top: 0;
   width: 100%;
-  height: 130%;
+  height: 100%;
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
@@ -169,6 +166,7 @@ button:hover {
   width: 30%;
   height:40%;
   border-radius:10px;
+
 }
 
 .imgcontainer {
@@ -183,6 +181,43 @@ button:hover {
   background-color: white;
   border:none;
 
+}
+
+.container-contact {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  width: 70%;
+ margin-right: auto;
+ margin-left: auto;
+ box-shadow: 0 3px 10px 0 black;
+ margin-top: 45px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 0 black;
+  border: 1;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
 
  input[type=text1], input[type=password1] {
@@ -214,17 +249,6 @@ button:hover {
   animation: animatezoom 0.6s
 }
 
-.modal-content animate{
-     background-color: #fefefe;
-     margin: 5% auto 15% auto;
-     border: 1px solid #888;
-     width: 30%;
-     height:40%;
-     border-radius:10px;
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
- }
-
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
@@ -247,18 +271,6 @@ img {
 	box-shadow: 0 6px 25px 0 black;
 }
 
-/*used by login popup window for username and password input fields*/
-input[type=text], select, textarea, [type=password]{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
 
  .footer {
     position:fixed;bottom:0;
@@ -269,6 +281,9 @@ input[type=text], select, textarea, [type=password]{
 	width: 100%;
 	text-align:center;
 }
+
+ 
+
 
 </style>
 
@@ -283,7 +298,7 @@ input[type=text], select, textarea, [type=password]{
 					  <a href="about.html">About</a>
 					  <a href="courses.html">Courses</a>
 					  <a href="partners.html">Partners</a>
-					  <a href="contact.php">Contact</a>
+					  <a href="contact.html">Contact</a>					  
 					  <a href="prices.html">Prices</a>
 					  <a href="impressum.html">Impressum</a>
 				</div>
@@ -300,7 +315,7 @@ input[type=text], select, textarea, [type=password]{
 						}
 						</script>
 						
-				<a href="index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
+				<a href="homepage.html"><i class="fa fa-fw fa-home"></i> HOME</a>
 				<div class="dropdown">
 					<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 					<div class="dropdown-content">
@@ -313,10 +328,10 @@ input[type=text], select, textarea, [type=password]{
 					</div>
 				</div>
 				
-                <a class="active" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+				  <a class="active" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 				
 				<div class="dropdown">
-					<button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
+					<button class="dropbtn"><i class="fa fa-users"></i></i> TEAM <i class="fa fa-caret-down"></i></button>
 						<div class="dropdown-content">
 						
 						  <a href="anna.html">Anna</a>
@@ -329,44 +344,36 @@ input[type=text], select, textarea, [type=password]{
 						</div>
 						
 				</div>
-
-<!--                toggle logout / login button-->
-                <?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>
-                    <form action="logout.inc.php" method="post">
-                    <button style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
-				    font-size:15px; letter-spacing:3px" id="logout_btn">
-                    <i class="fa fa-fw fa-user"></i> LOGOUT </button>
-                    </form>
-                <?php else:?>
-                    <button onclick="document.getElementById('id01').style.display='block'"
-                    style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
-				    font-size:15px; letter-spacing:3px" id="login_btn">
-                    <i class="fa fa-fw fa-user"></i> LOGIN </button>
-                <?php endif; ?>
-
+				
+				<button onclick="document.getElementById('id01').style.display='block'" 
+				style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black; font-size:15px; letter-spacing:3px">
+				<i class="fa fa-fw fa-user"></i>  LOGIN </button>
 							
 					<div id="id01" class="modal">
 					
-					  <form class="modal-content animate" method="post">
+					  <form class="modal-content animate" action="/action_page.php">
 					  
 						<div class="imgcontainer">
 						  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 						</div>
 						
 						<div class="container">
-                            <label for="username"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="username" required>
+						
+						  <label for="uname"><b>Username</b></label>
+						  <input type="text1" placeholder="Enter Username" name="uname" required>
 
-                            <label for="password"><b>Password</b></label><br>
-                            <input type="password" placeholder="Enter Password" name="password" required>
+						  <label for="psw"><b>Password</b></label>
+						  <input type="password1" placeholder="Enter Password" name="psw" required>
 							
-                            <button type="submit" formaction="validate.inc.php" name="login_submit" id="login_submit">Login</button>
-                            <button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
-                            <label><span><a href="#">Forgot password?</a></span></label>
+						  <button type="submit">Login</button>
+						  
+						  <label><span><a href="#">Forgot password?</a></span></label>
+						  
 						</div>
+						
 					  </form>
-
-					</div>
+					  
+					</div>	
 
 					<script>
 					// Get the modal
@@ -378,8 +385,8 @@ input[type=text], select, textarea, [type=password]{
 							modal.style.display = "none";
 						}
 					}
-					</script>
-
+					</script>					
+			
 			<a href="shoppingcart.html"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
 			
 			<div class="dropdown" style="float:right">
@@ -392,45 +399,49 @@ input[type=text], select, textarea, [type=password]{
 						</form>
 					</div>      
 			</div>
-<!--            if user is logged in, write Welcome, else echo error message    -->
-            <div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">
-                <?php
-                if (isset($_SESSION['username']) && $_SESSION['username'] !== '') {
-                    echo "Welcome back, ".$_SESSION['username'];
-                }
-                else if (isset($_SESSION['error']) && $_SESSION['error'] !== '') {
-                    echo $_SESSION['error'];
-                    unset($_SESSION['error']);
-                }
-                else if (isset($_SESSION['reg_failed']) && $_SESSION['reg_failed'] !== '') {
-                    echo $_SESSION['reg_failed'];
-                    unset($_SESSION['reg_failed']);
-                }
-                else if (isset($_SESSION['reg_check']) && $_SESSION['reg_check'] !== '') {
-                    echo $_SESSION['reg_check'];
-                    unset($_SESSION['reg_check']);
-                }
-                else if (isset($_SESSION['message']) && $_SESSION['message'] !== '') {
-                    echo $_SESSION['message'];
-                    unset($_SESSION['message']);
-                }
-                ?>
-            </div>
+	
 			</nav>
 
 	</header>
 
 	<main>
-		<div class="fakeimg" style="height:550px;">
-			<img src="slide1.jpg">
-		</div>
+	
+	<!-- Contact Form -->
+	<div class="container-contact">
+		<form action="contactform_insert.php" method="post">
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="fname" required placeholder="Your name..">
+
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lname" required placeholder="Your last name..">
+			
+			<label for="email">Email Address</label>
+			<input type="text" id="email" name="email" required placeholder="Your email address.." maxlength="80">
+
+			<label for="country">Country</label>
+				<select id="country" name="country" required>
+				  <option value="austria">Austria</option>
+				  <option value="iceland">Iceland</option>
+				  <option value="norway">Norway</option>
+				  <option value="poland">Poland</option>
+				  <option value="portugal">Portugal</option>
+				  <option value="scotland">Scottland</option>
+				  <option value="sweden">Sweden</option>
+				  <option value="uk">United Kingdom</option>
+				</select>
+
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Let us know how we can be of assistance ..." style="height:150px" required></textarea>
+
+			<input type="submit" value="Submit" name="msg_submit" id="msg_submit">
+		</form>
+	</div>
 
 	</main>
 
-
-
-		<footer class="footer">			
-               Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
-		</footer>	
+	<footer class="footer">			
+		Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
+	</footer>
+		
 </body>
 </html>

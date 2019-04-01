@@ -1,4 +1,6 @@
 <?php
+session_start();
+
   //LogOut the user by unsetting the session cookie
   unset($_SESSION['is_auth']);
   unset($_SESSION['username']);
@@ -14,4 +16,4 @@
   session_destroy();
   header("Location: index.php");
   exit;
-  
+?>

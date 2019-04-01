@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 31. Mrz 2019 um 09:15
+-- Erstellungszeit: 01. Apr 2019 um 21:19
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `customerqueries` (
   `ID` bigint(20) UNSIGNED NOT NULL,
   `fname` varchar(30) COLLATE utf8_german2_ci NOT NULL,
-  `lame` varchar(30) COLLATE utf8_german2_ci NOT NULL,
+  `lname` varchar(30) COLLATE utf8_german2_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_german2_ci NOT NULL,
   `country` varchar(30) COLLATE utf8_german2_ci NOT NULL,
   `message` text COLLATE utf8_german2_ci NOT NULL
@@ -41,11 +41,13 @@ CREATE TABLE `customerqueries` (
 -- Daten für Tabelle `customerqueries`
 --
 
-INSERT INTO `customerqueries` (`ID`, `fname`, `lame`, `email`, `country`, `message`) VALUES
+INSERT INTO `customerqueries` (`ID`, `fname`, `lname`, `email`, `country`, `message`) VALUES
 (1, 'fname', 'lname', 'email', 'country', 'message'),
 (2, 'fname', 'lname', 'email', 'country', 'message'),
 (3, 'fname', 'lname', 'email', 'country', 'message'),
-(4, 'fname', 'lname', 'email', 'country', 'message');
+(4, 'fname', 'lname', 'email', 'country', 'message'),
+(5, 'G', 'K', 'gk@gmx.at', 'austria', 'Hi'),
+(6, 'G', 'K', 'gk@gmx.at', 'austria', 'Hi again!');
 
 --
 -- Indizes der exportierten Tabellen
@@ -65,7 +67,7 @@ ALTER TABLE `customerqueries`
 -- AUTO_INCREMENT für Tabelle `customerqueries`
 --
 ALTER TABLE `customerqueries`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 28. Mrz 2019 um 10:45
+-- Erstellungszeit: 01. Apr 2019 um 21:20
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -40,7 +40,10 @@ CREATE TABLE `login_data` (
 --
 
 INSERT INTO `login_data` (`ID`, `username`, `email`, `password`) VALUES
-(1, 'Max', '', '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
+(6, 'Max', '', '$2y$10$zw4cTm/SBOSz3qIjrBMeSuUjknJdZkfRGg.yJbwdJsYYGCh6VAuC6'),
+(7, 'Moritz', '', '$2y$10$BmC64OQDy2nrH3PG685eAOY90NgLX/AamdeC.1qpS0VTqABkU1ABe'),
+(8, 'Wilhelm', '', '$2y$10$dTdE.TAcy33jXBwsAQQzN.otVUvgKU.wGYWYHLhdMIaLqVzfu/PZW'),
+(9, 'Busch', '', '$2y$10$Wc4CQHFqZ3O/GN177K5S..LVi.R6T9ysLqUtlSghQh5uGwcjtA/yW');
 
 --
 -- Indizes der exportierten Tabellen
@@ -51,8 +54,7 @@ INSERT INTO `login_data` (`ID`, `username`, `email`, `password`) VALUES
 --
 ALTER TABLE `login_data`
   ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `ID` (`ID`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT für exportierte Tabellen
@@ -62,7 +64,7 @@ ALTER TABLE `login_data`
 -- AUTO_INCREMENT für Tabelle `login_data`
 --
 ALTER TABLE `login_data`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
