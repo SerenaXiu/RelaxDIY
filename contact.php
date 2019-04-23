@@ -439,8 +439,10 @@ img {
 
 	</main>
 
-	<footer class="footer">			
-		Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
+	<footer class="footer">
+        <strong><script src="http://numbersapi.com/random?write"></script></strong>
+        <br>
+        Copyright &copy; 2019 <a href="impressum.html">relaxDIY.com</a>
 	</footer>
 		
 </body>
