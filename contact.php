@@ -408,7 +408,7 @@ img {
 	
 	<!-- Contact Form -->
 	<div class="container-contact">
-		<form action="contactform_insert.php" method="post" name="contactform" enctype="text/plain">
+		<form action="contactform_insert.php" method="post">
 			<label for="fname">First Name</label>
 			<input type="text" id="fname" name="fname" required placeholder="Your name..">
 
@@ -425,13 +425,13 @@ img {
 				  <option value="norway">Norway</option>
 				  <option value="poland">Poland</option>
 				  <option value="portugal">Portugal</option>
-				  <option value="scottland">Scottland</option>
+				  <option value="scotland">Scottland</option>
 				  <option value="sweden">Sweden</option>
 				  <option value="uk">United Kingdom</option>
 				</select>
 
 			<label for="message">Message</label>
-			<textarea id="message" name="message" placeholder="Let us know how we can be of assistance.." style="height:150px" required></textarea>
+			<textarea id="message" name="message" placeholder="Let us know how we can be of assistance ..." style="height:150px" required></textarea>
 
 			<input type="submit" value="Submit" name="msg_submit" id="msg_submit">
 		</form>
