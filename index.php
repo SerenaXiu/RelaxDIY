@@ -10,12 +10,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
-
  box-sizing: {
 	
 	border-box;
  }
-
  body {
  width:100%;
  height: 100%;
@@ -31,7 +29,6 @@
   box-shadow: 0 3px 20px 0 black;
   width: 100%;
 }
-
 .navbar a {
   float: left;
   font-size: 15px;
@@ -40,11 +37,9 @@
   padding: 10px 12px;
   text-decoration: none;
 }
-
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #F0F0EF;
 }
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -57,7 +52,6 @@
   transition: 0.5s;
   padding-top: 30px;
 }
-
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -66,12 +60,10 @@
   display: block;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
   width:100%;
 }
-
 .sidenav .closebtn {
   position: absolute;
   top: -5px;
@@ -79,18 +71,14 @@
   font-size: 30px;
   left: 180px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 15px;}
 }
-
-
 .dropdown {
   float: left;
   overflow: hidden;
 }
-
 .dropdown .dropbtn {
   font-size: 15px;  
   letter-spacing: 3px;
@@ -102,8 +90,6 @@
   font-family: inherit;
   margin: 0;
 }
-
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -113,7 +99,6 @@
   z-index: 1;
   margin-top:37px;
 }
-
 .dropdown-content a {
   float: none;
   color: black;
@@ -122,15 +107,12 @@
   display: block;
   text-align: left;
 }
-
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 button {
   background-color: grey;
   color: white;
@@ -141,11 +123,9 @@ button {
   width: 100%;
   float:right;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -153,13 +133,12 @@ button:hover {
   left: 0;
   top: 0;
   width: 100%;
-  height: 105%;
+  height: 110%;
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
   padding-top: 60px;
 }
-
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto;
@@ -168,21 +147,24 @@ button:hover {
   height:40%;
   border-radius:10px;
 }
-
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
 }
-
 .container {
   padding: 16px;
   margin-top:0px; 
   background-color: white;
   border:none;
-
 }
 
+ .container-slide {
+  position: relative;
+  width: 100%;
+  max-width: 400px;  
+ }
+ 
  input[type=text1], input[type=password1] {
   width: 100%;
   padding: 12px 20px;
@@ -191,7 +173,6 @@ button:hover {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
 .close {
   position: absolute;
   right: 25px;
@@ -200,18 +181,15 @@ button:hover {
   font-size: 35px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: red;
   cursor: pointer;
 }
-
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
 }
-
 .modal-content animate{
      background-color: #fefefe;
      margin: 5% auto 15% auto;
@@ -222,7 +200,6 @@ button:hover {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
  }
-
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
@@ -232,19 +209,16 @@ button:hover {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
-
 .fakeimg {
   background-color: white;
   width: 100%;
 }
-
 img {
     width: 100%;
 	height:100%;
 	
 	box-shadow: 0 6px 25px 0 black;
 }
-
 /*used by login popup window for username and password input fields*/
 input[type=text], select, textarea, [type=password]{
   width: 100%;
@@ -257,6 +231,59 @@ input[type=text], select, textarea, [type=password]{
   resize: vertical;
 }
 
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ .mySlides {	
+	display: none
+	}
+		
+.fakeimg {
+  background-color: white;
+  width: 100%;
+}
+
+img {
+    width: 100%;
+	height:530px;
+	
+	box-shadow: 0 6px 25px 0 black;
+}
+
 
  .footer {
     position:fixed;bottom:0;
@@ -267,7 +294,6 @@ input[type=text], select, textarea, [type=password]{
 	width: 100%;
 	text-align:center;
 }
-
 </style>
 
 <body>
@@ -292,13 +318,12 @@ input[type=text], select, textarea, [type=password]{
 						function openNav() {
 						  document.getElementById("mySidenav").style.width = "250px";
 						}
-
 						function closeNav() {
 						  document.getElementById("mySidenav").style.width = "0";
 						}
 						</script>
 						
-				<a href="index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
+				<a href="homepage.html"><i class="fa fa-fw fa-home"></i> HOME</a>
 				<div class="dropdown">
 					<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 					<div class="dropdown-content">
@@ -311,7 +336,7 @@ input[type=text], select, textarea, [type=password]{
 					</div>
 				</div>
 				
-                <a class="active" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+                <a href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 				
 				<div class="dropdown">
 					<button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
@@ -362,6 +387,7 @@ input[type=text], select, textarea, [type=password]{
 						  <button type="submit" name="login_submit" id="login_submit">Login</button>
 
 						  <label><span><a href="#">Forgot password?</a></span></label>
+						  <label><span><a href="#" style="float:right"> Create a new account</a></span></label>
 
                         </form>
 
@@ -373,7 +399,6 @@ input[type=text], select, textarea, [type=password]{
 					<script>
 					// Get the modal
 					var modal = document.getElementById('id01');
-
 					// When the user clicks anywhere outside of the modal, close it
 					window.onclick = function(event) {
 						if (event.target == modal) {
@@ -411,16 +436,75 @@ input[type=text], select, textarea, [type=password]{
 	</header>
 
 	<main>
-		<div class="fakeimg" style="height:550px;">
-			<img src="slide1.jpg">
-		</div>
+	
+	
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="slide1.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="zumbaslide.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="cali.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="spices.jpg" style="width:100%">
+
+</div>
+
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 	</main>
-
-
+	
+	
 
 		<footer class="footer">			
-               Copyright © 2019 <a href="impressum.html">relaxDIY.com</a>            
+               Copyright © 2019 <a href="index.php">relaxDIY.com</a>            
 		</footer>	
 </body>
 </html>
