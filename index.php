@@ -498,7 +498,75 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+        <?php
 
+        $api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
+
+        $data = json_decode(file_get_contents($api_url));
+        $temperature = $data->currently->temperature;
+        $weather = $data->currently->icon;
+
+        switch ($weather){
+            case 'clear-day':
+                if ($temperature > 18) {
+                    echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }elseif ($temperature > 0){
+                    echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
+                }else{
+                    echo '<p>Its very cold why dont you <a href="cooking.html"target= "blank">cook something warm?</a></p>';
+                }
+                break;
+
+            case 'clear-night':
+                echo '<p>Its a clear night perfect time to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
+                break;
+
+            case 'rain':
+                echo '<p>Ah a rainy day you could try some <a href="origami.html">Origami.</a>></p>';
+                break;
+
+            case 'snow':
+                echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html"target= "blank">Write something.</a></p>';
+                break;
+
+            case 'sleet':
+                if ($temperature > 18) {
+                    echo '<p>Test Case 1 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }elseif ($temperature > 0){
+                    echo '<p>Test Case 2 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }else{
+                    echo '<p>Test Case 3 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }
+                break;
+
+            case 'wind':
+                if ($temperature > 18) {
+                    echo '<p>Test Case 4 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }elseif ($temperature > 0){
+                    echo '<p>Test Case 5 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }else{
+                    echo '<p>Test Case 6 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                }
+                break;
+
+            case 'fog':
+                echo '<p>Foggy weather is perfect to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
+                break;
+
+            case 'cloudy':
+                echo '<p>Test Case 7 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                break;
+
+            case 'partly-cloudy-day':
+                echo '<p>Test Case 8 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                break;
+
+            case 'partly-cloudy-night':
+                echo '<p>Test Case 9 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                break;
+
+        }
+        ?>
 	</main>
 	
 	
