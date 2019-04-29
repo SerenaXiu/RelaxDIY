@@ -3,5 +3,11 @@
 	margin: 20px;
 	padding: 50px;
 	background:rgba(255,255,255, 0.85);
+	border-radius: 10px;
+	box-shadow: 0 6px 25px 0 black;
+}
+
+#id01 {
+	z-index: 50;
 }
 

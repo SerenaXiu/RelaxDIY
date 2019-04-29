@@ -7,6 +7,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="CSS/general.css" type="text/css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
@@ -516,7 +517,7 @@ img {
 	<div class="slideshow-container">
 
 <div class="mySlides fade col-md-12">
-  <img src="slide6.jpg" style="width:100%">
+  <img src="Img/Slidegallery/slide1.jpg" style="width:100%">
   <section class="company-heading intro-type" id="parallax-one">
         <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" style="height: 60px; width:60px; 
 					margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
@@ -527,17 +528,17 @@ img {
 </div>
 
 <div class="mySlides fade">
-  <img src="zumbaslide.jpg" style="width:100%">
+  <img src="Img/Slidegallery/slide2.jpg" style="width:100%">
 
 </div>
 
 <div class="mySlides fade">
-  <img src="cali.jpg" style="width:100%">
+  <img src="Img/Slidegaller/slide3.jpg" style="width:100%">
 
 </div>
 
 <div class="mySlides fade">
-  <img src="slidecook.jpg" style="width:100%">
+  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
 
 </div>
 
@@ -578,108 +579,109 @@ function showSlides(n) {
 </script>
 
 <div class="main">
-    <?php
+	<div class="white-bgrnd">
+		<?php
 
-    $api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
+		$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
 
 
-    $data = file_get_contents($api_url);
-    $clean_data = json_decode($data,TRUE);
-    echo $clean_data['currently']['temperature'];
-    //echo '<script>alert($data);</script>';
-    $temperature = $clean_data['currently']['temperature'];
-    $weather = $clean_data['currently']['icon'];
+		$data = file_get_contents($api_url);
+		$clean_data = json_decode($data,TRUE);
+		echo $clean_data['currently']['temperature'];
+		//echo '<script>alert($data);</script>';
+		$temperature = $clean_data['currently']['temperature'];
+		$weather = $clean_data['currently']['icon'];
 
-    switch ($weather){
-        case 'clear-day':
-            if ($temperature > 18) {
-                echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }elseif ($temperature > 0){
-                echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
-            }else{
-                echo '<p>Its very cold why dont you <a href="cooking.html"target= "blank">cook something warm?</a></p>';
-            }
-            break;
+		switch ($weather){
+			case 'clear-day':
+				if ($temperature > 18) {
+					echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}elseif ($temperature > 0){
+					echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
+				}else{
+					echo '<p>Its very cold why dont you <a href="cooking.html"target= "blank">cook something warm?</a></p>';
+				}
+				break;
 
-        case 'clear-night':
-            echo '<p>Its a clear night perfect time to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
-            break;
+			case 'clear-night':
+				echo '<p>Its a clear night perfect time to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
+				break;
 
-        case 'rain':
-            echo '<p>Ah a rainy day you could try some <a href="origami.html">Origami.</a>></p>';
-            break;
+			case 'rain':
+				echo '<p>Ah a rainy day you could try some <a href="origami.html">Origami.</a>></p>';
+				break;
 
-        case 'snow':
-            echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html" target= "blank">Write something.</a></p>';
-            break;
+			case 'snow':
+				echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html" target= "blank">Write something.</a></p>';
+				break;
 
-        case 'sleet':
-            if ($temperature > 18) {
-                echo '<p>Test Case 1 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }elseif ($temperature > 0){
-                echo '<p>Test Case 2 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }else{
-                echo '<p>Test Case 3 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }
-            break;
+			case 'sleet':
+				if ($temperature > 18) {
+					echo '<p>Test Case 1 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}elseif ($temperature > 0){
+					echo '<p>Test Case 2 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}else{
+					echo '<p>Test Case 3 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}
+				break;
 
-        case 'wind':
-            if ($temperature > 18) {
-                echo '<p>Test Case 4 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }elseif ($temperature > 0){
-                echo '<p>Test Case 5 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }else{
-                echo '<p>Test Case 6 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            }
-            break;
+			case 'wind':
+				if ($temperature > 18) {
+					echo '<p>Test Case 4 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}elseif ($temperature > 0){
+					echo '<p>Test Case 5 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}else{
+					echo '<p>Test Case 6 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				}
+				break;
 
-        case 'fog':
-            echo '<p>Foggy weather is perfect to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
-            break;
+			case 'fog':
+				echo '<p>Foggy weather is perfect to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
+				break;
 
-        case 'cloudy':
-            echo '<p>Test Case 7 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            break;
+			case 'cloudy':
+				echo '<p>Test Case 7 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				break;
 
-        case 'partly-cloudy-day':
-            echo '<p>Test Case 8 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            break;
+			case 'partly-cloudy-day':
+				echo '<p>Test Case 8 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				break;
 
-        case 'partly-cloudy-night':
-            echo '<p>Test Case 9 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-            break;
+			case 'partly-cloudy-night':
+				echo '<p>Test Case 9 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+				break;
 
-    }
-    ?>
-  <section id="section2"> 
+		}
+		?>
+		<section id="section2"> 
+	  
+
+			<h2>Let Big Data Change the Game</h2>
+			<p>WebCorpCo is all about making sure your marketing stack is in alignment with your 
+			company as well as the customers you serve. There is no 'one size fits all' approach 
+			to marketing. Every business is unique, customers are unique, and your marketing should 
+			be as well.</p>
+			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+	</div>
+		</section>
   
+	  $(document).ready(function(){
+	  $("a").on('click', function(event) {
+		if (this.hash !== "") {
+		  event.preventDefault();
+		  var hash = this.hash;
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 800, function(){
+			window.location.hash = hash;
+		  });
+		} 
+	  });
+	});
 
-        <h2>Let Big Data Change the Game</h2>
-        <p>WebCorpCo is all about making sure your marketing stack is in alignment with your 
-		company as well as the customers you serve. There is no 'one size fits all' approach 
-		to marketing. Every business is unique, customers are unique, and your marketing should 
-		be as well.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-
-    </div>
-  </section>
-  
-  $(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } 
-  });
-});
-
+	</div>
 </div>
-
 	</main>
 	
 	
