@@ -6,7 +6,10 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="CSS/general.css" type="text/css" rel="stylesheet">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
@@ -498,6 +501,8 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+
+	<div class="white-bgrnd">
         <?php
 
         $api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -567,6 +572,8 @@ function showSlides(n) {
 
         }
         ?>
+
+	</div>
 	</main>
 	
 	
