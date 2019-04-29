@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 01. Apr 2019 um 21:20
+-- Erstellungszeit: 29. Apr 2019 um 16:47
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -25,6 +25,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `courses`
+--
+
+CREATE TABLE `courses` (
+  `ID` int(11) NOT NULL,
+  `name` char(255) COLLATE latin1_german2_ci NOT NULL,
+  `instructor` char(255) COLLATE latin1_german2_ci NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci;
+
+--
+-- Daten für Tabelle `courses`
+--
+
+INSERT INTO `courses` (`ID`, `name`, `instructor`, `price`) VALUES
+(1, 'Peanut butter rocks!', 'Gaelle', 99),
+(2, 'How to kill a demon - the basics', 'Thomas', 99),
+(3, 'Folding is fun - helpful things to know before you get started', 'Anna', 99),
+(4, 'How to find your own calligraphy style', 'Elisabeth', 99),
+(5, 'Zumba for nerds', 'Judyta', 99),
+(6, 'How to make the most of instagram filters', 'Serena', 99);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `login_data`
 --
 
@@ -32,22 +57,29 @@ CREATE TABLE `login_data` (
   `ID` bigint(20) UNSIGNED NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `ms_lvl` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `login_data`
 --
 
-INSERT INTO `login_data` (`ID`, `username`, `email`, `password`) VALUES
-(6, 'Max', '', '$2y$10$zw4cTm/SBOSz3qIjrBMeSuUjknJdZkfRGg.yJbwdJsYYGCh6VAuC6'),
-(7, 'Moritz', '', '$2y$10$BmC64OQDy2nrH3PG685eAOY90NgLX/AamdeC.1qpS0VTqABkU1ABe'),
-(8, 'Wilhelm', '', '$2y$10$dTdE.TAcy33jXBwsAQQzN.otVUvgKU.wGYWYHLhdMIaLqVzfu/PZW'),
-(9, 'Busch', '', '$2y$10$Wc4CQHFqZ3O/GN177K5S..LVi.R6T9ysLqUtlSghQh5uGwcjtA/yW');
+INSERT INTO `login_data` (`ID`, `username`, `email`, `password`, `ms_lvl`) VALUES
+(6, 'Max', '', '$2y$10$zw4cTm/SBOSz3qIjrBMeSuUjknJdZkfRGg.yJbwdJsYYGCh6VAuC6', 0),
+(7, 'Moritz', '', '$2y$10$BmC64OQDy2nrH3PG685eAOY90NgLX/AamdeC.1qpS0VTqABkU1ABe', 0),
+(8, 'Wilhelm', '', '$2y$10$dTdE.TAcy33jXBwsAQQzN.otVUvgKU.wGYWYHLhdMIaLqVzfu/PZW', 0),
+(9, 'Busch', '', '$2y$10$Wc4CQHFqZ3O/GN177K5S..LVi.R6T9ysLqUtlSghQh5uGwcjtA/yW', 0);
 
 --
 -- Indizes der exportierten Tabellen
 --
+
+--
+-- Indizes für die Tabelle `courses`
+--
+ALTER TABLE `courses`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indizes für die Tabelle `login_data`
@@ -59,6 +91,12 @@ ALTER TABLE `login_data`
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
+
+--
+-- AUTO_INCREMENT für Tabelle `courses`
+--
+ALTER TABLE `courses`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT für Tabelle `login_data`
