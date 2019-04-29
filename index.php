@@ -159,6 +159,15 @@ button:hover {
   border:none;
 }
 
+.container-main{
+	 padding: 16px;
+  margin-top:0px; 
+  background-color: white;
+  opacity: 0.5;
+  border:none;
+	
+}
+
  .container-slide {
   position: relative;
   width: 100%;
@@ -237,6 +246,35 @@ input[type=text], select, textarea, [type=password]{
   margin: auto;
 }
 
+.slideshow-container .btn {
+  position: absolute;
+  top: 74%;
+  left: 65%;
+  transform: translate(-60%, -60%);
+  -ms-transform: translate(-60%, -60%);
+  background-color: #fff;
+  opacity: 0.9;
+  color: grey;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 25px 0 black;
+
+}
+
+.slideshow-container .btn:hover {
+  opacity:0.7;
+  filter: alpha(opacity=70);
+
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -294,6 +332,42 @@ img {
 	width: 100%;
 	text-align:center;
 }
+
+
+.intro-type .container {
+  padding: 107px 0px 102px 0px !important;
+}
+.company-heading h1 {
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  line-height: 80px;
+  color: #fff;
+  font-weight: 700 !important;
+  text-align: center;
+}
+.jumbo {
+  margin-top: 40px;
+  opacity: 0.5;
+}
+
+
+.ct-btn-scroll {
+  width: 49px;
+  height: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 300px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+
+
+
 </style>
 
 <body>
@@ -438,10 +512,17 @@ img {
 	<main>
 	
 	
+	
 	<div class="slideshow-container">
 
-<div class="mySlides fade">
-  <img src="slide1.jpg" style="width:100%">
+<div class="mySlides fade col-md-12">
+  <img src="slide6.jpg" style="width:100%">
+  <section class="company-heading intro-type" id="parallax-one">
+        <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" style="height: 60px; width:60px; 
+					margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+      </div>
+	  <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/anchor/company-hero2.jpg);"></div>
+</section>
 
 </div>
 
@@ -456,12 +537,9 @@ img {
 </div>
 
 <div class="mySlides fade">
-  <img src="spices.jpg" style="width:100%">
+  <img src="slidecook.jpg" style="width:100%">
 
 </div>
-
-
-<br>
 
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
@@ -498,6 +576,36 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+
+<div class="main">
+  <section id="section2"> 
+  
+
+        <h2>Let Big Data Change the Game</h2>
+        <p>WebCorpCo is all about making sure your marketing stack is in alignment with your 
+		company as well as the customers you serve. There is no 'one size fits all' approach 
+		to marketing. Every business is unique, customers are unique, and your marketing should 
+		be as well.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+    </div>
+  </section>
+  
+  $(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+
+</div>
 
 	</main>
 	
