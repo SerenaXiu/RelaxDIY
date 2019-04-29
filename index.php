@@ -502,9 +502,13 @@ function showSlides(n) {
 
         $api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
 
-        $data = json_decode(file_get_contents($api_url));
-        $temperature = $data->currently->temperature;
-        $weather = $data->currently->icon;
+
+        $data = file_get_contents($api_url);
+        $clean_data = json_decode($data,TRUE);
+        echo $clean_data['currently']['temperature'];
+        //echo '<script>alert($data);</script>';
+        $temperature = $clean_data['currently']['temperature'];
+        $weather = $clean_data['currently']['icon'];
 
         switch ($weather){
             case 'clear-day':
@@ -526,7 +530,7 @@ function showSlides(n) {
                 break;
 
             case 'snow':
-                echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html"target= "blank">Write something.</a></p>';
+                echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html" target= "blank">Write something.</a></p>';
                 break;
 
             case 'sleet':
