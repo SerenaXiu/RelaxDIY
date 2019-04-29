@@ -8,6 +8,7 @@
 .data {
 	text-align: left;
 	margin:30px;
+	font-weight: bold;
 }
 
 .table{
@@ -36,4 +37,12 @@
 #placeholderImg:hover span[id="onhover"]{
 	display: block;
 }
+
+
+
+
+
+
+
+ 
 
