@@ -513,7 +513,7 @@ function showSlides(n) {
         switch ($weather){
             case 'clear-day':
                 if ($temperature > 18) {
-                    echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+                    echo '<p>Its a beautiful day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
                 }elseif ($temperature > 0){
                     echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
                 }else{
