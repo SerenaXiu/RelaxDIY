@@ -118,22 +118,11 @@ img {
 }
 
 
-.intro-type .container {
-  padding: 107px 0px 102px 0px !important;
-}
-.company-heading h1 {
-  margin-bottom: 60px;
-  padding-bottom: 50px;
-  line-height: 80px;
-  color: #fff;
-  font-weight: 700 !important;
-  text-align: center;
-}
-.jumbo {
-  margin-top: 40px;
-  opacity: 0.5;
-}
 
+
+
+
+/* scroll button */
 
 .ct-btn-scroll {
   width: 49px;
@@ -362,7 +351,7 @@ function showSlides(n) {
 </script>
 
 <div class="main">
-	<div class="white-bgrnd">
+	
 		<?php
 
 		$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -446,7 +435,7 @@ function showSlides(n) {
 			be as well.</p>
 			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 
-	</div>
+	
 		</section>
   
 	  $(document).ready(function(){
@@ -463,6 +452,11 @@ function showSlides(n) {
 	  });
 	});
 
+	<div class="white-bgrnd">
+	
+	/*about */
+	
+	</div>
 </div>
 
 	</main>
