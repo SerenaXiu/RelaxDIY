@@ -101,7 +101,7 @@ input[type=text], select, textarea, [type=password]{
 img {
     width: 100%;
 	height:530px;
-
+	border-radius:15px;
 	box-shadow: 0 6px 25px 0 black;
 }
 
@@ -370,7 +370,7 @@ function showSlides(n) {
 </script>
 
 <div class="main">
-
+		<script>
 		<?php
 
 		$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -444,17 +444,19 @@ function showSlides(n) {
 
 		}
 		?>
+		
+		</script>
 		<section id="section2">
 
-
-			<h2>Find a way to relax</h2>
-
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			<div class="white-bgrnd" style="padding:10px">
+			<h2 style="margin-left:50px"> Choose one of our wonderful courses</h2>
+			</div>
+	
 			<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/slidecalii2.jpg" style="width:48%; height:300px; margin-left:20px;">
+		<img border="0" alt="Zumba" src="Img/Judyta/sliden11111.jpg" style="width:48%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
 
-		<img border="0" alt="Zumba" src="Img/Judyta/slidezumbaa2.jpg" style="width:48%; height:300px; margin-left:20px;">
+		<img border="0" alt="Zumba" src="Img/Judyta/sliden2010.jpg" style="width:48%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
 
         </br>
@@ -462,18 +464,18 @@ function showSlides(n) {
 
 		<div class="center">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/slidedaemonn.jpg" style="width: 23%; height:300px; margin-left:none;">
+		<img border="0" alt="Zumba" src="Img/Judyta/sliden3.jpg" style="width: 23%; height:300px; margin-left:none;">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/slidecookingg.jpg" style="width: 23%; height:300px; margin-left:15px;">
+		<img border="0" alt="Zumba" src="Img/Judyta/sliden4.jpg" style="width: 23%; height:300px; margin-left:15px;">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/slidephotoo.jpg" style="width: 23%; height:300px; margin-left:20px;">
+		<img border="0" alt="Zumba" src="Img/Judyta/sliden99.jpg" style="width: 23%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/slideorigamii.jpg" style="width: 23%; height:300px; margin-left:20px; margin-right:-10px;">
+		<img border="0" alt="Zumba" src="Img/Judyta/sliden77.jpg" style="width: 23%; height:300px; margin-left:20px; margin-right:-10px;">
 		</div>
 
 
 		</section>
-
+		<script>
 	  $(document).ready(function(){
 	  $("a").on('click', function(event) {
 		if (this.hash !== "") {
@@ -487,7 +489,7 @@ function showSlides(n) {
 		}
 	  });
 	});
-
+	</script>
 	<div class="white-bgrnd">
 
 	/*about */
