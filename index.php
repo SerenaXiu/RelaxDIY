@@ -102,7 +102,7 @@ input[type=text], select, textarea, [type=password]{
 img {
     width: 100%;
 	height:530px;
-	
+	border-radius:8px;
 	box-shadow: 0 6px 25px 0 black;
 }
 
@@ -139,6 +139,19 @@ img {
   transition: background-color 0.25s ease-in-out;
 }
 
+.center {
+
+  text-align: center;
+  width: 100%;
+  border: none;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 </style>
@@ -300,12 +313,12 @@ img {
 </div>
 
 <div class="mySlides fade">
-  <img src="Img/Slidegallery/slide2.jpg" style="width:100%">
+  <img src="Img/Slidegallery/slied2.jpg" style="width:100%">
 
 </div>
 
 <div class="mySlides fade">
-  <img src="Img/Slidegallery/slide3.jpg" style="width:100%">
+  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%">
 
 </div>
 
@@ -428,16 +441,33 @@ function showSlides(n) {
 		<section id="section2"> 
 	  
 
-			<h2>Let Big Data Change the Game</h2>
-			<p>WebCorpCo is all about making sure your marketing stack is in alignment with your 
-			company as well as the customers you serve. There is no 'one size fits all' approach 
-			to marketing. Every business is unique, customers are unique, and your marketing should 
-			be as well.</p>
+			<h2>Find a way to relax</h2>
+
 			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="Img/Judyta/slidecalii2.jpg" style="width:48%; height:300px; margin-left:20px;">
+		<a href="https://www.w3schools.com">
+		
+		<img border="0" alt="Zumba" src="Img/Judyta/slidezumbaa2.jpg" style="width:48%; height:300px; margin-left:20px;">
+		<a href="https://www.w3schools.com">
+		
+        </br>
+		</br>
+	
+		<div class="center">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="Img/Judyta/slidedaemonn.jpg" style="width: 23%; height:300px; margin-left:none;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="Img/Judyta/slidecookingg.jpg" style="width: 23%; height:300px; margin-left:15px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="Img/Judyta/slidephotoo.jpg" style="width: 23%; height:300px; margin-left:20px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="Img/Judyta/slideorigamii.jpg" style="width: 23%; height:300px; margin-left:20px; margin-right:-10px;">
+		</div>
 
 	
 		</section>
-  
+		<script>
 	  $(document).ready(function(){
 	  $("a").on('click', function(event) {
 		if (this.hash !== "") {
@@ -451,7 +481,7 @@ function showSlides(n) {
 		} 
 	  });
 	});
-
+	</script>
 	<div class="white-bgrnd">
 	
 	/*about */
@@ -463,8 +493,10 @@ function showSlides(n) {
 	
 	
 
-		<footer class="footer">			
-               Copyright © 2019 <a href="index.php">relaxDIY.com</a>            
+		<footer class="footer">		
+				<strong>	&quot;<script src="http://numbersapi.com/random?write"></script>	&quot;</strong>
+          
+			<br> Copyright © 2019 <a href="index.php">relaxDIY.com</a>            
 		</footer>	
 </body>
 </html>
