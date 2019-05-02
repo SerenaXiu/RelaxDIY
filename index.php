@@ -241,7 +241,7 @@ img {
                             <label for="password"><b>Password</b></label><br>
                             <input type="password" placeholder="Enter Password" name="password" required>
 
-                            <button type="submit" formaction="validate.inc.php" name="login_submit" id="login_submit">Login</button>
+                            <button type="submit" formaction="login.inc.php" name="login_submit" id="login_submit">Login</button>
                             <button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
                             <label><span><a href="#">Forgot password?</a></span></label>
 						</div>
@@ -444,8 +444,8 @@ function showSlides(n) {
 
 		}
 		?>
-		<section id="section2"> 
-	  
+		<section id="section2">
+
 
 			<h2>Find a way to relax</h2>
 
@@ -453,13 +453,13 @@ function showSlides(n) {
 			<a href="https://www.w3schools.com">
 		<img border="0" alt="Zumba" src="Img/Judyta/slidecalii2.jpg" style="width:48%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
-		
+
 		<img border="0" alt="Zumba" src="Img/Judyta/slidezumbaa2.jpg" style="width:48%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
-		
+
         </br>
 		</br>
-	
+
 		<div class="center">
 		<a href="https://www.w3schools.com">
 		<img border="0" alt="Zumba" src="Img/Judyta/slidedaemonn.jpg" style="width: 23%; height:300px; margin-left:none;">
@@ -471,7 +471,7 @@ function showSlides(n) {
 		<img border="0" alt="Zumba" src="Img/Judyta/slideorigamii.jpg" style="width: 23%; height:300px; margin-left:20px; margin-right:-10px;">
 		</div>
 
-	
+
 		</section>
 
 	  $(document).ready(function(){
