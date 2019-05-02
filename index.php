@@ -117,7 +117,6 @@ img {
 	text-align:center;
 }
 
-
 .intro-type .container {
   padding: 107px 0px 102px 0px !important;
 }
@@ -129,11 +128,6 @@ img {
   font-weight: 700 !important;
   text-align: center;
 }
-.jumbo {
-  margin-top: 40px;
-  opacity: 0.5;
-}
-
 
 .ct-btn-scroll {
   width: 49px;
@@ -362,7 +356,7 @@ function showSlides(n) {
 </script>
 
 <div class="main">
-	<div class="white-bgrnd">
+	
 		<?php
 
 		$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -436,7 +430,8 @@ function showSlides(n) {
 
 		}
 		?>
-		<section id="section2"> 
+		<main> 
+		<section id="section2">
 	  
 
 			<h2>Let Big Data Change the Game</h2>
@@ -445,9 +440,31 @@ function showSlides(n) {
 			to marketing. Every business is unique, customers are unique, and your marketing should 
 			be as well.</p>
 			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="zumbaslidee.jpg" style="width:300px; height:300px; margin-left:50px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="cooking.jpg" style="width:300px; height:300px; margin-left:50px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="writing.jpg" style="width:300px; height:300px; margin-left:50px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="daemon.jpg" style="width:300px; height:300px; margin-left:50px;">
 
-	</div>
+        </br>
+		</br>
+		</br>
+		
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="zumbaslidee.jpg" style="width:300px; height:300px; margin-left:50px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="cooking.jpg" style="width:300px; height:300px; margin-left:50px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="writing.jpg" style="width:300px; height:300px; margin-left:50px;">
+		<a href="https://www.w3schools.com">
+		<img border="0" alt="Zumba" src="daemon.jpg" style="width:300px; height:300px; margin-left:50px;">
+	
+
 		</section>
+		</main>
   
 	  $(document).ready(function(){
 	  $("a").on('click', function(event) {
@@ -462,6 +479,10 @@ function showSlides(n) {
 		} 
 	  });
 	});
+
+</div>
+
+<div class="white-bgrnd">
 
 </div>
 
