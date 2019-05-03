@@ -105,6 +105,21 @@ img {
 	box-shadow: 0 6px 25px 0 black;
 }
 
+.zoom {
+ padding:10px;
+  background-color: transparent;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
 
  .footer {
     position:fixed;bottom:0;
@@ -122,6 +137,7 @@ img {
   text-align: center;
   width: 100%;
   border: none;
+
 }
 
 .centered {
@@ -308,7 +324,7 @@ img {
 	<div class="slideshow-container">
 
 <div class="mySlides fade col-md-12">
-  <img src="Img/Slidegallery/slide1.jpg" style="width:100%">
+  <img src="Img/Slidegallery/slide1.jpg" style="width:100%; border-radius:0px;">
   <section class="company-heading intro-type" id="parallax-one">
         <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" style="height: 60px; width:60px;
 					margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
@@ -448,29 +464,31 @@ function showSlides(n) {
 		</script>
 		<section id="section2">
 
-			<div class="white-bgrnd" style="padding:10px">
-			<h2 style="margin-left:50px"> Choose one of our wonderful courses</h2>
+			<div class="white-bgrnd" style="padding:5px; width:93%; margin-left:auto; margin-right:auto;">
+			<h2 style="margin-left:50px">  </h2>
 			</div>
 	
-			<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/sliden11111.jpg" style="width:48%; height:300px; margin-left:20px;">
+	
+		<div class="center">
 		<a href="https://www.w3schools.com">
-
-		<img border="0" alt="Zumba" src="Img/Judyta/sliden2010.jpg" style="width:48%; height:300px; margin-left:20px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden11111.jpg" style="width:45%; height:300px; margin-left:20px;">
+		
+		
 		<a href="https://www.w3schools.com">
-
+		<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden2010.jpg" style="width:45%; height:300px; margin-left:20px;">
+		</center>
         </br>
 		</br>
 
 		<div class="center">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/sliden3.jpg" style="width: 23%; height:300px; margin-left:none;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden3.jpg" style="width: 21%; height:300px; margin-left:none;">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/sliden4.jpg" style="width: 23%; height:300px; margin-left:15px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden4.jpg" style="width: 21%; height:300px; margin-left:15px;">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/sliden99.jpg" style="width: 23%; height:300px; margin-left:20px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99.jpg" style="width: 21%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
-		<img border="0" alt="Zumba" src="Img/Judyta/sliden77.jpg" style="width: 23%; height:300px; margin-left:20px; margin-right:-10px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden77.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
 		</div>
 
 
@@ -490,7 +508,7 @@ function showSlides(n) {
 	  });
 	});
 	</script>
-	<div class="white-bgrnd">
+	<div class="white-bgrnd" style="margin-bottom:50px; margin-left:auto; margin-right:auto; width:87%;">
 
 	/*about */
 
