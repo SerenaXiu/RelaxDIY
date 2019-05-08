@@ -107,7 +107,8 @@ img {
 
 .zoom {
  padding:10px;
-  background-color: transparent;
+ background:rgba(255,255,255, 0.90);
+
   transition: transform .2s;
   width: 200px;
   height: 200px;
@@ -471,24 +472,24 @@ function showSlides(n) {
 	
 		<div class="center">
 		<a href="https://www.w3schools.com">
-		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden11111.jpg" style="width:45%; height:300px; margin-left:20px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
 		
 		
 		<a href="https://www.w3schools.com">
-		<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden2010.jpg" style="width:45%; height:300px; margin-left:20px;">
+		<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/zumbaslidee1.jpg" style="width:45%; height:300px; margin-left:20px;">
 		</center>
         </br>
 		</br>
 
 		<div class="center">
 		<a href="https://www.w3schools.com">
-		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden3.jpg" style="width: 21%; height:300px; margin-left:none;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden33.jpg" style="width: 21%; height:300px; margin-left:none;">
 		<a href="https://www.w3schools.com">
-		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden4.jpg" style="width: 21%; height:300px; margin-left:15px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden444.jpg" style="width: 21%; height:300px; margin-left:15px;">
 		<a href="https://www.w3schools.com">
-		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99.jpg" style="width: 21%; height:300px; margin-left:20px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99999.jpg" style="width: 21%; height:300px; margin-left:20px;">
 		<a href="https://www.w3schools.com">
-		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden77.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
+		<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden7777.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
 		</div>
 
 
@@ -508,11 +509,14 @@ function showSlides(n) {
 	  });
 	});
 	</script>
-	<div class="white-bgrnd" style="margin-bottom:50px; margin-left:auto; margin-right:auto; width:87%;">
+	
+	<section id="section3">
+	<div class="white-bgrnd" style="margin-bottom:90px; margin-left:auto; margin-right:auto; width:87%;">
 
 	/*about */
 
 	</div>
+	</section>
 </div>
 
 	</main>
@@ -520,6 +524,7 @@ function showSlides(n) {
 
 
 		<footer class="footer">
+		<strong>	&quot;<script src="http://numbersapi.com/random?write"></script>	&quot;</strong> <br>
                Copyright © 2019 <a href="index.php">relaxDIY.com</a>
 		</footer>
 </body>
