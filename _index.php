@@ -31,7 +31,7 @@ input[type=text], select, textarea, [type=password]{
 }
 
 .slideshow-container {
-  max-width: 100%;
+  max-width: 100%; height: auto;
   position: relative;
   margin: auto;
 }
@@ -106,8 +106,7 @@ input[type=text], select, textarea, [type=password]{
 }
 
 img {
-    width: 100%;
-	height:530px;
+    max-width: 100%; height: auto;
 	border-radius:15px;
 	box-shadow: 0 6px 25px 0 black;
 }
@@ -129,14 +128,7 @@ img {
 }
 
 
- .footer {
-    position:fixed;bottom:0;
-	background-color: #fff;
-    display:block;
-	padding: 6px 8px;
-	box-shadow: 0 3px 20px 0 black;
-	width: 100%;
-	text-align:center;
+
 }
 
 
@@ -159,7 +151,7 @@ img {
 
 /* scroll button */
 
-.ct-btn-scroll {
+.scroll {
   width: 49px;
   height: 10px;
   position: absolute;
@@ -185,203 +177,201 @@ img {
 
 
 
-	<div class="slideshow-container">
+		<div class="slideshow-container">
 
-		<div class="mySlides fade col-md-12">
-		  <img src="Img/Slidegallery/slide1.jpg" style="width:100%; border-radius:0px;">
-		  <section class="company-heading intro-type" id="parallax-one">
-				<a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" style="height: 60px; width:60px;
-							margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
-		
-		<div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/anchor/company-hero2.jpg);"></div>
-		  </section>
+			<div class="mySlides fade col-md-12">
+			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
+			 
+			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
+								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+			
+			</div>
 		</div>
+
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slied2.jpg" style="width:100%">
+
 	</div>
 
-<div class="mySlides fade">
-  <img src="Img/Slidegallery/slied2.jpg" style="width:100%">
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%">
 
-</div>
+	</div>
 
-<div class="mySlides fade">
-  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%">
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
 
-</div>
+	</div>
 
-<div class="mySlides fade">
-  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
+	<div id="dots" style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
 
-</div>
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
 
-<div id="dots" style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-</div>
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-<div class="main">
-	<section id="section2">
-
-			<div class="white-bgrnd" style="padding:5px;">
-			<h2 style="margin-left:50px">  </h2>
-			</div>
-		<script>
-		<?php
-
-		$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
-
-
-		$data = file_get_contents($api_url);
-		$clean_data = json_decode($data,TRUE);
-		echo $clean_data['currently']['temperature'];
-		//echo '<script>alert($data);</script>';
-		$temperature = $clean_data['currently']['temperature'];
-		$weather = $clean_data['currently']['icon'];
-
-		switch ($weather){
-			case 'clear-day':
-				if ($temperature > 18) {
-					echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}elseif ($temperature > 0){
-					echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
-				}else{
-					echo '<p>Its very cold why dont you <a href="cooking.html"target= "blank">cook something warm?</a></p>';
-				}
-				break;
-
-			case 'clear-night':
-				echo '<p>Its a clear night perfect time to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
-				break;
-
-			case 'rain':
-				echo '<p>Ah a rainy day you could try some <a href="origami.html">Origami.</a>></p>';
-				break;
-
-			case 'snow':
-				echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html" target= "blank">Write something.</a></p>';
-				break;
-
-			case 'sleet':
-				if ($temperature > 18) {
-					echo '<p>Test Case 1 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}elseif ($temperature > 0){
-					echo '<p>Test Case 2 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}else{
-					echo '<p>Test Case 3 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}
-				break;
-
-			case 'wind':
-				if ($temperature > 18) {
-					echo '<p>Test Case 4 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}elseif ($temperature > 0){
-					echo '<p>Test Case 5 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}else{
-					echo '<p>Test Case 6 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				}
-				break;
-
-			case 'fog':
-				echo '<p>Foggy weather is perfect to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
-				break;
-
-			case 'cloudy':
-				echo '<p>Test Case 7 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				break;
-
-			case 'partly-cloudy-day':
-				echo '<p>Test Case 8 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				break;
-
-			case 'partly-cloudy-night':
-				echo '<p>Test Case 9 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-				break;
-
-		}
-		?>
-		
-		</script>
-		
-	
-	
-		<div class="center">
-			<a href="https://www.w3schools.com">
-			<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
-			
-			
-			<a href="https://www.w3schools.com">
-			<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/zumbaslidee1.jpg" style="width:45%; height:300px; margin-left:20px;">
-		</div>
-		
-			</br>
-			</br>
-
-		<div class="center">
-			<a href="https://www.w3schools.com">
-			<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden33.jpg" style="width: 21%; height:300px; margin-left:none;">
-			<a href="https://www.w3schools.com">
-			<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden444.jpg" style="width: 21%; height:300px; margin-left:15px;">
-			<a href="https://www.w3schools.com">
-			<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99999.jpg" style="width: 21%; height:300px; margin-left:20px;">
-			<a href="https://www.w3schools.com">
-			<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden7777.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
-		</div>
+	<div >
+		<section id="section1" class="white-bgrnd" style="padding:5px;">
+		<h2 style="margin-left:50px">  </h2>
 		</section>
 		
-		<script>
-		$(document).ready(function(){
-		$("a").on('click', function(event) {
-			if (this.hash !== "") {
-			event.preventDefault();
-			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 800, function(){
-				window.location.hash = hash;
-			});
-			}
-		});
-		});
-		</script>
-	
-	<section id="section3">
-		<div class="white-bgrnd" style="margin-bottom:90px">
+		<section id="section2">
+				<script>
+					<?php
 
-		/*about */
+				$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
 
-		</div>
-	</section>
+
+				$data = file_get_contents($api_url);
+				$clean_data = json_decode($data,TRUE);
+				echo $clean_data['currently']['temperature'];
+				//echo '<script>alert($data);</script>';
+				$temperature = $clean_data['currently']['temperature'];
+				$weather = $clean_data['currently']['icon'];
+
+				switch ($weather){
+					case 'clear-day':
+						if ($temperature > 18) {
+							echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}elseif ($temperature > 0){
+							echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
+						}else{
+							echo '<p>Its very cold why dont you <a href="cooking.html"target= "blank">cook something warm?</a></p>';
+						}
+						break;
+
+					case 'clear-night':
+						echo '<p>Its a clear night perfect time to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
+						break;
+
+					case 'rain':
+						echo '<p>Ah a rainy day you could try some <a href="origami.html">Origami.</a>></p>';
+						break;
+
+					case 'snow':
+						echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html" target= "blank">Write something.</a></p>';
+						break;
+
+					case 'sleet':
+						if ($temperature > 18) {
+							echo '<p>Test Case 1 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}elseif ($temperature > 0){
+							echo '<p>Test Case 2 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}else{
+							echo '<p>Test Case 3 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}
+						break;
+
+					case 'wind':
+						if ($temperature > 18) {
+							echo '<p>Test Case 4 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}elseif ($temperature > 0){
+							echo '<p>Test Case 5 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}else{
+							echo '<p>Test Case 6 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						}
+						break;
+
+					case 'fog':
+						echo '<p>Foggy weather is perfect to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
+						break;
+
+					case 'cloudy':
+						echo '<p>Test Case 7 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						break;
+
+					case 'partly-cloudy-day':
+						echo '<p>Test Case 8 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						break;
+
+					case 'partly-cloudy-night':
+						echo '<p>Test Case 9 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+						break;
+
+				}
+					?>
+						
+				</script>
+		</section>
 		
+			<section>
+			<div class="center">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
+				
+				
+				<a href="https://www.w3schools.com">
+				<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/zumbaslidee1.jpg" style="width:45%; height:300px; margin-left:20px;">
+			</div>
+			
+				</br>
+				</br>
+
+			<div class="center">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden33.jpg" style="width: 21%; height:300px; margin-left:none;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden444.jpg" style="width: 21%; height:300px; margin-left:15px;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99999.jpg" style="width: 21%; height:300px; margin-left:20px;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden7777.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
+			</div>
+			</section>
+			
+			<script>
+			$(document).ready(function(){
+			$("a").on('click', function(event) {
+				if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+				}
+			});
+			});
+			</script>
+		
+		<section id="section3">
+			<div class="white-bgrnd" style="margin-bottom:90px">
+
+			/*about */
+
+			</div>
+		</section>
+			
 
 </main>
 

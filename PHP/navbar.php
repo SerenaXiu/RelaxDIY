@@ -2,13 +2,13 @@
 
 				<div id="mySidenav" class="sidenav">
 					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					  <a href="myprofile.html" style="border-bottom:solid; border-width: thin;">My profile</a>
-					  <a href="about.html">About</a>
-					  <a href="courses.html">Courses</a>
-					  <a href="partners.html">Partners</a>
-					  <a href="contact.html">Contact</a>
-					  <a href="prices.html">Prices</a>
-					  <a href="impressum.html">Impressum</a>
+					  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
+					  <a href="_about.php">About</a>
+					  <a href="-courses.php">Courses</a>
+					  <a href="_partners.php">Partners</a>
+					  <a href="_contact.php">Contact</a>
+					  <a href="_prices.php">Prices</a>
+					  <a href="_impressum.php">Impressum</a>
 				</div>
 
 				<span style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
@@ -22,26 +22,30 @@
 						}
 						</script>
 
-				<a href="index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
-				<div class="dropdown">
-					<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
-					<div class="dropdown-content">
-					  <a href="origami.html">Origami</a>
-					  <a href="https://www.zumba.com" target= "blank">Zumba</a>
-					  <a href="photography.html"target= "blank">Photography</a>
-					  <a href="cooking.html"target= "blank">Cooking</a>
-					  <a href="daemons.html"target= "blank">Daemons</a>
-					  <a href="writing.html"target= "blank">Writing</a>
+				<a href="_index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
+				
+				<a href="_courses.php" style=" padding:0">
+					<div class="dropdown">
+						<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
+							<div class="dropdown-content">
+							  <a href="courses/origami.php">Origami</a>
+							  <a href="https://www.zumba.com" target= "blank">Zumba</a>
+							  <a href="courses/photography.php"target= "blank">Photography</a>
+							  <a href="courses/cooking.php"target= "blank">Cooking</a>
+							  <a href="couses/demons.php"target= "blank">Demons</a>
+							  <a href="courses/writing.php"target= "blank">Writing</a>
+							</div>
 					</div>
-				</div>
-
+				</a>
+				
                 <a href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
-
+				
+				<a href="_team.php" style=" padding:0">
 				<div class="dropdown">
-					<button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
+					 <button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 						<div class="dropdown-content">
 
-						  <a href="anna.html">Anna</a>
+						  <a class="lead" href="../_team.php#Anna">Anna</a>
 						  <a href="elisabeth.html">Elisabeth</a>
 						  <a href="gaelle.html">Gaelle</a>
 						  <a href="judyta.html">Judyta</a>
@@ -51,6 +55,7 @@
 						</div>
 
 				</div>
+				</a>
 
 <!--                toggle logout / login button-->
                 <?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>

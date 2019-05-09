@@ -14,8 +14,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 		
-		<link href="../CSS/team.css" type="text/css" rel="stylesheet">
-		<link href="../CSS/general.css" type="text/css" rel="stylesheet">
+		<link href="CSS/team.css" type="text/css" rel="stylesheet">
+		<link href="CSS/general.css" type="text/css" rel="stylesheet">
 		
 		<script src="myScript.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -43,7 +43,7 @@
 		
 	<div class="people">
 		
-		
+		<div id="Anna">
 		<table border="1">
 		<tr>
 			<td colspan="2"><h2>Anna Kastlunger</h2></td></tr>
@@ -51,8 +51,8 @@
 		<tr>
 			<td colspan="1" rowspan="2">
 				<span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="../Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane"> </span>
-					<span id="onhover"> <img class="cImg" src="../Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna Kastelungen with Crane"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna Kastelungen with Crane"> </span>
 				</span>
 			</td>
 			
@@ -81,8 +81,8 @@
 		<tr>
 			<td colspan="1" rowspan="2">
 				<span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="../Img/Profilepics/Elisabeth.jpeg" alt="Photo of Elisabeth Kohlhofer"> </span>
-					<span id="onhover"> <img class="cImg" src="../Img/Profilepics/Elisabeth2.jpeg" alt = "Photo of Calligraphy"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Elisabeth.jpeg" alt="Photo of Elisabeth Kohlhofer"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Elisabeth2.jpeg" alt = "Photo of Calligraphy"> </span>
 				</span>
 			</td>
 			
@@ -111,8 +111,8 @@
 		<tr>
 			<td colspan="1" rowspan="2">
 				<span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="../Img/Profilepics/Gaelle.jpeg" alt="Photo of Gaelle Knibbeler"> </span>
-					<span id="onhover"> <img class="cImg" src="../Img/Profilepics/Gaelle2.jpeg" alt = "Photo of Breakfast"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Gaelle.jpeg" alt="Photo of Gaelle Knibbeler"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Gaelle2.jpeg" alt = "Photo of Breakfast"> </span>
 				</span>
 			</td>
 			
@@ -137,8 +137,8 @@
 		<tr>
 			<td colspan="1" rowspan="2">
 				<span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="../Img/Profilepics/Judyta.jpeg" alt="Photo of Judyta Krzyzak"> </span>
-					<span id="onhover"> <img class="cImg" src="../Img/Profilepics/Judyta2.jpeg" alt = "Photo of a dancing Judyta"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Judyta.jpeg" alt="Photo of Judyta Krzyzak"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Judyta2.jpeg" alt = "Photo of a dancing Judyta"> </span>
 				</span>
 			</td>
 			
@@ -164,8 +164,8 @@
 		<tr>
 			<td colspan="3" rowspan="3">
 				<span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="../Img/Profilepics/Serena.jpeg" alt="Photo of Serena Li"> </span>
-					<span id="onhover"> <img class="cImg" src="../Img/Profilepics/Serena2.jpeg" alt = "Photo of a landview"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Serena.jpeg" alt="Photo of Serena Li"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Serena2.jpeg" alt = "Photo of a landview"> </span>
 				</span>
 			</td>
 			
@@ -193,8 +193,8 @@
 		<tr>
 			<td colspan="1" rowspan="2">
 				<span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="../Img/Profilepics/Thomas.jpeg" alt="Photo of normal Thomas Kellner"> </span>
-					<span id="onhover"> <img class="cImg" src="../Img/Profilepics/Thomas2.jpeg" alt = "Photo of Demon-Slayer Thomas"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Thomas.jpeg" alt="Photo of normal Thomas Kellner"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Thomas2.jpeg" alt = "Photo of Demon-Slayer Thomas"> </span>
 				</span>
 			</td>
 			

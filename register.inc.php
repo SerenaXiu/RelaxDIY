@@ -13,6 +13,8 @@ if (isset($_POST['reg_submit'])) {
 		// Connect to the database and check if the username is available If not, jump
         // down to our error message that the username is in use already
         $pdo = new PDO("mysql:host=localhost;dbname=relaxdiy", "root", "");
+
+
         $pdo_query = $pdo->prepare("SELECT ID, username, password FROM login_data WHERE username = :username");
         $pdo_query->bindParam(':username', $username);
         $pdo_query->execute();

@@ -38,6 +38,20 @@
 	display: block;
 }
 
+.lead {
+  width: 49px;
+  height: 10px;
+  position: relative;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 300px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+
 
 
 
