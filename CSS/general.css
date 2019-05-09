@@ -252,7 +252,7 @@ input[type=text], select, textarea {
 }
 
 
- .footer {
+footer {
     position:fixed;bottom:0;
 	background-color: #fff;
     display:block;
