@@ -106,7 +106,7 @@
 					}
 					</script>
 
-			<a href="shoppingcart.html"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
+			<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
 
 			<div class="dropdown" style="float:right">
 				<button class="dropbtn"><i class="fa fa-search"></i></button>

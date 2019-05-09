@@ -15,7 +15,7 @@
 <style>
 
 /*used by login popup window for username and password input fields*/
-input[type=text], select, textarea, [type=password]{
+input[type=text], select, textarea, input[type=password]{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
