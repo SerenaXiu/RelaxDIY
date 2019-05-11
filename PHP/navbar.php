@@ -7,25 +7,24 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <style>
+
 #content-desktop{display:block;}
 #content-mobile{display:none;}
 
 @media screen and (max-width:900px)
 	{
 	#content-desktop{display:none;}
-	#content-mobile{display:block;}
+	#content-mobile{display:block;}	
 	}
+	
 </style>
 
 </head>
 
 
 <body>
-
-<div id="content-desktop">
 		<nav class="navbar">
-
-						<div id="mySidenav" class="sidenav">
+						<div id="mySidenav" class="sidenav" >
 							  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 							  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
 							  <a href="_about.php">About</a>
@@ -36,7 +35,7 @@
 							  <a href="_impressum.php">Impressum</a>
 						</div>
 
-						<span id="openSide" style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
+						<span id="sidenavbtn" style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
 
 								<script>
 								function openNav() {
@@ -47,6 +46,7 @@
 								}
 								</script>
 
+	<div id="content-desktop">
 						<a href="_index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
 						
 						<a href="_courses.php" style=" padding:0">
@@ -144,65 +144,16 @@
 							</div>
 					</div>
 
-		<!--            if user is logged in, write Welcome, else echo error message    -->
-		<div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">
-			<?php
-			if (isset($_SESSION['username']) && $_SESSION['username'] !== '') {
-				echo "Welcome back, ".$_SESSION['username'];
-			}
-			else if (isset($_SESSION['error']) && $_SESSION['error'] !== '') {
-				echo $_SESSION['error'];
-				unset($_SESSION['error']);
-			}
-			else if (isset($_SESSION['reg_failed']) && $_SESSION['reg_failed'] !== '') {
-				echo $_SESSION['reg_failed'];
-				unset($_SESSION['reg_failed']);
-			}
-			else if (isset($_SESSION['reg_check']) && $_SESSION['reg_check'] !== '') {
-				echo $_SESSION['reg_check'];
-				unset($_SESSION['reg_check']);
-			}
-			else if (isset($_SESSION['message']) && $_SESSION['message'] !== '') {
-				echo $_SESSION['message'];
-				unset($_SESSION['message']);
-			}
-			?>
-		</div>
-		</nav>
+		
+		
 	</div>
-
+		
 
 	
-								
-<div id="content-mobile">
-
-		<nav class="navbar">
-
-						<div id="mySidenavM" class="sidenav">
-							  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-							  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
-							  <a href="_about.php">About</a>
-							  <a href="-courses.php">Courses</a>
-							  <a href="_partners.php">Partners</a>
-							  <a href="_contact.php">Contact</a>
-							  <a href="_prices.php">Prices</a>
-							  <a href="_impressum.php">Impressum</a>
-						</div>
-
-						<span style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
-
-								<script>
-								function openNav() {
-								  document.getElementById("mySidenavM").style.width = "250px";
-								}
-								function closeNav() {
-								  document.getElementById("mySidenavM").style.width = "0";
-								}
-								</script>
-								
+	<div id="content-mobile">							
 						<a href="_index.php"><i class="fa fa-fw fa-home"></i></a>
 						
-						<a href="_courses.php" style=" padding:0">
+						<a href="_courses.php" style=" padding:0px; margin:0px" >
 							<div class="dropdown">
 								<button class="dropbtn"><i class="fa fa-camera-retro"></i><i class="fa fa-caret-down"></i></button>
 									<div class="dropdown-content">
@@ -243,19 +194,19 @@
 							<i class="fa fa-fw fa-user"></i> LOGOUT </button>
 							</form>
 						<?php else:?>
-							<button onclick="document.getElementById('id01M').style.display='block'"
+							<button onclick="document.getElementById('id01').style.display='block'"
 							style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
 							font-size:15px; letter-spacing:3px" id="login_btn">
 							<i class="fa fa-fw fa-user"></i> LOGIN </button>
 						<?php endif; ?>
 
 
-							<div id="id01M" class="modal">
+							<div id="id01" class="modal">
 
 							  <form class="modal-content animate" method="post">
 
 								<div class="imgcontainer">
-								  <span onclick="document.getElementById('id01M').style.display='none'" class="close" title="Close Modal">&times;</span>
+								  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 								</div>
 
 								<div class="container">
@@ -265,8 +216,8 @@
 									<label for="password"><b>Password</b></label><br>
 									<input type="password" placeholder="Enter Password" name="password" required>
 
-									<button type="submit" formaction="login.inc.php" name="login_submit" id="login_submitM">Login</button>
-									<button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submitM">Register</button>
+									<button type="submit" formaction="login.inc.php" name="login_submit" id="login_submit">Login</button>
+									<button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
 									<label><span><a href="#">Forgot password?</a></span></label>
 								</div>
 							  </form>
@@ -275,7 +226,7 @@
 
 							<script>
 							// Get the modal
-							var modal = document.getElementById('id01M');
+							var modal = document.getElementById('id01');
 							// When the user clicks anywhere outside of the modal, close it
 							window.onclick = function(event) {
 								if (event.target == modal) {
@@ -297,6 +248,8 @@
 							</div>
 					</div>
 
+	</div>
+	
 		<!--            if user is logged in, write Welcome, else echo error message    -->
 		<div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">
 			<?php
@@ -322,6 +275,6 @@
 			?>
 		</div>
 		</nav>
-	</div>
+	
 </body>
 </HTML>

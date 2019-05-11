@@ -2,7 +2,7 @@
 session_start();
 
 // Check to see if this run of the script was caused by our login submit button being clicked.
-if (isset($_POST['login_submit'] OR $_POST['login_submitM'])) {
+if (isset($_POST['login_submit'])) {
     // Also check that our username and password were passed along. If not, jump
     // down to our error message about providing both pieces of information.
     if (isset($_POST['username']) && isset($_POST['password'])) {
