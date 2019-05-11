@@ -13,14 +13,27 @@
 /* The z-index property specifies the stack order of an element.
 An element with greater stack order is always in front of an element with a lower stack order.
 Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) */
-#id01 {
+#id01, #id01M {
 	z-index: 50;
+	max-width: 100%; height: relative;
 }
 
+#mySidenav, #mySidenavM {
+	z-index:100;
+}
 
-box-sizing: {
-	border-box;
- }
+/*used by login popup window for username and password input fields*/
+input[type=text], select, textarea, input[type=password]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
 
 body {
  width:100%;
@@ -46,7 +59,7 @@ body {
   text-decoration: none;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn, {
   background-color: #F0F0EF;
 }
 

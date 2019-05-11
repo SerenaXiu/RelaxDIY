@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include ('validate.inc.php');
+  
   include ('PHP/footer.php');
   include ('PHP/navbar.php');
 ?>
@@ -17,24 +17,14 @@
 	</head>
 <style>
 
-/*used by login popup window for username and password input fields*/
-input[type=text], select, textarea, [type=password]{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+
 
 #dots {
 	margin: 10px;
 }
 
 .slideshow-container {
-  max-width: 100%;
+  max-width: 100%; height: auto;
   position: relative;
   margin: auto;
 }
@@ -109,8 +99,7 @@ input[type=text], select, textarea, [type=password]{
 }
 
 img {
-    width: 100%;
-	height:530px;
+    max-width: 100%; height: auto;
 	border-radius:15px;
 	box-shadow: 0 6px 25px 0 black;
 }
@@ -132,14 +121,7 @@ img {
 }
 
 
- .footer {
-    position:fixed;bottom:0;
-	background-color: #fff;
-    display:block;
-	padding: 6px 8px;
-	box-shadow: 0 3px 20px 0 black;
-	width: 100%;
-	text-align:center;
+
 }
 
 
@@ -162,7 +144,7 @@ img {
 
 /* scroll button */
 
-.ct-btn-scroll {
+.scroll {
   width: 49px;
   height: 10px;
   position: absolute;
@@ -182,43 +164,41 @@ img {
 	
 
 	<main>
+		<div class="slideshow-container">
+
+			<div class="mySlides fade col-md-12">
+			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
+			 
+			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
+								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+			
+			
+			
+			</div>
+		</div>
 	
-	
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slied2.jpg" style="width:100%">
 
-	<div class="slideshow-container">
+	</div>
 
-<div class="mySlides fade col-md-12">
-  <img src="slide6.jpg" style="width:100%">
-  <section class="company-heading intro-type" id="parallax-one">
-        <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" style="height: 60px; width:60px; 
-					margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
-      </div>
-	  <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/anchor/company-hero2.jpg);"></div>
-</section>
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%">
 
-</div>
+	</div>
 
-<div class="mySlides fade">
-  <img src="zumbaslide.jpg" style="width:100%">
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
 
-</div>
+	</div>
 
-<div class="mySlides fade">
-  <img src="cali.jpg" style="width:100%">
+	<div id="dots" style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
 
-</div>
-
-<div class="mySlides fade">
-  <img src="slidecook.jpg" style="width:100%">
-
-</div>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-</div>
 
 <script>
 var slideIndex = 1;
@@ -249,7 +229,9 @@ function showSlides(n) {
 }
 </script>
 
-<div class="white-bgrnd">
+
+<section class="white-bgrnd" id="section1" style="padding:5px; margin:50px;">
+		<h2 style="margin-left:50px">  
     <?php
 
     $api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -323,34 +305,58 @@ function showSlides(n) {
 
     }
     ?>
-  <section id="section2"> 
-  
+	</h2>
+	
+</section>
+ 
+<section id="section2"> 
+  <div class="center">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
+				
+				
+				<a href="https://www.w3schools.com">
+				<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/zumbaslidee1.jpg" style="width:45%; height:300px; margin-left:20px;">
+			</div>
+			
+				</br>
+				</br>
 
-        <h2>Let Big Data Change the Game</h2>
-        <p>WebCorpCo is all about making sure your marketing stack is in alignment with your 
-		company as well as the customers you serve. There is no 'one size fits all' approach 
-		to marketing. Every business is unique, customers are unique, and your marketing should 
-		be as well.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			<div class="center">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden33.jpg" style="width: 21%; height:300px; margin-left:none;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden444.jpg" style="width: 21%; height:300px; margin-left:15px;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99999.jpg" style="width: 21%; height:300px; margin-left:20px;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden7777.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
+			</div>
+			</section>
+			
+			<script>
+			$(document).ready(function(){
+			$("a").on('click', function(event) {
+				if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+				}
+			});
+			});
+			</script>
+		
+		<section id="section3">
+			<div class="white-bgrnd" style="margin-bottom:90px">
 
-    </div>
-  </section>
-  
-  $(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } 
-  });
-});
+			/*about */
 
-</div>
+			</div>
+		</section>
 
 	</main>
 	

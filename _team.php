@@ -71,7 +71,40 @@
 		<tr>
 			<td> <p class="data"> Course: <a href="course-Origami.html"> Origami </a> <br> Email: beispiel@email.com</p></td>
 		</table>
-		<br><br><br>
+		
+		
+		<div class="person">
+		<h2>Anna Kastlunger</h2>
+		<div>
+			<table class="tables" border="1" ><tr>
+				<td><span id="placeholderImg">
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna Kastelungen with Crane"> </span>
+				</span></td>
+			</tr></table>
+		</div>
+		
+		<div class="overflow"><p class="text"> 
+				Anna's love for origami goes back to her childhood. 
+				After having made her first paper creation at the age of five, 
+				she has never stopped folding since. Anna has even published her own 
+				book in which she teaches you to fold origami patterns that she created herself. 
+				Very impressing, right?! If this has convinced you to try out 
+				one of Anna’s many courses, you will be in the best hands.
+		<p/></div>
+		</div>
+	<br>
+		<div>
+		<table border="1" style="float:left; text-align:left"><tr>
+				<td><p> Course: <a href="course-Origami.html"> Origami </a> </p>
+					<span> Email: beispiel@email.com </span>
+				</td>
+		</tr></table>
+		</div>
+		
+		
+		<br>
+		<br><br><br><br><br><br><br>
 		
 		
 		<table border="1">

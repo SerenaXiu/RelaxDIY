@@ -1,7 +1,7 @@
 <?php
   session_start();
 	
-	include "PHP/serenaTesting/footer.php";
+	include "PHP/footer.php";
 	include "PHP/navbar.php";
 ?>
 

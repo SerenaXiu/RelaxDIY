@@ -2,7 +2,7 @@
 session_start();
 
 // Check to see if this run of the script was caused by our register submit button being clicked.
-if (isset($_POST['reg_submit'])) {
+if (isset($_POST['reg_submit'] OR $_POST['reg_submitM'])) {
 
 	// Also check that our username and password were passed along. If not, jump
 	// down to our error message about providing both pieces of information.
@@ -33,18 +33,18 @@ if (isset($_POST['reg_submit'])) {
 
             $_SESSION['reg_check'] = "Registration successful.";
 
-            header('location: index.php');
+            header('location: _index.php');
             exit;
 		}
 		else {
             $_SESSION['reg_failed'] = "Username already in use. Please try again.";
-            header('location: index.php');
+            header('location: _index.php');
             exit;
 		}
 	}
 	else {
         $_SESSION['reg_failed'] = "Please enter a username and password to register.";
-        header('location: index.php');
+        header('location: _index.php');
         exit;
 	}
 }

@@ -2,7 +2,7 @@
 session_start();
 
 // Check to see if this run of the script was caused by our login submit button being clicked.
-if (isset($_POST['login_submit'])) {
+if (isset($_POST['login_submit'] OR $_POST['login_submitM'])) {
     // Also check that our username and password were passed along. If not, jump
     // down to our error message about providing both pieces of information.
     if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -28,24 +28,24 @@ if (isset($_POST['login_submit'])) {
                 $_SESSION['user_id'] = $row['ID'];
                 $_SESSION['username'] = $row['username'];
                 // Once the sessions variables have been set, redirect them to the landing page / home page.
-                header('location: index.php');
+                header('location: _index.php');
                 exit;
             }
             else {
                 $_SESSION['error'] = "Invalid username or password. Please try again.";
-                header('location: index.php');
+                header('location: _index.php');
                 exit;
             }
         }
         else {
             $_SESSION['error'] = "Invalid username or password. Please try again.";
-            header('location: index.php');
+            header('location: _index.php');
             exit;
         }
     }
     else {
         $_SESSION['error'] = "Please enter a username and password to login.";
-        header('location: index.php');
+        header('location: _index.php');
         exit;
     }
 }

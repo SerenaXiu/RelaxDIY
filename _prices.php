@@ -43,8 +43,6 @@
 		</br>
 		</br>
 
-		<h3>Option 3: </h3> </br> Subject-related packages </b> 
-		You pay a fixed price and get access to three courses of a certain subject - price depends on the courses.
 
 	</main>
 

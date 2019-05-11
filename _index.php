@@ -14,17 +14,7 @@
 	</head>
 <style>
 
-/*used by login popup window for username and password input fields*/
-input[type=text], select, textarea, input[type=password]{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+
 
 #dots {
 	margin: 10px;
@@ -185,9 +175,11 @@ img {
 			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
 								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
 			
+			
+			
 			</div>
 		</div>
-
+	
 	<div class="mySlides fade">
 	  <img src="Img/Slidegallery/slied2.jpg" style="width:100%">
 
@@ -241,11 +233,7 @@ img {
 
 	<div >
 		<section id="section1" class="white-bgrnd" style="padding:5px;">
-		<h2 style="margin-left:50px">  </h2>
-		</section>
-		
-		<section id="section2">
-				<script>
+		<h2 style="margin-left:50px"> 				
 					<?php
 
 				$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -319,11 +307,11 @@ img {
 
 				}
 					?>
-						
-				</script>
-		</section>
+				</h2>			
+			</section>
 		
-			<section>
+		
+			<section id="section2">
 			<div class="center">
 				<a href="https://www.w3schools.com">
 				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
@@ -364,13 +352,13 @@ img {
 			});
 			</script>
 		
-		<section id="section3">
-			<div class="white-bgrnd" style="margin-bottom:90px">
+			<section id="section3">
+				<div class="white-bgrnd" style="margin-bottom:90px">
 
-			/*about */
+				/*about */
 
-			</div>
-		</section>
+				</div>
+			</section>
 			
 
 </main>
