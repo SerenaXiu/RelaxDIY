@@ -25,16 +25,33 @@
 <div id="content-desktop">
 		<nav class="navbar">
 
-						<div id="mySidenav" class="sidenav">
-							  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-							  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
-							  <a href="_about.php">About</a>
-							  <a href="-courses.php">Courses</a>
-							  <a href="_partners.php">Partners</a>
-							  <a href="_contact.php">Contact</a>
-							  <a href="_prices.php">Prices</a>
-							  <a href="_impressum.php">Impressum</a>
-						</div>
+            <!-- change navbar - myProfile is shown when logged in otherwise not -->
+            <?php if (isset($_SESSION['username']) && $_SESSION['username'] !== '') { ?>
+
+                <div id="mySidenav" class="sidenav">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                          <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
+                          <a href="_about.php">About</a>
+                          <a href="-courses.php">Courses</a>
+                          <a href="_partners.php">Partners</a>
+                          <a href="_contact.php">Contact</a>
+                          <a href="_prices.php">Prices</a>
+                          <a href="_impressum.php">Impressum</a>
+                    </div>
+
+            <?php } else { ?>
+
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="_about.php">About</a>
+                        <a href="-courses.php">Courses</a>
+                        <a href="_partners.php">Partners</a>
+                        <a href="_contact.php">Contact</a>
+                        <a href="_prices.php">Prices</a>
+                        <a href="_impressum.php">Impressum</a>
+                    </div>
+
+            <?php } ?>
 
 						<span id="openSide" style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
 
@@ -82,7 +99,7 @@
 						</div>
 						</a>
 
-		<!--                toggle logout / login button-->
+		<!-- toggle logout / login button-->
 						<?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>
 							<form action="logout.inc.php" method="post">
 							<button style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
@@ -144,7 +161,7 @@
 							</div>
 					</div>
 
-		<!--            if user is logged in, write Welcome, else echo error message    -->
+		<!-- if user is logged in, write Welcome, else echo error message -->
 		<div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">
 			<?php
 			if (isset($_SESSION['username']) && $_SESSION['username'] !== '') {

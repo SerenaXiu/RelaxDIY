@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3615bcc-4133-495c-9d0a-b832d6b0c624" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/CSS_Web_Page_New_Example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/login.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/loginnav.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/logout.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/main.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/nav.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/readContacts.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/readFile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/saveContacts.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/saveFile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_LogIn/validate.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_Web_Page_New_Example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMG-20190404-WA0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/header-idea.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kali.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relaxdiyinfo.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/slide1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/slide4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/teesting.html" beforeDir="false" />
-    </list>
+    <list default="true" id="e3615bcc-4133-495c-9d0a-b832d6b0c624" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,35 +10,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logout.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/RelaxDIY.iml">
+        <entry file="file://$PROJECT_DIR$/CSS/general.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -74,6 +22,8 @@
       <find>index.php</find>
       <find>login_submit</find>
       <find>reg_submit</find>
+      <find>sess</find>
+      <find>calli</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,9 +45,11 @@
         <option value="$PROJECT_DIR$/about.html" />
         <option value="$PROJECT_DIR$/weather.inc.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/logout.inc.php" />
-        <option value="$PROJECT_DIR$/login.inc.php" />
         <option value="$PROJECT_DIR$/register.inc.php" />
+        <option value="$PROJECT_DIR$/login.inc.php" />
+        <option value="$PROJECT_DIR$/logout.inc.php" />
+        <option value="$PROJECT_DIR$/PHP/navbar.php" />
+        <option value="$PROJECT_DIR$/_index.php" />
       </list>
     </option>
   </component>
@@ -105,17 +57,17 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
+    <option name="x" value="798" />
     <option name="y" value="130" />
-    <option name="width" value="1440" />
+    <option name="width" value="1128" />
     <option name="height" value="780" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,6 +79,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Course" />
       <pane id="PackagesPane" />
     </panes>
@@ -168,16 +121,17 @@
       <workItem from="1556900141949" duration="124000" />
       <workItem from="1556901763771" duration="3000" />
       <workItem from="1557522121558" duration="1000000" />
+      <workItem from="1557566255843" duration="8445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9075000" />
+    <option name="totallyTimeSpent" value="19069000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28053692" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.04" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -246,19 +200,6 @@
     <entry file="file://$PROJECT_DIR$/saveFile.php" />
     <entry file="file://$PROJECT_DIR$/weather.inc.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$PROJECT_DIR$/.idea/RelaxDIY.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/general.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/register.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -266,12 +207,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logout.inc.php">
+    <entry file="file://$PROJECT_DIR$/.idea/RelaxDIY.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        <state relative-caret-position="-493">
+          <caret line="107" column="35" lean-forward="true" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2048" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="249" column="25" selection-start-line="249" selection-start-column="25" selection-end-line="249" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/general.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

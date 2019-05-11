@@ -1,13 +1,17 @@
 <?php
   session_start();
-  
+
+    // includes the outsourced footer & navbar.
 	include "PHP/footer.php";
 	include "PHP/navbar.php";
+
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset='utf-8'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -233,7 +237,7 @@ img {
 
 	<div >
 		<section id="section1" class="white-bgrnd" style="padding:5px;">
-		<h2 style="margin-left:50px"> 				
+		<h3 style="margin-left:50px">
 					<?php
 
 				$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -241,73 +245,104 @@ img {
 
 				$data = file_get_contents($api_url);
 				$clean_data = json_decode($data,TRUE);
+				echo 'Current temperature: ';
 				echo $clean_data['currently']['temperature'];
+				echo ' °C';
 				//echo '<script>alert($data);</script>';
 				$temperature = $clean_data['currently']['temperature'];
 				$weather = $clean_data['currently']['icon'];
 
 				switch ($weather){
 					case 'clear-day':
-						if ($temperature > 18) {
-							echo '<p>Its a beautiful Day how about some <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						}elseif ($temperature > 0){
-							echo '<p>Its sunny but rather cold why dont you <a href="writing.html"target= "blank">Write something?</a></p>';
+						if ($temperature > 20) {
+							echo '<p>It&#039;s a beautiful day! How about a <a href="zumba.html" target= "blank">Zumba</a> course with Judyta in the park?</p>';
+						}elseif ($temperature > 10){
+							echo '<p>It&#039;s sunny but rather cold! Why don&#039;t you stay inside and improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills by watching one of Elisabeth&#039;s tutorials? &#128175 </p>';
 						}else{
-							echo '<p>Its very cold why dont you <a href="cooking.html"target= "blank">cook something warm?</a></p>';
+							echo '<p>It&#039;s very cold. Why don&#039;t you <a href="cooking.html"target= "blank">cook</a> some warming pumkin soup following Gaelle&#039;s instructions?</p>';
 						}
 						break;
 
 					case 'clear-night':
-						echo '<p>Its a clear night perfect time to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
-						break;
+						if ($temperature > 10) {
+						    echo '<p>It&#039;s a clear night! Perfect time to <a href="daemons.html"target= "blank">summon some demons</a>!</p>';
+                        } else {
+						    echo '<p>It&#039;s pretty cold this night! Why don&#039;t you stay inside and improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills?</p>';
+                        } break;
 
 					case 'rain':
-						echo '<p>Ah a rainy day you could try some <a href="origami.html">Origami.</a>></p>';
+					    if ($temperature > 20) {
+                            echo '<p>Ah a rainy day but still pretty warm! You could go outside and improve your <a href="photgraphy.html">photography</a> skills.</p>';
+                        } elseif ($temperature > 10) {
+                            echo '<p>Ah a rainy day! You could try some <a href="origami.html">origami</a> at home following Anna&#039;s instructions.</p>';
+                        } else {
+                            echo '<p>Ah a rainy day and really cold! You could try to summon some nice weather <a href="demons.html">demons</a> following Thomas&#039; instructions.</p>';
+                        }
 						break;
 
 					case 'snow':
-						echo '<p>Ah a snowy day you could try some <a href="origami.html">Origami</a>> or <a href="writing.html" target= "blank">Write something.</a></p>';
+						echo '<p>Ah a snowy day! You could try some <a href="origami.html">origami</a> or improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills.</p>';
 						break;
 
 					case 'sleet':
 						if ($temperature > 18) {
-							echo '<p>Test Case 1 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						}elseif ($temperature > 0){
-							echo '<p>Test Case 2 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+							echo '<p>Urgh sleet! Better stay inside and make some <a href="origami.html">origami</a> following Anna&#039;s instructions.</p>';
 						}else{
-							echo '<p>Test Case 3 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
+							echo '<p>Urgh sleet & pretty cold. Better stay at home and try out one of Serena&#039;s <a href="photgraphy.html">photography</a> courses.</p>';
 						}
 						break;
 
 					case 'wind':
-						if ($temperature > 18) {
-							echo '<p>Test Case 4 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						}elseif ($temperature > 0){
-							echo '<p>Test Case 5 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						}else{
-							echo '<p>Test Case 6 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						}
-						break;
+                        if ($temperature > 18) {
+                            echo '<p>Very windy today but nice temperatures! Better stay inside and make some <a href="origami.html">origami</a></p>';
+                        }else{
+                            echo '<p>Urgh windy and not too warm today. Better stay at home and try out one of Gaelle&#039;s <a href="cooking.html"target= "blank">cooking</a> courses.</p>';
+                        }
+                        break;
 
 					case 'fog':
-						echo '<p>Foggy weather is perfect to <a href="daemons.html"target= "blank">Summon some Demons!</a></p>';
-						break;
+                        if ($temperature > 20) {
+                            echo '<p>It&#039;s a foggy day but nice temperatures. How about some <a href="zumba.html" target= "blank">Zumba</a> in the park?</p>';
+                        }elseif ($temperature > 10){
+                            echo '<p>It&#039;s foggy and rather cold! Why don&#039;t you stay inside and improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills?</p>';
+                        }else{
+                            echo '<p>It&#039;s very cold today and so much fog! Why don&#039;t you try to summon some nice weather <a href="demons.html">demons</a> following Thomas&#039; instructions.</p>';
+                        }
+                        break;
 
 					case 'cloudy':
-						echo '<p>Test Case 7 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						break;
+                        if ($temperature > 20) {
+                            echo '<p>It&#039;s a cloudy day but such nice temperatures! How about some <a href="zumba.html" target= "blank">Zumba</a> in the park?</p>';
+                        }elseif ($temperature > 10){
+                            echo '<p>It&#039;s cloudy and rather cold! Better stay inside and improve your<a href="photogrpahy.html"target= "blank">photography</a> skills with Serena&#039;s help.</p>';
+                        }else{
+                            echo '<p>It&#039;s very cold today and so cloudy! Why dont you stay inside and fold some <a href="origami.html"target= "blank">Origami</a> objects?</p>';
+                        }
+                        break;
 
 					case 'partly-cloudy-day':
-						echo '<p>Test Case 8 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						break;
+                        if ($temperature > 20) {
+                            echo '<p>It&#039;s cloudy but still warm! How about some <a href="zumba.html" target= "blank">Zumba</a> to clear your mind?</p>';
+                        }elseif ($temperature > 10){
+                            echo '<p>It&#039;s cloudy and rather cold. Why don&#039;t you stay inside and improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills?</p>';
+                        }else{
+                            echo '<p>It&#039;s very cold today. Why don&#039;t you <a href="cooking.html"target= "blank">cook</a> some warming potato soup?</p>';
+                        }
+                        break;
 
 					case 'partly-cloudy-night':
-						echo '<p>Test Case 9 <a href="https://www.zumba.com" target= "blank">Zumba?</a></p>';
-						break;
+                        if ($temperature > 20) {
+                            echo '<p>It&#039;s cloudy but still warm! How about some nightime <a href="zumba.html" target= "blank">Zumba</a> to clear your mind?</p>';
+                        }elseif ($temperature > 10){
+                            echo '<p>It&#039;s cloudy and rather cold and pretty late anyway. Why don&#039;t you stay inside and improve your <a href="origami.html"target= "blank">Origami</a> skills?</p>';
+                        }else{
+                            echo '<p>It&#039;s very cold today. Why don&#039;t you <a href="cooking.html"target= "blank">cook</a> a midnight supper with Gaelle&#039;s help?</p>';
+                        }
+                        break;
 
 				}
 					?>
-				</h2>			
+				</h3>
 			</section>
 		
 		
