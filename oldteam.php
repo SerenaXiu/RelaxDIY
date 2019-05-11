@@ -73,12 +73,10 @@
 		</table>
 		
 		
-		<div class="persons">
-		
-		<div>
+		<div class="person">
 		<h2>Anna Kastlunger</h2>
 		<div>
-			<table class="tables float" border="1" ><tr>
+			<table class="tables" border="1" ><tr>
 				<td><span id="placeholderImg">
 					<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane"> </span>
 					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna Kastelungen with Crane"> </span>
@@ -94,17 +92,16 @@
 				Very impressing, right?! If this has convinced you to try out 
 				one of Anna’s many courses, you will be in the best hands.
 		<p/></div>
-		
+		</div>
 	<br>
 		<div>
-		<table border="1" style="clear:left; text-align:left"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Origami </a> <br> <b>Email:</b> beispiel@email.com </p>
+		<table border="1" style="float:left; text-align:left"><tr>
+				<td><p> Course: <a href="course-Origami.html"> Origami </a> </p>
+					<span> Email: beispiel@email.com </span>
 				</td>
 		</tr></table>
 		</div>
-		</div>
 		
-		</div>
 		
 		<br>
 		<br><br><br><br><br><br><br>

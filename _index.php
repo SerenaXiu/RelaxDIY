@@ -14,8 +14,6 @@
 	</head>
 <style>
 
-
-
 #dots {
 	margin: 10px;
 }
@@ -164,8 +162,6 @@ img {
 	</header>
 
 	<main>
-
-
 
 		<div class="slideshow-container">
 

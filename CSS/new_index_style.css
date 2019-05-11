@@ -1,0 +1,142 @@
+<style>
+
+#dots {
+	margin: 10px;
+}
+
+.slideshow-container {
+  max-width: 100%; height: auto;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container .btn {
+  position: absolute;
+  top: 74%;
+  left: 65%;
+  transform: translate(-60%, -60%);
+  -ms-transform: translate(-60%, -60%);
+  background-color: #fff;
+  opacity: 0.9;
+  color: grey;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 25px 0 black;
+
+}
+
+.slideshow-container .btn:hover {
+  opacity:0.7;
+  filter: alpha(opacity=70);
+
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ .mySlides {
+	display: none
+	}
+
+.fakeimg {
+  background-color: white;
+  width: 100%;
+}
+
+img {
+    max-width: 100%; height: auto;
+	border-radius:15px;
+	box-shadow: 0 6px 25px 0 black;
+}
+
+.zoom {
+ padding:10px;
+ background:rgba(255,255,255, 0.90);
+
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+
+
+}
+
+
+.center {
+
+  text-align: center;
+  width: 100%;
+  border: none;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* scroll button */
+
+.scroll {
+  width: 49px;
+  height: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 300px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+</style>
