@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 29. Apr 2019 um 16:47
+-- Erstellungszeit: 11. Mai 2019 um 21:28
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `relaxdiy`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `booked_courses`
+--
+
+CREATE TABLE `booked_courses` (
+  `customer_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci;
 
 -- --------------------------------------------------------
 
@@ -69,7 +80,8 @@ INSERT INTO `login_data` (`ID`, `username`, `email`, `password`, `ms_lvl`) VALUE
 (6, 'Max', '', '$2y$10$zw4cTm/SBOSz3qIjrBMeSuUjknJdZkfRGg.yJbwdJsYYGCh6VAuC6', 0),
 (7, 'Moritz', '', '$2y$10$BmC64OQDy2nrH3PG685eAOY90NgLX/AamdeC.1qpS0VTqABkU1ABe', 0),
 (8, 'Wilhelm', '', '$2y$10$dTdE.TAcy33jXBwsAQQzN.otVUvgKU.wGYWYHLhdMIaLqVzfu/PZW', 0),
-(9, 'Busch', '', '$2y$10$Wc4CQHFqZ3O/GN177K5S..LVi.R6T9ysLqUtlSghQh5uGwcjtA/yW', 0);
+(9, 'Busch', '', '$2y$10$Wc4CQHFqZ3O/GN177K5S..LVi.R6T9ysLqUtlSghQh5uGwcjtA/yW', 0),
+(10, 'Nimmersatt', '', '$2y$10$smulSLO9iqotH3oBhznGEOw81wniiqEyMAqwDfZiRQ7.9bgdI7UsS', 0);
 
 --
 -- Indizes der exportierten Tabellen
@@ -102,7 +114,7 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT für Tabelle `login_data`
 --
 ALTER TABLE `login_data`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
