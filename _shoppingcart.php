@@ -10,18 +10,18 @@
   switch($_GET["action"]) {
   	case "add":
   		if(!empty($_POST["quantity"])) {
-        $msg = $_POST["ID"];
-        echo "<script type='text/javascript'>alert('$msg');</script>";
-        $pdo_query = $pdo->prepare("SELECT * FROM courses WHERE ID='".$_POST["ID"]."'");
-        $pdo_query->execute();
-        $pdo_query->setFetchMode(PDO::FETCH_ASSOC);
-        $productByCode = $pdo_query->fetch();
-  			$itemArray = array($productByCode[0]["ID"]=>array('name'=>$productByCode[0]["name"], 'ID'=>$productByCode[0]["ID"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"]));
+        // $msg = $_GET["ID"];
+        // echo "<script type='text/javascript'>alert('$msg');</script>";
+        $pdo_query_ID = $pdo->prepare("SELECT * FROM courses WHERE ID='" . $_GET["ID"] . "'");
+        $pdo_query_ID->execute();
+        $pdo_query_ID->setFetchMode(PDO::FETCH_ASSOC);
+        $productByCode = $pdo_query_ID->fetch();
+  			$itemArray = array($productByCode["ID"]=>array('name'=>$productByCode["name"], 'ID'=>$productByCode["ID"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode["price"]));
 
   			if(!empty($_SESSION["cart_item"])) {
-  				if(in_array($productByCode[0]["ID"],array_keys($_SESSION["cart_item"]))) {
+  				if(in_array($productByCode["ID"],array_keys($_SESSION["cart_item"]))) {
   					foreach($_SESSION["cart_item"] as $k => $v) {
-  							if($productByCode[0]["ID"] == $k) {
+  							if($productByCode["ID"] == $k) {
   								if(empty($_SESSION["cart_item"][$k]["quantity"])) {
   									$_SESSION["cart_item"][$k]["quantity"] = 0;
   								}
@@ -39,6 +39,8 @@
   	case "remove":
   		if(!empty($_SESSION["cart_item"])) {
   			foreach($_SESSION["cart_item"] as $k => $v) {
+          var_dump($_SESSION["cart_item"][$k]["ID"]);
+          echo $_GET["ID"];
   					if($_GET["ID"] == $k)
   						unset($_SESSION["cart_item"][$k]);
   					if(empty($_SESSION["cart_item"]))
@@ -46,6 +48,11 @@
   			}
   		}
   	break;
+    case "shopnow":
+      foreach($_SESSION["cart_item"] as $k => $v) {
+              var_dump($_SESSION["cart_item"]);
+      }
+    break;
   	case "empty":
   		unset($_SESSION["cart_item"]);
   	break;
@@ -53,9 +60,9 @@
   }
 }
 else {
-  echo "<script>alert('Please log in first.');
-  window.location.href='_index.php';
-  </script>";
+    echo "<script>alert('Please log in first.');
+    window.location.href='_index.php';
+    </script>";
   exit;
 }
 ?>
@@ -124,7 +131,7 @@ else {
   }
 
   #product-grid .txt-heading {
-  	margin-bottom: 18px;
+  	margin-bottom: 30px;
   }
 
   .product-item {
@@ -196,6 +203,7 @@ else {
   	margin: 38px 0px;
   }
 </style>
+
 <body>
 
 	<header>
@@ -231,9 +239,10 @@ else {
     				<td  style="text-align:right;"><?php echo "€ ".$item["price"]; ?></td>
     				<td  style="text-align:right;"><?php echo "€ ". number_format($item_price,2); ?></td>
             <td style="text-align:center;">
-              <form method="post" action="_shoppingcart.php?action=remove&code=<?php echo $item["ID"]; ?>">
-                <input type="submit" value="Remove"  class="btnRemoveAction"></a></td>
+              <form method="post" action="_shoppingcart.php?action=remove&ID=<?php echo $item["ID"]; ?>">
+                <input type="submit" value="Remove" class="btnRemoveAction" />
               </form>
+            </td>
     				</tr>
     				<?php
     				$total_quantity += $item["quantity"];
@@ -245,7 +254,11 @@ else {
     <td colspan="2" align="right">Total:</td>
     <td align="right"><?php echo $total_quantity; ?></td>
     <td align="right" colspan="2"><strong><?php echo "€ ".number_format($total_price, 2); ?></strong></td>
-    <td></td>
+    <td style="text-align:center;">
+      <form method="post" action="_shoppingcart.php?action=shopnow&ID=<?php echo $_SESSION["cart_item"]; ?>">
+        <input type="submit" value="Shop now" class="btnAddAction" />
+      </form>
+    </td>
     </tr>
     </tbody>
     </table>
@@ -270,14 +283,14 @@ else {
     		foreach($product_array as $key=>$value){
     	?>
     		<div class="product-item">
-    			<form method="post" action="_shoppingcart.php?action=add&code=<?php echo $product_array[$key]["ID"]; ?>">
+    			<form method="post" action="_shoppingcart.php?action=add&ID=<?php echo $product_array[$key]["ID"]; ?>">
     			<div class="product-tile-footer">
     			<div class="product-title">Course: <?php echo $product_array[$key]["name"]; ?></div>
           <div class="product-title">ID: <?php echo $product_array[$key]["ID"]; ?></div>
           <div class="product-title">Instructor: <?php echo $product_array[$key]["instructor"]; ?></div>
     			<div class="product-price">Price: <?php echo "€ ".$product_array[$key]["price"]; ?></div>
     			<div class="cart-action">
-                    <input type="text" class="product-quantity" name="quantity" value="1" size="2" />
+                    <input type="hidden" class="product-quantity" name="quantity" value="1" size="2" />
                     <input type="submit" value="Add to Cart" class="btnAddAction" /></div>
     			</div>
     			</form>
