@@ -386,7 +386,8 @@ img {
 			<section id="section3">
 				<div class="white-bgrnd" style="margin-bottom:90px">
 
-                    <h4> About RelaxDIY </h4>
+                <a class="not-active" href="http://localhost:8081/RelaxDIY/_index.php" >   
+					<h4> About RelaxDIY </h4>
                     <p> Are you feeling stressed and exhausted? <br />
                         Are you having trouble concentrating throughout your day? <br />
                         Are you in desperate need of a break from the daily grind? <br />
@@ -403,8 +404,10 @@ img {
                             and find the one that will help you to relax. </b>
                     </p>
                     </br>
-                    <a href="courses.html" class="a"><b>&#8702; Go to Courses</b></a>
-
+					<div class="goTo">
+                    <a href="_courses.php" class="a"><b>&#8702; Go to Courses</b></a>
+					</div>
+				</a>
 				</div>
 			</section>
 			
