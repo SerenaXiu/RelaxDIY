@@ -2,7 +2,7 @@
 session_start();
 
 // Check to see if this run of the script was caused by our register submit button being clicked.
-if (isset($_POST['reg_submit'] OR $_POST['reg_submitM'])) {
+if (isset($_POST['reg_submit'])) {
 
 	// Also check that our username and password were passed along. If not, jump
 	// down to our error message about providing both pieces of information.

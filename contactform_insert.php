@@ -43,6 +43,6 @@ if (isset($_POST['msg_submit'])) {
 else {
     $_SESSION['message'] = "Oops, something went terribly wrong!";
 }
-header('location:index.php');
+header('location:_index.php');
 exit;
 ?>
