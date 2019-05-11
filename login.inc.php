@@ -27,6 +27,7 @@ if (isset($_POST['login_submit'])) {
                 $_SESSION['is_auth'] = true;
                 $_SESSION['user_id'] = $row['ID'];
                 $_SESSION['username'] = $row['username'];
+                $_SESSION["cart_item"];
                 // Once the sessions variables have been set, redirect them to the landing page / home page.
                 header('location: _index.php');
                 exit;

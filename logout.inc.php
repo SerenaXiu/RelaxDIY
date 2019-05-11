@@ -5,6 +5,7 @@ session_start();
   unset($_SESSION['is_auth']);
   unset($_SESSION['username']);
   unset($_SESSION['ID']);
+  $_SESSION["cart_item"];
 
   //  delete session cookie
   if (ini_get("session.use_cookies")) {
