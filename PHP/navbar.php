@@ -194,19 +194,19 @@
 							<i class="fa fa-fw fa-user"></i> LOGOUT </button>
 							</form>
 						<?php else:?>
-							<button onclick="document.getElementById('id01').style.display='block'"
+							<button onclick="document.getElementById('id01M').style.display='block'"
 							style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
 							font-size:15px; letter-spacing:3px" id="login_btn">
 							<i class="fa fa-fw fa-user"></i> LOGIN </button>
 						<?php endif; ?>
 
 
-							<div id="id01" class="modal">
+							<div id="id01M" class="modal">
 
 							  <form class="modal-content animate" method="post">
 
 								<div class="imgcontainer">
-								  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+								  <span onclick="document.getElementById('id01M').style.display='none'" class="close" title="Close Modal">&times;</span>
 								</div>
 
 								<div class="container">
@@ -226,7 +226,7 @@
 
 							<script>
 							// Get the modal
-							var modal = document.getElementById('id01');
+							var modal = document.getElementById('id01M');
 							// When the user clicks anywhere outside of the modal, close it
 							window.onclick = function(event) {
 								if (event.target == modal) {

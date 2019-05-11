@@ -2,7 +2,7 @@
   session_start();
 
  	include "PHP/footer.php";
-	include "PHP/navbarOld.php";
+	include "PHP/navbar.php";
 	
 ?>
 
