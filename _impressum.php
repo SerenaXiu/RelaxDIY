@@ -33,7 +33,7 @@
 	<header>
 	</header>
 
-	<main  class="white-bgrnd">
+	<main  class="white-bgrnd" style="margin-bottom:70px;">
 		
 	<div id="impressum"><pre style="font-family: Bell MT">
 	Impressum

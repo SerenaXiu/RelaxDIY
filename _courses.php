@@ -25,7 +25,7 @@
 	<header>
 	</header>
 
-	<main class="white-bgrnd">
+	<main class="white-bgrnd" style="margin-bottom:70px;">
 		
 	<h1> Check out our courses… </h1>
 
