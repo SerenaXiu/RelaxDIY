@@ -174,7 +174,7 @@ img {
 		<div class="slideshow-container">
 
 			<div class="mySlides fade col-md-12">
-			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: 550px;; border-radius:0px;">
+			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: 550px; border-radius:0px;">
 			 
 			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
 								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
@@ -185,17 +185,17 @@ img {
 		</div>
 	
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%; height:550px;;">
+	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%; height:550px;">
+	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%; height:550px;">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
