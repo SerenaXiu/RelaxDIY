@@ -3,7 +3,10 @@
 
 	include "PHP/footer.php";
 	include "PHP/navbar.php";
+  require_once("_dbcontroller.php");
+  $db_handle = new DBController;
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -27,12 +30,8 @@
 
     <?php
     if(isset($_SESSION["is_auth"]) && $_SESSION["is_auth"] == true){
-      $pdo = new PDO("mysql:host=localhost;dbname=relaxdiy", "root", "");
-      $pdo_query = $pdo->prepare("SELECT courses.name, courses.instructor FROM courses INNER JOIN booked_courses
-        ON courses.ID = booked_courses.course_id WHERE booked_courses.customer_id = '" . $_SESSION["user_id"] . "'");
-      $pdo_query->execute();
-      $pdo_query->setFetchMode(PDO::FETCH_ASSOC);
-      $product_array = $pdo_query->fetchAll();
+      $product_array = $db_handle->runQuery("SELECT courses.name, courses.instructor FROM courses INNER JOIN booked_courses
+         ON courses.ID = booked_courses.course_id WHERE booked_courses.customer_id = '" . $_SESSION["user_id"] . "'");
     ?>
     <table class="tbl-cart" cellpadding="10" cellspacing="1">
     <tbody>

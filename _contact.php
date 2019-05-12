@@ -1,6 +1,6 @@
 <?php
   session_start();
-	
+
 	include "PHP/footer.php";
 	include "PHP/navbar.php";
 ?>
@@ -10,13 +10,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
 
 /* for Cotact-Form */
-.container-contact { 
+.container-contact {
   border-radius: 5px;
   background-color: #fff;
   padding: 20px;
@@ -35,16 +35,16 @@
 	</header>
 
 	<main>
-	
+
 	<!-- Contact Form -->
-	<div class="container-contact" style="margin-bottom:70px;">
+	<div class="container-contact">
 		<form action="contactform_insert.php" method="post" name="contactform" enctype="text/plain">
 			<label for="fname">First Name</label>
 			<input type="text" id="fname" name="fname" required placeholder="Your name..">
 
 			<label for="lname">Last Name</label>
 			<input type="text" id="lname" name="lname" required placeholder="Your last name..">
-			
+
 			<label for="email">Email Address</label>
 			<input type="text" id="email" name="email" required placeholder="Your email address.." maxlength="80">
 
@@ -69,11 +69,7 @@
 
 	</main>
 
-	<footer class="footer">
-		<strong><script src="http://numbersapi.com/random?write"></script></strong>
-		<br>
-		Copyright &copy; 2019 <a href="impressum.html">relaxDIY.com</a>
-	</footer>
-		
+
+
 </body>
 </html>

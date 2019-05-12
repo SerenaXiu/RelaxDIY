@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
-		
+
 		<style>
 		 footer {
 			position:fixed;bottom:0;
@@ -18,14 +18,14 @@
 			width: 100%;
 			text-align:center;
 		}
-		
+
 	</style>
 	</head>
 
 	<body>
 		<footer>
 			<strong>"<script src="http://numbersapi.com/random?write"></script>"</strong>
-			
-			<br>Copyright &copy; 2019 <a href="impressum.html">relaxDIY.com</a>
-		</footer>	
+
+			<br>Copyright &copy; 2019 <a href="_impressum.php">relaxDIY.com</a>
+		</footer>
 	</body>

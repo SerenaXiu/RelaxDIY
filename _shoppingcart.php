@@ -3,26 +3,21 @@
 
 	include "PHP/footer.php";
 	include "PHP/navbar.php";
+  require_once("_dbcontroller.php");
+  $db_handle = new DBController;
 
   if (isset($_SESSION["is_auth"]) && $_SESSION["is_auth"] == true) {
-  $pdo = new PDO("mysql:host=localhost;dbname=relaxdiy", "root", "");
-
   if(!empty($_GET["action"])) {
   switch($_GET["action"]) {
   	case "add":
   		if(!empty($_POST["quantity"])) {
-        // $msg = $_GET["ID"];
-        // echo "<script type='text/javascript'>alert('$msg');</script>";
-        $pdo_query_ID = $pdo->prepare("SELECT * FROM courses WHERE ID='" . $_GET["ID"] . "'");
-        $pdo_query_ID->execute();
-        $pdo_query_ID->setFetchMode(PDO::FETCH_ASSOC);
-        $productByCode = $pdo_query_ID->fetch();
-  			$itemArray = array($productByCode["ID"]=>array('name'=>$productByCode["name"], 'ID'=>$productByCode["ID"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode["price"]));
+        $productByCode = $db_handle->runQuery("SELECT * FROM courses WHERE ID='" . $_GET["ID"] . "'");
+  			$itemArray = array($productByCode[0]["ID"]=>array('name'=>$productByCode[0]["name"], 'ID'=>$productByCode[0]["ID"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"]));
 
   			if(!empty($_SESSION["cart_item"])) {
-  				if(in_array($productByCode["ID"],array_keys($_SESSION["cart_item"]))) {
+  				if(in_array($productByCode[0]["ID"],array_keys($_SESSION["cart_item"]))) {
   					foreach($_SESSION["cart_item"] as $k => $v) {
-  							if($productByCode["ID"] == $k) {
+  							if($productByCode[0]["ID"] == $k) {
   								if(empty($_SESSION["cart_item"][$k]["quantity"])) {
   									$_SESSION["cart_item"][$k]["quantity"] = 0;
   								}
@@ -48,10 +43,10 @@
   		}
   	break;
     case "shopnow":
-    $pdo_query_shopnow = $pdo->prepare("INSERT INTO booked_courses (customer_id, course_id) VALUES (:customer_id, :course_id)");
+    $shopnow = $db_handle->prepare("INSERT INTO booked_courses (customer_id, course_id) VALUES (:customer_id, :course_id)");
       foreach($_SESSION["cart_item"] as $k => $v) {
               $next_course = array("customer_id"=>$_SESSION["user_id"], "course_id"=>$_SESSION["cart_item"][$k]["ID"]);
-              $pdo_query_shopnow->execute($next_course);
+              $shopnow->execute($next_course);
       }
       unset($_SESSION["cart_item"]);
     break;
@@ -143,11 +138,11 @@ else {
   	border: #E0E0E0 1px solid;
   }
 
-  .product-image {
+  /* .product-image {
   	height: 155px;
   	width: 250px;
   	background-color: #FFF;
-  }
+  } */
 
   .clear-float {
   	clear: both;
@@ -190,7 +185,7 @@ else {
       overflow: auto;
   }
 
-  .cart-item-image {
+  /* .cart-item-image {
   	width: 30px;
       height: 30px;
       border-radius: 50%;
@@ -198,7 +193,7 @@ else {
       padding: 5px;
       vertical-align: middle;
       margin-right: 15px;
-  }
+  } */
   .no-records {
   	text-align: center;
   	clear: both;
@@ -276,11 +271,7 @@ else {
     <div id="product-grid">
     	<div class="txt-heading">Our courses</div>
     	<?php
-      $pdo_query = $pdo->prepare("SELECT * FROM courses ORDER BY instructor ASC");
-      $pdo_query->execute();
-      $pdo_query->setFetchMode(PDO::FETCH_ASSOC);
-      $product_array = $pdo_query->fetchall();
-
+      $product_array = $db_handle->runQuery("SELECT * FROM courses ORDER BY instructor ASC");
     	if (!empty($product_array)) {
     		foreach($product_array as $key=>$value){
     	?>
