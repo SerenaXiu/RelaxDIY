@@ -3,6 +3,7 @@
 
 	include "PHP/footer.php";
 	include "PHP/navbar.php";
+
   if (isset($_SESSION["is_auth"]) && $_SESSION["is_auth"] == true) {
   $pdo = new PDO("mysql:host=localhost;dbname=relaxdiy", "root", "");
 
@@ -39,9 +40,7 @@
   	case "remove":
   		if(!empty($_SESSION["cart_item"])) {
   			foreach($_SESSION["cart_item"] as $k => $v) {
-          var_dump($_SESSION["cart_item"][$k]["ID"]);
-          echo $_GET["ID"];
-  					if($_GET["ID"] == $k)
+  					if($_GET["ID"] == $_SESSION["cart_item"][$k]["ID"])
   						unset($_SESSION["cart_item"][$k]);
   					if(empty($_SESSION["cart_item"]))
   						unset($_SESSION["cart_item"]);
@@ -49,9 +48,12 @@
   		}
   	break;
     case "shopnow":
+    $pdo_query_shopnow = $pdo->prepare("INSERT INTO booked_courses (customer_id, course_id) VALUES (:customer_id, :course_id)");
       foreach($_SESSION["cart_item"] as $k => $v) {
-              var_dump($_SESSION["cart_item"]);
+              $next_course = array("customer_id"=>$_SESSION["user_id"], "course_id"=>$_SESSION["cart_item"][$k]["ID"]);
+              $pdo_query_shopnow->execute($next_course);
       }
+      unset($_SESSION["cart_item"]);
     break;
   	case "empty":
   		unset($_SESSION["cart_item"]);
@@ -208,7 +210,7 @@ else {
 
 	<header>
 	</header>
-
+<main class="white-bgrnd">
     <div id="shopping-cart">
     <div class="txt-heading">Shopping Cart</div>
 
@@ -300,6 +302,6 @@ else {
     	}
     	?>
     </div>
-
+</main>
 </body>
 </html>

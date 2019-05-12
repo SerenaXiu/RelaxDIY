@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 11. Mai 2019 um 21:28
+-- Erstellungszeit: 12. Mai 2019 um 18:22
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -32,6 +32,16 @@ CREATE TABLE `booked_courses` (
   `customer_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci;
+
+--
+-- Daten für Tabelle `booked_courses`
+--
+
+INSERT INTO `booked_courses` (`customer_id`, `course_id`) VALUES
+(6, 4),
+(6, 4),
+(6, 3),
+(6, 1);
 
 -- --------------------------------------------------------
 
