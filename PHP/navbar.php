@@ -211,19 +211,19 @@
 							<i class="fa fa-fw fa-user"></i> LOGOUT </button>
 							</form>
 						<?php else:?>
-							<button onclick="document.getElementById('id01M').style.display='block'"
+							<button onclick="document.getElementById('id01').style.display='block'"
 							style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
 							font-size:15px; letter-spacing:3px" id="login_btn">
 							<i class="fa fa-fw fa-user"></i> LOGIN </button>
 						<?php endif; ?>
 
 
-							<div id="id01M" class="modal">
+							<div id="id01" class="modal">
 
 							  <form class="modal-content animate" method="post">
 
 								<div class="imgcontainer">
-								  <span onclick="document.getElementById('id01M').style.display='none'" class="close" title="Close Modal">&times;</span>
+								  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 								</div>
 
 								<div class="container">
@@ -243,7 +243,7 @@
 
 							<script>
 							// Get the modal
-							var modal = document.getElementById('id01M');
+							var modal = document.getElementById('id01');
 							// When the user clicks anywhere outside of the modal, close it
 							window.onclick = function(event) {
 								if (event.target == modal) {
@@ -252,8 +252,8 @@
 							}
 							</script>
 
+				<div id="shoppingcart">
 					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i></a>
-
 					<div class="dropdown" style="float:right">
 						<button class="dropbtn"><i class="fa fa-search"></i></button>
 							<div class="dropdown-content" style="margin-top:33px; background-color:transparent;
@@ -264,7 +264,7 @@
 								</form>
 							</div>
 					</div>
-
+				</div>
 	</div>
 	
 		<!--            if user is logged in, write Welcome, else echo error message    -->

@@ -1,5 +1,4 @@
-/* General settings, which can be found on all pages! */
-
+/* General CSS, which can be found on all pages! */
 .white-bgrnd {
 	margin: 20px;
 	padding: 50px;
@@ -8,17 +7,23 @@
 	box-shadow: 0 6px 25px 0 black;	
 }
 
-
+/* about.php */
+#aboutText{
+	text-align: center;
+	font-size:19px;
+	vertical-align: middle;
+	padding: 2% 0;
+	}
 
 /* The z-index property specifies the stack order of an element.
 An element with greater stack order is always in front of an element with a lower stack order.
-Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) */
-#id01, #id01M {
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
+*/
+#id01 {
 	z-index: 50;
 	max-width: 100%; height: relative;
 }
-
-#mySidenav, #mySidenavM {
+#mySidenav {
 	z-index:100;
 }
 
@@ -271,17 +276,21 @@ input[type=text], select, textarea {
   text-decoration: none;
 }
 
-goTo {
-	background-color: #f44336;
-	color: white;
-	padding: 14px 25px;
-	text-align: center; 
-	text-decoration: none;
-	display: inline-block;
+/*unfinished*/
+.goTo {
+	 background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
-a:hover {
-	#26B3AA
+
+.goTo a:hover, {
+  background-color: green;
+  color: white;
 }
 
 footer {
@@ -293,3 +302,8 @@ footer {
 	width: 100%;
 	text-align:center;
 }
+
+
+
+
+

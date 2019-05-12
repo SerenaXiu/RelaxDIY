@@ -12,21 +12,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-	<style>
-	
-	
-	#text{
-		text-align: center;
-		font-size:19px;
-	
-		vertical-align: middle;
-		padding: 2% 0;
-	}
-	
-	</style>
-	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	</head>
 
 
@@ -35,7 +21,7 @@
 	<header >
 	</header>
 
-	<main id="text" class="white-bgrnd">  
+	<main id="aboutText" class="white-bgrnd">  
 		<h2> About RelaxDIY </h2>
 		<p> Are you feeling stressed and exhausted? <br /> 
 		Are you having trouble concentrating throughout your day? <br /> 
