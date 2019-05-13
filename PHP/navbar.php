@@ -1,3 +1,9 @@
+<?php
+	if (anna == true) {
+		header ("Location: ../RelaxDIY/_team.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,7 +93,7 @@
 							 <button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
-								  <a class="lead" href="../_team.php#Anna">Anna</a>
+								  <a name="anna" href="../RelaxDIY/_team.php#anna" target="_self" >Anna</a>
 								  <a href="elisabeth.html">Elisabeth</a>
 								  <a href="gaelle.html">Gaelle</a>
 								  <a href="judyta.html">Judyta</a>
@@ -99,60 +105,12 @@
 						</div>
 						</a>
 
-		<!--                toggle logout / login button-->
-						<?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>
-							<form action="logout.inc.php" method="post">
-							<button style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
-							font-size:15px; letter-spacing:3px" id="logout_btn">
-							<i class="fa fa-fw fa-user"></i> LOGOUT </button>
-							</form>
-						<?php else:?>
-							<button onclick="document.getElementById('id01').style.display='block'"
-							style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
-							font-size:15px; letter-spacing:3px" id="login_btn">
-							<i class="fa fa-fw fa-user"></i> LOGIN </button>
-						<?php endif; ?>
 
-
-							<div id="id01" class="modal">
-
-							  <form class="modal-content animate" method="post">
-
-								<div class="imgcontainer">
-								  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-								</div>
-
-								<div class="container">
-									<label for="username"><b>Username</b></label>
-									<input type="text" placeholder="Enter Username" name="username" required>
-
-									<label for="password"><b>Password</b></label><br>
-									<input type="password" placeholder="Enter Password" name="password" required>
-
-									<button type="submit" formaction="login.inc.php" name="login_submit" id="login_submit">Login</button>
-									<button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
-									<label><span><a href="#">Forgot password?</a></span></label>
-								</div>
-							  </form>
-
-							</div>
-
-							<script>
-							// Get the modal
-							var modal = document.getElementById('id01');
-							// When the user clicks anywhere outside of the modal, close it
-							window.onclick = function(event) {
-								if (event.target == modal) {
-									modal.style.display = "none";
-								}
-							}
-							</script>
-
-					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i> SHOPPING CART</a>
-
+			
+				<div id="search">
 					<div class="dropdown" style="float:right">
 						<button class="dropbtn"><i class="fa fa-search"></i></button>
-							<div class="dropdown-content" style="margin-top:33px; background-color:transparent;
+							<div class="dropdown-content" style="position:absolute; right:0px; margin-top:33px; background-color:transparent;
 							box-shadow:none; border:none;">
 								<form method="get" action="http://google.com/search">
 									<input type="text" placeholder="Search..." name="q"
@@ -160,6 +118,12 @@
 								</form>
 							</div>
 					</div>
+				</div>
+				
+				<div id="shoppingcart">
+					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i>SHOPPING CART</a>
+					
+				</div>
 
 		
 		
@@ -191,7 +155,7 @@
 							 <button class="dropbtn"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
-								  <a class="lead" href="../_team.php#Anna">Anna</a>
+								  <a class="lead" href="../_team.php#anna">Anna</a>
 								  <a href="elisabeth.html">Elisabeth</a>
 								  <a href="gaelle.html">Gaelle</a>
 								  <a href="judyta.html">Judyta</a>
@@ -203,18 +167,39 @@
 						</div>
 						</a>
 
-		<!--                toggle logout / login button-->
+				<div id="search">
+					<div class="dropdown" style="float:right">
+						<button class="dropbtn"><i class="fa fa-search"></i></button>
+							<div class="dropdown-content" style="position:absolute; right:0px; margin-top:33px; background-color:transparent;
+							box-shadow:none; border:none;">
+								<form method="get" action="http://google.com/search">
+									<input type="text" placeholder="Search..." name="q"
+									style="width:220px; height:40px; letter-spacing:2px; padding: 12px 13px; border-radius:0px;">
+								</form>
+							</div>
+					</div>
+				</div>
+				
+				<div id="shoppingcart">
+					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i></a>
+					
+				</div>
+	</div>
+	
+	
+				<!--                toggle logout / login button-->
+					<div style="float:right">
 						<?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>
 							<form action="logout.inc.php" method="post">
 							<button style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
 							font-size:15px; letter-spacing:3px" id="logout_btn">
-							<i class="fa fa-fw fa-user"></i> LOGOUT </button>
+							<i class="fa fa-fw fa-user" ></i> LOGOUT </button>
 							</form>
 						<?php else:?>
 							<button onclick="document.getElementById('id01').style.display='block'"
-							style="width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
+							style="float:right; width:auto; margin-right:10px; padding:3px; background-color:white; font-family: Bell MT; color:black;
 							font-size:15px; letter-spacing:3px" id="login_btn">
-							<i class="fa fa-fw fa-user"></i> LOGIN </button>
+							<i class="fa fa-fw fa-user" ></i> LOGIN </button>
 						<?php endif; ?>
 
 
@@ -251,21 +236,7 @@
 								}
 							}
 							</script>
-
-				<div id="shoppingcart">
-					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i></a>
-					<div class="dropdown" style="float:right">
-						<button class="dropbtn"><i class="fa fa-search"></i></button>
-							<div class="dropdown-content" style="margin-top:33px; background-color:transparent;
-							box-shadow:none; border:none;">
-								<form method="get" action="http://google.com/search">
-									<input type="text" placeholder="Search..." name="q"
-									style="width:220px; height:40px; letter-spacing:2px; padding: 12px 13px; border-radius:0px;">
-								</form>
-							</div>
-					</div>
-				</div>
-	</div>
+					</div>	
 	
 		<!--            if user is logged in, write Welcome, else echo error message    -->
 		<div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">

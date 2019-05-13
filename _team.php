@@ -38,7 +38,7 @@
 		from exotic cooking classes to learning how to write neater than a computer, 
 		from preserving your most amazing memories by taking amazingly beautiful photographs to 
 		catching the demons in your life you always wanted to get rid of&hellip; 
-		there is something incredible for everyone 😊. 	
+		<b>there is something incredible for everyone</b> 😊. 	
 		<p/>
 		<br>
 	
@@ -47,7 +47,8 @@
 		
 		<div class="row">	
 		
-			<div id="anna" class="person float">
+			<div class="person float">
+			<a  id="anna">
 			<h2>Anna Kastlunger</h2>
 			<div>
 				<table class="tables float"><tr>

@@ -39,15 +39,10 @@
 		and find the one that will help you to relax. </b>
 		</p>
 		</br>
-		<a href="courses.html" class="a"><b>&#8702; Go to Courses</b></a>
+		<a class="goTo" href="courses.html" class="a"><b>&#8702; Go to Courses</b></a>
 	</main>
 
 
-
-		<footer class="footer">
-			<strong>	&quot;<script src="http://numbersapi.com/random?write"></script>	&quot;</strong>
-			<br>
-			Copyright &copy; 2019 <a href="impressum.html">relaxDIY.com</a>
-		</footer>	
+	
 </body>
 </html>

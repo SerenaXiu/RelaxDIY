@@ -407,7 +407,7 @@ img {
 							</p>
 							</br>
 							
-							<a class="goTo "href="_courses.php" class="a"><b>&#8702; Go to Courses</b></a>
+							<a id="goToid" class="goTo "href="_courses.php"><b>&#8702; Go to Courses</b></a>
 							
 						</a>
 					</div>
