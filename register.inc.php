@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+require_once("_dbcontroller.php");
+$db_handle = new DBController;
 // Check to see if this run of the script was caused by our register submit button being clicked.
 if (isset($_POST['reg_submit'])) {
 
@@ -10,29 +11,16 @@ if (isset($_POST['reg_submit'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
-		// Connect to the database and check if the username is available If not, jump
-        // down to our error message that the username is in use already
-        $pdo = new PDO("mysql:host=localhost;dbname=relaxdiy", "root", "");
+		// Connect to the database and check if the username is available
+		// If not, jump down to our error message that the username is in use already
+				$row = $db_handle->runQueryParam("SELECT ID, username, password FROM login_data WHERE username = :username", $username);
 
-
-        $pdo_query = $pdo->prepare("SELECT ID, username, password FROM login_data WHERE username = :username");
-        $pdo_query->bindParam(':username', $username);
-        $pdo_query->execute();
-        $pdo_query->setFetchMode(PDO::FETCH_ASSOC);
-        $row = $pdo_query->fetch();
-
-        // If the username is available, hash the password and insert the new user to the database
-		if ($pdo_query->rowCount() == 0) {
+    // If the username is available, hash the password and insert the new user to the database
+		if ($row == false) {
             $password_hashed = password_hash($password, PASSWORD_DEFAULT);
-
-            $pdo_insert = $pdo->prepare("INSERT INTO login_data(username, password) VALUES(:username, :password_hashed)");
-            //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $pdo_insert->bindParam(':username', $username);
-            $pdo_insert->bindParam(':password_hashed', $password_hashed);
-            $pdo_insert->execute();
-
+						$reg_user = $db_handle->regInsert("INSERT INTO login_data (username, password)
+							VALUES (:username, :password_hashed)", $username, $password_hashed);
             $_SESSION['reg_check'] = "Registration successful.";
-
             header('location: _index.php');
             exit;
 		}
@@ -48,4 +36,3 @@ if (isset($_POST['reg_submit'])) {
         exit;
 	}
 }
-
