@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once("_dbcontroller.php");
+$db_handle = new DBController;
 
 // Check to see if this run of the script was caused by our login submit button being clicked.
 if (isset($_POST['login_submit'])) {
@@ -10,16 +12,13 @@ if (isset($_POST['login_submit'])) {
         $password = $_POST['password'];
         // Connect to the database and select the user based on their provided username.
         // Be sure to retrieve their password and any other information you want to save for the user session.
-        $pdo = new PDO("mysql:host=localhost;dbname=relaxdiy", "root", "");
-        $pdo_query = $pdo->prepare("SELECT ID, username, password FROM login_data WHERE username = :username");
-        $pdo_query->bindParam(':username', $username);
-        $pdo_query->execute();
-        $pdo_query->setFetchMode(PDO::FETCH_ASSOC);
-        $row = $pdo_query->fetch();
+
+        $row = $db_handle->runQueryParam("SELECT ID, username, password FROM login_data WHERE username = :username", $username);
+
         // If the user record was found, compare the password on record to the one provided hashed as necessary.
         // If successful, now set up session variables for the user and store a flag to say they are authorized.
         // These values follow the user around the site and will be tested on each page.
-        if (($row !== false) && ($pdo_query->rowCount() > 0)) {
+        if (($row !== false)) {
             if (password_verify($password, $row['password'])) {
 
                 // is_auth is important here because we will test this to make sure they can view other pages

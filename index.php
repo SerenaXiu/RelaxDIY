@@ -14,11 +14,10 @@
         <meta charset='utf-8'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
-
-
 
 #dots {
 	margin: 10px;
@@ -169,12 +168,10 @@ img {
 
 	<main>
 
-
-
 		<div class="slideshow-container">
 
 			<div class="mySlides fade col-md-12">
-			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: 550px; border-radius:0px;">
+			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
 			 
 			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
 								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
@@ -185,17 +182,17 @@ img {
 		</div>
 	
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%; height:550px;border-radius:0px;">
+	  <img src="Img/Slidegallery/slied2.jpg" style="width:100%; height:500px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%; height:550px;border-radius:0px;">
+	  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%; height:500px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%; height:550px;border-radius:0px;">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
 
 	</div>
 
@@ -236,8 +233,8 @@ img {
 	</script>
 
 	<div >
-		<section id="section1" class="white-bgrnd" style="padding:5px;">
-		<h3 style="margin-left:50px">
+		<section id="section1" class="white-bgrnd" style="padding:5px; overflow:hidden">
+		<h3 style="margin:30px">
 					<?php
 
 				$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -389,26 +386,31 @@ img {
 		
 			<section id="section3">
 				<div class="white-bgrnd" style="margin-bottom:90px">
-
-                    <h4> About RelaxDIY </h4>
-                    <p> Are you feeling stressed and exhausted? <br />
-                        Are you having trouble concentrating throughout your day? <br />
-                        Are you in desperate need of a break from the daily grind? <br />
-                        </br>
-                        With RelaxDIY you found the right spot to get exactly that!
-                    </p>
-                    <p>
-                        <b>RelaxDIY is pursuing the goal to decelerate your life. </b> <br />
-                        We want to make sure to help you get your focus <br />
-                        &#45; <i> at least for a little while &#45; </i> </br>
-                        back to yourself. <br />
-                        </br> <b>
-                            Scroll through our one&#45;of&#45;a&#45;kind course offers </br>
-                            and find the one that will help you to relax. </b>
-                    </p>
-                    </br>
-                    <a href="courses.html" class="a"><b>&#8702; Go to Courses</b></a>
-
+				
+					<div id="aboutText">
+						<a class="not-active" href="http://localhost:8081/RelaxDIY/_index.php" >   
+							<h4> About RelaxDIY </h4>
+							<p> Are you feeling stressed and exhausted? <br />
+								Are you having trouble concentrating throughout your day? <br />
+								Are you in desperate need of a break from the daily grind? <br />
+								</br>
+								With RelaxDIY you found the right spot to get exactly that!
+							</p>
+							<p>
+								<b>RelaxDIY is pursuing the goal to decelerate your life. </b> <br />
+								We want to make sure to help you get your focus <br />
+								&#45; <i> at least for a little while &#45; </i> </br>
+								back to yourself. <br />
+								</br> <b>
+									Scroll through our one&#45;of&#45;a&#45;kind course offers </br>
+									and find the one that will help you to relax. </b>
+							</p>
+							</br>
+							
+							<a class="goTo "href="_courses.php" class="a"><b>&#8702; Go to Courses</b></a>
+							
+						</a>
+					</div>
 				</div>
 			</section>
 			

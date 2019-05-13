@@ -21,7 +21,7 @@
 	<header >
 	</header>
 
-	<main id="aboutText" class="white-bgrnd">  
+	<main id="aboutText" class="white-bgrnd" style="margin-bottom:150px;">  
 		<h2> About RelaxDIY </h2>
 		<p> Are you feeling stressed and exhausted? <br /> 
 		Are you having trouble concentrating throughout your day? <br /> 
