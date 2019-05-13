@@ -42,4 +42,5 @@ class DBController {
 		$result->execute();
 	}
 }
+//end
 ?>
