@@ -8,48 +8,121 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	</head>
-
-
-<body>
-
-	<header>
-	</header>
-
-	<main class="white-bgrnd">
 	
-		<h1> Prices </h1>
-		
-		We offer different ways to get access to our courses to make sure that everybody finds one pricing model he/she is happy with.
-		</br>
-		</br>
-		
-		<h3> Option 1: </h3> <b> All inclusive membership </b>
-		You pay a <b> monthly fee </b> or a <b> yearly fee </b> (the longer the cheaper 😊) and get access to everything. 
+	<style>
+	
+
+	.header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+	.column {
+  float: left;
+  margin-left:45px;
+  padding: 10px;
+  margin-bottom:70px;
+  height:300px;
+  width:300px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 27%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 27%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+  
+	</style>
+
+
+<body id="generalBackground">
+
+	<div class="header" style="box-shadow: 0 6px 15px 0 grey; height:200px;">
+  <h1 style="margin-top:20px">Prices</h1>
+  <i class="fa fa-shopping-bag" aria-hidden="true" style="font-size:50px;"></i>
+  </br>
+   </br>
+    </br>
+  <p>We offer different ways to get access to our courses to make sure that everybody finds one pricing model he/she is happy with.</p>
+   </div>
+
+	<div class="row center" style="margin-top:30px; margin-bottom:200px;">
+	
+    <div class="column side">
+    <img src="Img/Coursespics/option111.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+	<h2 style="text-align: center; margin-left:60px">Single Class</h2>
+	<div class="white-bgrnd" style="margin-bottom:70px; margin-left:70px; width:220px; height:150px;">
+	You pay a fixed price for one specific course - price depends on the course. 
+	</br>
+		<b>Single class:</b>  </br> &euro; 6.99
+	
+	</div>
+
+  </div>
+  
+  <div class="column middle">  
+ 
+  <img src="Img/Coursespics/option2.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+	 <h2 style="text-align: center; margin-left:60px">Basic Package</h2>
+	 <div class="white-bgrnd" style="margin-bottom:70px; margin-left:70px; width:220px; height:150px;">
+	The basic package includes 10 single courses of your choice. 
+	</br>
+		<b>Yearly membership:</b>  </br> &euro; 34.99
+	</div>
+  </div>
+  
+ <div class="column side">
+    <img src="Img/Coursespics/option3.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+	<h2 style="text-align: center; margin-left:60px">All Inclusive</h2>
+	<div class="white-bgrnd" style="margin-bottom:70px; margin-left:70px; width:220px; height:150px;">
+	You pay a <b> monthly fee </b> or a <b> yearly fee </b> and get access to everything. 
 		</br>
 
-		Monthly membership: &euro; 19.99
-		Yearly membership: &euro; 189.99
+		<b>Monthly membership:</b> </br>&euro; 59.99
 		</br>
-		</br>
+		<b>Yearly membership:</b>  </br> &euro; 389.99 
+	</div>
 
-		<h3>Option 2: </h3> <b> Pay-on-demand</b> 
-		You pay a fixed price for one specific course - price depends on the course. 
-		</br>
-		</br>
-
-
-	</main>
+  </div>
+</div>
 
 
 
 		<footer class="footer">
-			<strong><script src="http://numbersapi.com/random?write"></script></strong>
+			<strong>	&quot;<script src="http://numbersapi.com/random?write"></script>	&quot;</strong>
 			<br>
 			Copyright &copy; 2019 <a href="impressum.html">relaxDIY.com</a>
 		</footer>	

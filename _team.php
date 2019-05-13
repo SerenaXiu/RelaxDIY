@@ -30,7 +30,7 @@
 
 
 	
-	<main class="white-bgrnd" style="overflow:hidden">
+	<main class="white-bgrnd" style="overflow:hidden; margin-bottom:70px;">
 		<p><h1> Meet our team! </h1>
 		Our team consists of a happy bunch of people with different talents. 
 		Each of us will provide you with unique course offers that will astound you. 
