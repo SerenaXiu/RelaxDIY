@@ -120,7 +120,7 @@ body {
   border: none;
   outline: none;
   color: black;
-  padding: 10px 12px;
+  padding: 12px 12px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -293,6 +293,12 @@ input[type=text], select, textarea {
   background-color: rgba(26,109,125, 0.90);
   color: white;
   opacity: 100%;
+}
+
+#sidenavbtn:hover {
+  background-color: #EDEDED;
+  color: #EDEDED;
+  opacity: 70%;
 }
 
 footer {

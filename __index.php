@@ -14,10 +14,11 @@
         <meta charset='utf-8'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
+
+
 
 #dots {
 	margin: 10px;
@@ -168,10 +169,12 @@ img {
 
 	<main>
 
+
+
 		<div class="slideshow-container">
 
 			<div class="mySlides fade col-md-12">
-			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
+			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: 550px; border-radius:0px;">
 			 
 			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
 								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
@@ -182,17 +185,17 @@ img {
 		</div>
 	
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slied2.jpg" style="width:100%; height:500px;">
+	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%; height:500px;">
+	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
@@ -233,8 +236,8 @@ img {
 	</script>
 
 	<div >
-		<section id="section1" class="white-bgrnd" style="padding:5px; overflow:hidden">
-		<h3 style="margin:30px">
+		<section id="section1" class="white-bgrnd" style="padding:5px;">
+		<h3 style="margin-left:50px">
 					<?php
 
 				$api_url = 'https://api.darksky.net/forecast/9d2e1fd7e2c4011fce1daa9fc49bd46c/48.209,16.37?exclude=minutely,hourly,daily,alerts,flags&units=ca';
@@ -385,10 +388,9 @@ img {
 			</script>
 		
 			<section id="section3">
-				<div class="white-bgrnd" style="margin-bottom:90px">
-				
-					<div id="aboutText">
-						<a class="not-active" href="http://localhost:8081/RelaxDIY/_index.php" >   
+				<div id="aboutText" class="white-bgrnd" style="margin-bottom:90px">
+
+							<a class="not-active" href="http://localhost:8081/RelaxDIY/_index.php" >   
 							<h4> About RelaxDIY </h4>
 							<p> Are you feeling stressed and exhausted? <br />
 								Are you having trouble concentrating throughout your day? <br />
@@ -407,10 +409,10 @@ img {
 							</p>
 							</br>
 							
-							<a class="goTo "href="_courses.php" class="a"><b>&#8702; Go to Courses</b></a>
+							<a id="goToid" class="goTo "href="_courses.php"><b>&#8702; Go to Courses</b></a>
 							
 						</a>
-					</div>
+
 				</div>
 			</section>
 			

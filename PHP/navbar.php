@@ -64,11 +64,11 @@
 								</script>
 
 	<div id="content-desktop">
-						<a href="_index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
+						<a id="home" href="_index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
 						
 						<style=" padding:0">
 							<div class="dropdown">
-								<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
+								<button id="courses" class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 									<div class="dropdown-content">
 									
 									  <a href="_courses.php">ALL</a>
@@ -82,15 +82,14 @@
 							</div>
 						
 						
-						<a href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+						<a id="blog" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 						
-						<style="padding:0">
 						<div class="dropdown">
-							 <button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
+							 <button id="team" class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
 								  <a name="anna" href="_team.php" target="_self" >Who are we?</a>
-								  <a href="partners.php">Our partners</a>
+								  <a href="_partners.php">Our partners</a>
 
 								</div>
 
@@ -124,10 +123,10 @@
 
 	
 	<div id="content-mobile">							
-						<a href="_index.php"><i class="fa fa-fw fa-home"></i></a>
+						<a id="homeM" href="_index.php"><i class="fa fa-fw fa-home"></i></a>
 						
 						<div class="dropdown">
-							<button class="dropbtn"><i class="fa fa-camera-retro"></i> <i class="fa fa-caret-down"></i></button>
+							<button id="coursesM" class="dropbtn"><i class="fa fa-camera-retro"></i> <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 								
 								  <a href="_courses.php">ALL</a>
@@ -141,22 +140,21 @@
 						</div>
 					
 
-						<a href="blog.html"><i class="fa fa-book" aria-hidden="true"></i></a>
+						<a id="blogM" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i></a>
 						
-						<style="padding:0">
 						<div class="dropdown">
 							 <button class="dropbtn"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
 								  <a name="anna" href="_team.php" target="_self" >Who are we?</a>
-								  <a href="partners.php">Our partners</a>
+								  <a href="_partners.php">Our partners</a>
 
 								</div>
 
 						</div>
 						
 						
-				<div id="search">
+				<div id="searchM">
 					<div class="dropdown" style="float:right">
 						<button class="dropbtn"><i class="fa fa-search"></i></button>
 							<div class="dropdown-content" style="position:absolute; right:0px; margin-top:33px; background-color:transparent;
@@ -169,7 +167,7 @@
 					</div>
 				</div>
 				
-				<div id="shoppingcart">
+				<div id="shoppingcartM">
 					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i></a>
 					
 				</div>
