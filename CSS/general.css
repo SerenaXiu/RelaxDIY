@@ -1,13 +1,10 @@
 /* General CSS, which can be found on all pages! */
 .white-bgrnd {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 20px;
+	margin: 20px;
 	padding: 50px;
 	background:rgba(255,255,255, 0.90);
 	border-radius: 10px;
 	box-shadow: 0 6px 25px 0 black;	
-	margin-bottom: 80px;
 }
 
 /* about.php */
