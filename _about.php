@@ -21,10 +21,11 @@
 	<header >
 	</header>
 
-	<main id="aboutText" class="white-bgrnd">  
+	<main id="aboutText" class="white-bgrnd" style="margin-bottom:70px;">  
 
 							<a class="not-active" href="http://localhost:8081/RelaxDIY/_index.php" >   
 							<h4> About RelaxDIY </h4>
+							<img src="Img/Coursespics/about.jpg" style="width:60%; height:40%; margin-left:auto; margin-right:auto; border-radius:40px;box-shadow: 0 6px 15px 0 grey;">
 							<p> Are you feeling stressed and exhausted? <br />
 								Are you having trouble concentrating throughout your day? <br />
 								Are you in desperate need of a break from the daily grind? <br />
@@ -36,9 +37,14 @@
 								We want to make sure to help you get your focus <br />
 								&#45; <i> at least for a little while &#45; </i> </br>
 								back to yourself. <br />
-								</br> <b>
-									Scroll through our one&#45;of&#45;a&#45;kind course offers </br>
-									and find the one that will help you to relax. </b>
+								</br>
+								
+							<img src="Img/Coursespics/about1.jpg" style="width:300px; height:300px; margin-left:auto; margin-right:auto; border-radius:40px;box-shadow: 0 6px 15px 0 grey;">
+							</br>
+							</br> <b>
+									Scroll through our one&#45;of&#45;a&#45;kind</br> 
+									course offers and find the one that </br>
+									will help you to relax. </b>
 							</p>
 							</br>
 							
