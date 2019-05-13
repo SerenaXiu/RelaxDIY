@@ -185,17 +185,17 @@ img {
 		</div>
 	
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%;>
+	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%;">
+	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 
 	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%;">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%; height:550px;border-radius:0px;">
 
 	</div>
 

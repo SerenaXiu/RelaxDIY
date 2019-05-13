@@ -1,9 +1,3 @@
-<?php
-	if (anna == true) {
-		header ("Location: ../RelaxDIY/_team.php");
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
