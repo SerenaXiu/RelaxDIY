@@ -147,7 +147,7 @@
 							 <button class="dropbtn"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
-								  <a class="lead" href="../_team.php#anna">Anna</a>
+								  <a class="lead" href="../RelaxDIY/_team.php#anna">Anna</a>
 								  <a href="elisabeth.html">Elisabeth</a>
 								  <a href="gaelle.html">Gaelle</a>
 								  <a href="judyta.html">Judyta</a>
