@@ -43,7 +43,7 @@
                         <div id="mySidenav" class="sidenav" >
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <a href="_about.php">About</a>
-                            <a href="-courses.php">Courses</a>
+                            <a href="_courses.php">Courses</a>
                             <a href="_partners.php">Partners</a>
                             <a href="_contact.php">Contact</a>
                             <a href="_prices.php">Prices</a>
@@ -66,33 +66,31 @@
 	<div id="content-desktop">
 						<a href="_index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
 						
-						<a href="_courses.php" style=" padding:0">
+						<style=" padding:0">
 							<div class="dropdown">
 								<button class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 									<div class="dropdown-content">
-									  <a href="courses/origami.php">Origami</a>
-									  <a href="https://www.zumba.com" target= "blank">Zumba</a>
-									  <a href="courses/photography.php"target= "blank">Photography</a>
-									  <a href="courses/cooking.php"target= "blank">Cooking</a>
-									  <a href="couses/demons.php"target= "blank">Demons</a>
-									  <a href="courses/writing.php"target= "blank">Writing</a>
+									
+									  <a href="_courses.php">ALL</a>
+									  <a href="origami.php">Origami</a>
+									  <a href="_zumba.php" target= "blank">Zumba</a>
+									  <a href="photography.php"target= "blank">Photography</a>
+									  <a href="cooking.php"target= "blank">Cooking</a>
+									  <a href="demons.php"target= "blank">Demons</a>
+									  <a href="writing.php"target= "blank">Writing</a>
 									</div>
 							</div>
 						</a>
 						
 						<a href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 						
-						<a href="_team.php" style=" padding:0">
+						<style="padding:0">
 						<div class="dropdown">
 							 <button class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
-								  <a name="anna" href="../RelaxDIY/_team.php#anna" target="_self" >Anna</a>
-								  <a href="elisabeth.html">Elisabeth</a>
-								  <a href="gaelle.html">Gaelle</a>
-								  <a href="judyta.html">Judyta</a>
-								  <a href="serena.html">Serena</a>
-								  <a href="thomas.html">Thomas</a>
+								  <a name="anna" href="_team-php" target="_self" >Who are we?</a>
+								  <a href="partners.php">Our partners</a>
 
 								</div>
 
