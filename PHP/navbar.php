@@ -31,7 +31,7 @@
 							  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 							  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
 							  <a href="_about.php">About</a>
-							  <a href="-courses.php">Courses</a>
+							  <a href="_courses.php">Courses</a>
 							  <a href="_partners.php">Partners</a>
 							  <a href="_contact.php">Contact</a>
 							  <a href="_prices.php">Prices</a>
@@ -149,7 +149,7 @@
 							 <button class="dropbtn"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
-								  <a class="lead" href="../_team.php#anna">Anna</a>
+								  <a class="lead" href="../RelaxDIY/_team.php#anna">Anna</a>
 								  <a href="elisabeth.html">Elisabeth</a>
 								  <a href="gaelle.html">Gaelle</a>
 								  <a href="judyta.html">Judyta</a>

@@ -342,7 +342,6 @@ img {
 				</h3>
 			</section>
 		
-		
 			<section id="section2">
 			<div class="center">
 				<a href="https://www.w3schools.com">
