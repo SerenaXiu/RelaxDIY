@@ -14,11 +14,10 @@
         <meta charset='utf-8'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
-
-
 
 #dots {
 	margin: 10px;
@@ -169,8 +168,6 @@ img {
 
 	<main>
 
-
-
 		<div class="slideshow-container">
 
 			<div class="mySlides fade col-md-12">
@@ -235,8 +232,8 @@ img {
 	}
 	</script>
 
-	<div >
-	<section id="section1" class="white-bgrnd" style="padding:5px; overflow:hidden">
+	
+		<section id="section1" class="white-bgrnd" style="padding:5px; overflow:hidden">
 		<h3 style="margin:30px">
 					<?php
 
@@ -387,7 +384,7 @@ img {
 			});
 			</script>
 		
-<section id="section3">
+			<section id="section3">
 				<div class="white-bgrnd" style="margin-bottom:90px">
 				
 					<div id="aboutText">
