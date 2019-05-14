@@ -75,7 +75,7 @@ else {
 	</head>
 <style>
   body {
-
+  	font-family: Arial;
   	color: #211a1a;
   	font-size: 0.9em;
   }
@@ -280,6 +280,7 @@ else {
     			<div class="product-tile-footer">
     			<div class="product-title">Course: <?php echo $product_array[$key]["name"]; ?></div>
           <div class="product-title">ID: <?php echo $product_array[$key]["ID"]; ?></div>
+          <div class="product-title"><?php echo $product_array[$key]["url"]; ?></div>
           <div class="product-title">Instructor: <?php echo $product_array[$key]["instructor"]; ?></div>
     			<div class="product-price">Price: <?php echo "€ ".$product_array[$key]["price"]; ?></div>
     			<div class="cart-action">
