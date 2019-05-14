@@ -18,6 +18,7 @@
 	</head>
 <style>
 
+<!--
 #containerscroll{display:block;}
 #containerscrollM{display:none;}
 
@@ -26,7 +27,7 @@
 	#containerscroll{display:none;}
 	#containerscrollM{display:block;}	
 	}
-
+-->
 
 </style>
 
@@ -44,17 +45,19 @@
 				<div class="mySlides fade">
 				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
 					
-					<!--- desktop -->
-					<div id="containerscroll" style="z-index:9; margin: auto; margin-top:-100px; width: auto; max-width:50px; max-height:50px; height:10%;">
+					
+					<!--- desktop 
+					<div id="containerscroll" style="z-index:9; margin: auto; margin-top:-100px; margin-bottom:70px; width: auto; max-width:50px; max-height:50px; height:10%;">
 					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
 					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
 					</div>
 					
-					<!--- mobile -->
-					<div id="containerscrollM" style="z-index:9; margin: auto; margin-top:-60px; width: auto; max-width:30px; max-height:30px; height:10%;">
+					<!--- mobile 
+					<div id="containerscrollM" style="z-index:9; margin: auto; margin-top:-60px; margin-bottom:40px; width: auto; max-width:30px; max-height:30px; height:10%;">
 					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
 					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
 					</div>
+					-->
 					
 				</div>
 			</div>
