@@ -17,6 +17,7 @@
 	#content-mobile{display:block;}	
 	}
 	
+	
 </style>
 
 </head>
@@ -64,11 +65,11 @@
 								</script>
 
 	<div id="content-desktop">
-						<a id="home" href="_index.php"><i class="fa fa-fw fa-home"></i> HOME</a>
+						<a id="home" href="_index.php" style="padding-top:12px"><i class="fa fa-fw fa-home"></i> HOME</a>
 						
 						<style=" padding:0">
 							<div class="dropdown">
-								<button id="courses" class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
+								<button id="courses" class="dropbtn"  style="padding-top:12px"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 								
 								  <a href="_courses.php">ALL</a>
@@ -82,10 +83,10 @@
 							</div>
 						
 						
-						<a id="blog" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+						<a id="blog" href="blog.html" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 						
 						<div class="dropdown">
-							 <button id="team" class="dropbtn"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
+							 <button id="team" class="dropbtn"  style="padding-top:12px"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
 								  <a name="anna" href="_team.php" target="_self" >Who are we?</a>
@@ -123,10 +124,10 @@
 
 	
 	<div id="content-mobile">							
-						<a id="homeM" href="_index.php"><i class="fa fa-fw fa-home"></i></a>
+						<a id="homeM" href="_index.php" style="padding:12px;"><i class="fa fa-fw fa-home"></i></a>
 						
 						<div class="dropdown">
-							<button id="coursesM" class="dropbtn"><i class="fa fa-camera-retro"></i> <i class="fa fa-caret-down"></i></button>
+							<button id="coursesM" class="dropbtn" style="padding-top:12px"><i class="fa fa-camera-retro"></i> <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 								
 								  <a href="_courses.php">ALL</a>
@@ -140,10 +141,10 @@
 						</div>
 					
 
-						<a id="blogM" href="blog.html"><i class="fa fa-book" aria-hidden="true"></i></a>
+						<a id="blogM" href="blog.html" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i></a>
 						
 						<div class="dropdown">
-							 <button class="dropbtn"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
+							 <button class="dropbtn"  style="padding-top:12px"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
 
 								  <a name="anna" href="_team.php" target="_self" >Who are we?</a>
@@ -168,7 +169,7 @@
 				</div>
 				
 				<div id="shoppingcartM">
-					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i></a>
+					<a href="_shoppingcart.php" style="float:right;" ><i class="fa fa-shopping-cart"></i></a>
 					
 				</div>
 	</div>
@@ -198,7 +199,7 @@
 								  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 								</div>
 
-								<div class="container">
+								<div class="data-container">
 									<label for="username"><b>Username</b></label>
 									<input type="text" placeholder="Enter Username" name="username" required>
 
@@ -207,11 +208,12 @@
 
 									<button type="submit" formaction="login.inc.php" name="login_submit" id="login_submit">Login</button>
 									<button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
-									<label><span><a href="#">Forgot password?</a></span></label>
+									<label id="forgot"><span><a href="#">Forgot password?</a></span></label>
 								</div>
 							  </form>
 
 							</div>
+							
 
 							<script>
 							// Get the modal

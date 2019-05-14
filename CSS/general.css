@@ -34,33 +34,9 @@ body {
  margin:0;	
  }
 
-/* about.php */
-#aboutText{
-	text-align: center;
-	font-size:19px;
-	vertical-align: middle;
-	padding: 2% 0;
-	}
-.goTo {
-	background-color: rgba(26,109,125, 0.60);
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 50%;
-}
 
-#goToid:hover {
-  background-color: rgba(26,109,125, 0.90);
-  color: white;
-  opacity: 100%;
-}
 
-/* The z-index property specifies the stack order of an element.
-An element with greater stack order is always in front of an element with a lower stack order.
-Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
-*/
+/* navbar and sidebar*/
 #id01 {
 	z-index: 50;
 	max-width: 100%; height: relative;
@@ -124,7 +100,7 @@ Note: z-index only works on positioned elements (position: absolute, position: r
   left: 180px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 15px;}
 }
@@ -207,13 +183,40 @@ button:hover {
 
 .modal-content {
   background-color: #fefefe;
+  padding: 15px;
   margin: 5% auto 15% auto;
   border: 1px solid #888;
-  width: 30%;
-  height:40%;
   border-radius:10px;
-
+  width: 50%;
+  height:45%;
 }
+
+@media screen and (max-width:624px)
+	{
+		.modal-content {
+			padding:0px;
+			width: 45%;
+			height:35%;
+		}
+		#login_submit {
+			max-width:45%;
+			padding:5px 10px;
+		}
+		#reg_submit {
+			max-width:45%;
+			float:left;
+			padding:5px 10px;
+		}
+		#forgot {
+			margin: 0px;
+			padding:0px;
+		}
+		.data-container label,
+		.data-container a,
+		.data-container button{
+			font-size:12px;
+		}
+	}
 
 .imgcontainer {
   text-align: center;
@@ -221,8 +224,8 @@ button:hover {
   position: relative;
 }
 
-.container {
-  padding: 16px;
+.data-container {
+  padding: 10px;
   margin-top:0px; 
   background-color: white;
   border:none;
@@ -287,16 +290,6 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-.not-active {
- pointer-events: none;
-  cursor: default;
-  color: black;
-  text-decoration: none;
-}
-
-
-
-
 #sidenavbtn:hover {
   background-color: #EDEDED;
   color: #EDEDED;
@@ -314,7 +307,6 @@ footer {
 	width: 100%;
 	text-align:center;
 }
-
 
 
 
@@ -397,27 +389,10 @@ footer {
 
 
 
-.zoom {
- padding:10px;
- background:rgba(255,255,255, 0.90);
-
-  transition: transform .2s;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-
-.zoom:hover {
-  -ms-transform: scale(1.01); /* IE 9 */
-  -webkit-transform: scale(1.01); /* Safari 3-8 */
-  transform: scale(1.01); 
-}
-
-
-  position: absolute;
+/*  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 
 /* scroll button */
 
@@ -472,6 +447,48 @@ footer {
 	width: 100%; height: auto;
 }
 
-#section2 {
-	
+.zoom {
+ padding:10px;
+ background:rgba(255,255,255, 0.90);
+
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+/*about */
+.not-active {
+ pointer-events: none;
+  cursor: default;
+  color: black;
+  text-decoration: none;
+}
+
+#aboutText{
+	text-align: center;
+	font-size:19px;
+	vertical-align: middle;
+	padding: 2% 0;
+	}
+.goTo {
+	background-color: rgba(26,109,125, 0.60);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  opacity: 50%;
+}
+
+#goToid:hover {
+  background-color: rgba(26,109,125, 0.90);
+  color: white;
+  opacity: 100%;
 }
