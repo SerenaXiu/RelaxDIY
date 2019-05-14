@@ -2,8 +2,8 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Erstellungszeit: 14. Mai 2019 um 21:12
+-- Host: localhost
+-- Erstellungszeit: 14. Mai 2019 um 22:54
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -44,7 +44,8 @@ INSERT INTO `booked_courses` (`customer_id`, `course_id`) VALUES
 (6, 1),
 (6, 1),
 (6, 6),
-(11, 1);
+(11, 1),
+(6, 8);
 
 -- --------------------------------------------------------
 
@@ -70,7 +71,10 @@ INSERT INTO `courses` (`ID`, `name`, `instructor`, `price`, `url`) VALUES
 (3, 'Basic Package', 'All', '34.99', '_prices.php'),
 (4, 'Monthly membership', 'All', '59.99', '_prices.php'),
 (5, 'Zumba for nerds', 'Judyta', '6.99', 'zumba.php'),
-(6, 'How to make the most of instagram filters', 'Serena', '6.99', 'photography.php');
+(6, 'How to make the most of instagram filters', 'Serena', '6.99', 'photography.php'),
+(7, 'Folding is fun - helpful things to know before you get started', 'Anna', '6.99', 'origami.php'),
+(8, 'How to find your own calligraphy style', 'Elisabeth', '6.99', 'calligraphy.php'),
+(9, 'Peanut butter rocks!', 'Gaelle', '6.99', 'cooking.php');
 
 -- --------------------------------------------------------
 
@@ -123,7 +127,7 @@ ALTER TABLE `login_data`
 -- AUTO_INCREMENT für Tabelle `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT für Tabelle `login_data`
