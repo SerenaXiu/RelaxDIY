@@ -37,6 +37,7 @@ body {
 
 
 /* navbar and sidebar*/
+
 #id01 {
 	z-index: 50;
 	max-width: 100%; height: relative;
@@ -45,7 +46,6 @@ body {
 	z-index:100;
 
 }
-
  
 .navbar {
   overflow: hidden;
@@ -74,15 +74,16 @@ body {
   top: 0px;
   left: 0;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
   padding-top: 30px;
 }
 
+/*
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -97,15 +98,17 @@ body {
   position: absolute;
   top: -5px;
   right: 0px;
-  font-size: 30px;
+  font-size: 25px;
   left: 180px;
+  overflow:visible;
 }
 
-@media screen and (max-width: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 10px;}
-}
-
+/*
+@media screen and (min-width: 1127px) {
+  .sidenav {padding: 20px 5px;}
+  .sidenav a {font-size:30px;}
+} 
+*/
 #navbar img:hover, #sidenavbtn{
   opacity: 10%;
 }
@@ -195,7 +198,7 @@ button:hover {
   height:45%;
 }
 
-@media screen and (max-width:624px)
+@media screen and (max-width:924px)
 	{
 		.modal-content {
 			padding:0px;
@@ -322,7 +325,7 @@ footer {
 }
 
 .slideshow-current .btn {
-  position: absolute;
+  position: relative;
   top: 74%;
   left: 65%;
   transform: translate(-60%, -60%);
