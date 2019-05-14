@@ -45,13 +45,13 @@
 				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
 					
 					<!--- desktop -->
-					<div id="containerscroll" style="z-index:9; margin: auto; margin-top:-100px; margin-bottom:70px; width: auto; max-width:50px; max-height:50px; height:10%;">
+					<div id="containerscroll" style="z-index:9; margin: auto; margin-top:-100px; width: auto; max-width:50px; max-height:50px; height:10%;">
 					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
 					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
 					</div>
 					
 					<!--- mobile -->
-					<div id="containerscrollM" style="z-index:9; margin: auto; margin-top:-60px; margin-bottom:40px; width: auto; max-width:30px; max-height:30px; height:10%;">
+					<div id="containerscrollM" style="z-index:9; margin: auto; margin-top:-60px; width: auto; max-width:30px; max-height:30px; height:10%;">
 					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
 					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
 					</div>
@@ -79,8 +79,9 @@
 			  <span class="dot" onclick="currentSlide(3)"></span>
 			  <span class="dot" onclick="currentSlide(4)"></span>
 			</div>
-		</div>
 -->
+		</div>
+
 	<script>
 	var slideIndex = 0;
 showSlides();
@@ -214,12 +215,12 @@ function showSlides() {
 		
 			<section id="section2" style="max-width:100%">
 			
-			<div class="flex center" style="border: 5px solid blue">
-				<div class="row1" style="border: 3px solid red">
+			<div class="flex center">
+				<div class="row1">
 				<a href="calligraphy.php" style="margin: auto" ><img class="zoom"  alt="Calligraphy" src="Img/_gallery/gallery1.jpg" ></a>
 				</div>
 				
-				<div class="row1" style="border: 3px solid red">
+				<div class="row1">
 				<a href="zumba.php" style="margin: auto"><img class="zoom"  alt="Zumba" src="Img/_gallery/gallery2.jpg" ></a>
 				</div>
 			</div>
@@ -227,20 +228,20 @@ function showSlides() {
 				</br>
 				</br>
 
-			<div class="flex center" style="border: 5px solid blue">
-				<div class="row2" style="border: 3px solid black;">
+			<div class="flex center">
+				<div class="row2">
 				<a href="cooking.php" style="margin: auto" ><img class="zoom" border="0" alt="Cooking" src="Img/_gallery/gallery3.jpg"></a>
 				</div>
 				
-				<div class="row2" style="border: 3px solid black;">
+				<div class="row2">
 				<a href="demons.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
 				</div>
 				
-				<div class="row2" style="border: 3px solid black;">
+				<div class="row2">
 				<a href="photography.php" style="margin: auto"><img class="zoom" border="0" alt="Photography" src="Img/_gallery/gallery5.jpg"></a>
 				</div>
 				
-				<div class="row2" style="border: 3px solid yellow;">
+				<div class="row2">
 				<a href="origami.php" style="margin: auto"><img class="zoom" border="0" alt="Origami" src="Img/_gallery/gallery6.jpg"></a>
 				</div>
 			</div>
