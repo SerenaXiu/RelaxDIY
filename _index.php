@@ -40,7 +40,7 @@
 
 
 		<div id="slideshow-container" style="position:relative">
-			<div class="slideshow-current">
+			<div class="slideshow-current" >
 				<div class="mySlides fade">
 				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
 					
@@ -73,7 +73,7 @@
 
 			</div>
 
-			<div id="dots" style="text-align:center">
+			<div id="dots" style="text-align:center; padding-top:10px;">
 			  <span class="dot" onclick="currentSlide(1)"></span>
 			  <span class="dot" onclick="currentSlide(2)"></span>
 			  <span class="dot" onclick="currentSlide(3)"></span>
@@ -223,12 +223,12 @@
 		
 			<section id="section2" style="max-width:100%">
 			
-			<div class="flex center" style="border: 5px solid blue">
-				<div class="row1" style="border: 3px solid red">
+			<div class="flex center">
+				<div class="row1">
 				<a href="calligraphy.php" style="margin: auto" ><img class="zoom"  alt="Calligraphy" src="Img/_gallery/gallery1.jpg" ></a>
 				</div>
 				
-				<div class="row1" style="border: 3px solid red">
+				<div class="row1">
 				<a href="zumba.php" style="margin: auto"><img class="zoom"  alt="Zumba" src="Img/_gallery/gallery2.jpg" ></a>
 				</div>
 			</div>
@@ -236,20 +236,20 @@
 				</br>
 				</br>
 
-			<div class="flex center" style="border: 5px solid blue">
-				<div class="row2" style="border: 3px solid black;">
+			<div class="flex center">
+				<div class="row2">
 				<a href="cooking.php" style="margin: auto" ><img class="zoom" border="0" alt="Cooking" src="Img/_gallery/gallery3.jpg"></a>
 				</div>
 				
-				<div class="row2" style="border: 3px solid black;">
+				<div class="row2">
 				<a href="demons.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
 				</div>
 				
-				<div class="row2" style="border: 3px solid black;">
+				<div class="row2">
 				<a href="photography.php" style="margin: auto"><img class="zoom" border="0" alt="Photography" src="Img/_gallery/gallery5.jpg"></a>
 				</div>
 				
-				<div class="row2" style="border: 3px solid yellow;">
+				<div class="row2">
 				<a href="origami.php" style="margin: auto"><img class="zoom" border="0" alt="Origami" src="Img/_gallery/gallery6.jpg"></a>
 				</div>
 			</div>

@@ -102,7 +102,7 @@ body {
 
 @media screen and (max-width: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 15px;}
+  .sidenav a {font-size: 10px;}
 }
 
 
@@ -313,13 +313,12 @@ footer {
 /* /* _index.php */ 
 /* slideshow */
 #dots {
-	
+
 }
 
 .slideshow-current {
-  max-width: 100%; height: auto;
   position: relative;
-  margin: auto;
+  margin: auto auto 0 auto;
 }
 
 .slideshow-current .btn {
@@ -386,6 +385,12 @@ footer {
 	display: none
 	}
 
+ .mySlides img {
+	width:1328;
+	height: 525;
+	max-width: 100%;
+	max-height: auto;
+	}
 
 
 
@@ -399,6 +404,7 @@ footer {
 .scroll {
   -webkit-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
+  z-index:9;
 }
 
 .centered {
@@ -413,7 +419,7 @@ footer {
   text-align: center;
   max-width: 100%;
   border: none;
-  
+ 
 }
 
 .flex {
@@ -423,29 +429,33 @@ footer {
 }
 
 #section2 .row1{
-	margin:auto;
+	margin-top:40px;
 	width:650px;
 	height:259px;
-	max-width: 50%; height: auto;
+	max-width: 40%; height: auto;
 	
 }	
 
 #section2 img{
 	margin;20px;
-	width: 100%; height: auto;
+	width: 90%; height: auto;
 }	
 
 #section2 .row2{
-	margin:auto;
 	width:289px;
 	height:250px;
-	max-width: 100%; height: auto;
+	max-width: 20%; height: auto;
+	 margin-bottom: 40px;
 }	
 
-#section2 img{
+
+.row2 a, .row1 a {
 	margin:20px;
-	width: 100%; height: auto;
 }
+.row2 , .row1  {
+	margin:auto;
+}
+
 
 .zoom {
  padding:10px;
