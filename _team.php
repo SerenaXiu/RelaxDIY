@@ -39,7 +39,7 @@
 		from preserving your most amazing memories by taking amazingly beautiful photographs to 
 		catching the demons in your life you always wanted to get rid of&hellip; 
 		<b>there is something incredible for everyone</b>. 	
-		<p/>
+		</p>
 		<br>
 	
 		
@@ -49,7 +49,7 @@
 		<div class="row">	
 		
 			<div id="anna" class="person float">
-			<h2>Anna Kastelungen</h2>
+			<h2>Anna Kastlunger</h2>
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
