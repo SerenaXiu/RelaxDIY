@@ -43,6 +43,7 @@ body {
 }
 #mySidenav {
 	z-index:100;
+
 }
 
  
@@ -105,6 +106,9 @@ body {
   .sidenav a {font-size: 10px;}
 }
 
+#navbar img:hover, #sidenavbtn{
+  opacity: 10%;
+}
 
 .dropdown {
   float: left;
@@ -290,11 +294,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-#sidenavbtn:hover {
-  background-color: #EDEDED;
-  color: #EDEDED;
-  opacity: 70%;
-}
+
 
 
 footer {
@@ -386,8 +386,7 @@ footer {
 	}
 
  .mySlides img {
-	width:1328;
-	height: 525;
+
 	max-width: 100%;
 	max-height: auto;
 	}
@@ -429,7 +428,7 @@ footer {
 }
 
 #section2 .row1{
-	margin-top:40px;
+	margin-top:20px;
 	width:650px;
 	height:259px;
 	max-width: 40%; height: auto;

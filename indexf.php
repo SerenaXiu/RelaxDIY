@@ -14,21 +14,150 @@
         <meta charset='utf-8'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <style>
 
+#dots {
+	margin: 10px;
+}
 
-#containerscroll{display:block;}
-#containerscrollM{display:none;}
+.slideshow-container {
+  max-width: 100%; height: auto;
+  position: relative;
+  margin: auto;
+}
 
-@media screen and (max-width:1023px)
-	{
-	#containerscroll{display:none;}
-	#containerscrollM{display:block;}	
+.slideshow-container .btn {
+  position: absolute;
+  top: 74%;
+  left: 65%;
+  transform: translate(-60%, -60%);
+  -ms-transform: translate(-60%, -60%);
+  background-color: #fff;
+  opacity: 0.9;
+  color: grey;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 25px 0 black;
+
+}
+
+.slideshow-container .btn:hover {
+  opacity:0.7;
+  filter: alpha(opacity=70);
+
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ .mySlides {
+	display: none
 	}
 
+.fakeimg {
+  background-color: white;
+  width: 100%;
+}
 
+img {
+    max-width: 100%; height: auto;
+	border-radius:15px;
+	box-shadow: 0 6px 25px 0 black;
+}
+
+.zoom {
+ padding:10px;
+ background:rgba(255,255,255, 0.90);
+
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+
+
+}
+
+
+.center {
+
+  text-align: center;
+  width: 100%;
+  border: none;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* scroll button */
+
+.scroll {
+  width: 49px;
+  height: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 300px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
 </style>
 
 <body>
@@ -39,73 +168,72 @@
 
 	<main>
 
+		<div class="slideshow-container">
 
-		<div id="slideshow-container" style="position:relative; max-width:100%">
-			<div class="slideshow-current">
-				<div class="mySlides fade">
-				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
-					
-					
-					<!--- desktop -->
-					<div id="containerscroll" style="z-index:9; margin: auto; margin-top:-100px; margin-bottom:70px; width: auto; max-width:50px; max-height:50px; height:10%;">
-					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
-					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
-					</div>
-					
-					<!--- mobile -->
-					<div id="containerscrollM" style="z-index:9; margin: auto; margin-top:-60px; margin-bottom:40px; width: auto; max-width:30px; max-height:30px; height:10%;">
-					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
-					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
-					</div>
-					
-					
-				</div>
-			</div>
+			<div class="mySlides fade col-md-12">
+			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
+			 
+			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
+								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
 			
-
-			<div class="mySlides fade">
-			  <img src="Img/_slideshow/slide2.jpg" style="max-width: 100%; height: auto; border-radius:0;">
-
-			</div>			
 			
-			<div class="mySlides fade">
-			  <img src="Img/_slideshow/slide3.jpg" style="max-width: 100%; height: auto; border-radius:0;">
-
+			
 			</div>
-
-			<div class="mySlides fade">
-			  <img src="Img/_slideshow/slide4.jpg" style="max-width: 100%; height: auto; border-radius:0;">
-
-			</div>
-
-<!--			<div id="dots" style="text-align:center">
-			  <span class="dot" onclick="currentSlide(1)"></span>
-			  <span class="dot" onclick="currentSlide(2)"></span>
-			  <span class="dot" onclick="currentSlide(3)"></span>
-			  <span class="dot" onclick="currentSlide(4)"></span>
-			</div>
--->
 		</div>
+	
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slied2.jpg" style="width:100%">
+
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slidee3.jpg" style="width:100%">
+
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="Img/Slidegallery/slide4.jpg" style="width:100%">
+
+	</div>
+
+	<div id="dots" style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
 
 	<script>
-	var slideIndex = 0;
-showSlides();
+	var slideIndex = 1;
+	showSlides(slideIndex);
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
-} 
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
 	</script>
 
 	<div >
-	<section id="section1" class="white-bgrnd" style="margin-top:20px;padding:5px; overflow:hidden">
+		<section id="section1" class="white-bgrnd" style="padding:5px; overflow:hidden">
 		<h3 style="margin:30px">
 					<?php
 
@@ -114,15 +242,12 @@ function showSlides() {
 
 				$data = file_get_contents($api_url);
 				$clean_data = json_decode($data,TRUE);
+				echo 'Current temperature: ';
+				echo $clean_data['currently']['temperature'];
+				echo ' °C';
+				//echo '<script>alert($data);</script>';
 				$temperature = $clean_data['currently']['temperature'];
 				$weather = $clean_data['currently']['icon'];
-				$roundTemp = round($temperature);
-				echo 'Current Temperature: ';
-				echo $roundTemp;
-				echo '°C';
-				
-				//echo '<script>alert($data);</script>';
-				
 
 				switch ($weather){
 					case 'clear-day':
@@ -218,37 +343,28 @@ function showSlides() {
 			</section>
 		
 		
-			<section id="section2" style="max-width:100%">
-			
-			<div class="flex center">
-				<div class="row1">
-				<a href="calligraphy.php" style="margin: auto" ><img class="zoom"  alt="Calligraphy" src="Img/_gallery/gallery1.jpg" ></a>
-				</div>
+			<section id="section2">
+			<div class="center">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
 				
-				<div class="row1">
-				<a href="zumba.php" style="margin: auto"><img class="zoom"  alt="Zumba" src="Img/_gallery/gallery2.jpg" ></a>
-				</div>
+				
+				<a href="https://www.w3schools.com">
+				<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/zumbaslidee1.jpg" style="width:45%; height:300px; margin-left:20px;">
 			</div>
 			
 				</br>
 				</br>
 
-			<div class="flex center">
-				<div class="row2">
-				<a href="cooking.php" style="margin: auto" ><img class="zoom" border="0" alt="Cooking" src="Img/_gallery/gallery3.jpg"></a>
-				</div>
-				
-				<div class="row2">
-				<a href="demons.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
-				</div>
-				
-				<div class="row2">
-				<a href="photography.php" style="margin: auto"><img class="zoom" border="0" alt="Photography" src="Img/_gallery/gallery5.jpg"></a>
-				</div>
-				
-				<div class="row2">
-				<a href="origami.php" style="margin: auto"><img class="zoom" border="0" alt="Origami" src="Img/_gallery/gallery6.jpg"></a>
-				</div>
+			<div class="center">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden33.jpg" style="width: 21%; height:300px; margin-left:none;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden444.jpg" style="width: 21%; height:300px; margin-left:15px;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99999.jpg" style="width: 21%; height:300px; margin-left:20px;">
+				<a href="https://www.w3schools.com">
+				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden7777.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
 			</div>
 			</section>
 			
@@ -268,7 +384,7 @@ function showSlides() {
 			});
 			</script>
 		
-<section id="section3" style="clear:left">
+			<section id="section3">
 				<div class="white-bgrnd" style="margin-bottom:90px">
 				
 					<div id="aboutText">
