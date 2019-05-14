@@ -2,8 +2,8 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Erstellungszeit: 14. Mai 2019 um 13:38
+-- Host: 127.0.0.1
+-- Erstellungszeit: 14. Mai 2019 um 21:12
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -42,7 +42,9 @@ INSERT INTO `booked_courses` (`customer_id`, `course_id`) VALUES
 (6, 4),
 (6, 3),
 (6, 1),
-(6, 1);
+(6, 1),
+(6, 6),
+(11, 1);
 
 -- --------------------------------------------------------
 
@@ -54,7 +56,7 @@ CREATE TABLE `courses` (
   `ID` int(11) NOT NULL,
   `name` char(255) COLLATE latin1_german2_ci NOT NULL,
   `instructor` char(255) COLLATE latin1_german2_ci NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` decimal(11,2) NOT NULL,
   `url` char(255) COLLATE latin1_german2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci;
 
@@ -63,12 +65,12 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`ID`, `name`, `instructor`, `price`, `url`) VALUES
-(1, 'Peanut butter rocks!', 'Gaelle', 99, '<a href = http://localhost:8081/RelaxDIY/cooking.php> Link zum Kurs </a>'),
-(2, 'How to kill a demon - the basics', 'Thomas', 99, '<a href = http://localhost:8081/RelaxDIY/demon.php> Link zum Kurs </a>'),
-(3, 'Folding is fun - helpful things to know before you get started', 'Anna', 99, '<a href = http://localhost:8081/RelaxDIY/origami.php> Link zum Kurs </a>'),
-(4, 'How to find your own calligraphy style', 'Elisabeth', 99, '<a href = http://localhost:8081/RelaxDIY/calligraphy.php>Link zum Kurs </a>'),
-(5, 'Zumba for nerds', 'Judyta', 99, '<a href = http://localhost:8081/RelaxDIY/zumba.php> Link zum Kurs </a>'),
-(6, 'How to make the most of instagram filters', 'Serena', 99, '<a href = http://localhost:8081/RelaxDIY/photography.php> Link zum Kurs </a>');
+(1, 'Yearly membership', 'All', '389.99', '_prices.php'),
+(2, 'How to kill a demon - the basics', 'Thomas', '6.99', 'demon.php'),
+(3, 'Basic Package', 'All', '34.99', '_prices.php'),
+(4, 'Monthly membership', 'All', '59.99', '_prices.php'),
+(5, 'Zumba for nerds', 'Judyta', '6.99', 'zumba.php'),
+(6, 'How to make the most of instagram filters', 'Serena', '6.99', 'photography.php');
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,8 @@ INSERT INTO `login_data` (`ID`, `username`, `email`, `password`, `ms_lvl`) VALUE
 (7, 'Moritz', '', '$2y$10$BmC64OQDy2nrH3PG685eAOY90NgLX/AamdeC.1qpS0VTqABkU1ABe', 0),
 (8, 'Wilhelm', '', '$2y$10$dTdE.TAcy33jXBwsAQQzN.otVUvgKU.wGYWYHLhdMIaLqVzfu/PZW', 0),
 (9, 'Busch', '', '$2y$10$Wc4CQHFqZ3O/GN177K5S..LVi.R6T9ysLqUtlSghQh5uGwcjtA/yW', 0),
-(10, 'Nimmersatt', '', '$2y$10$smulSLO9iqotH3oBhznGEOw81wniiqEyMAqwDfZiRQ7.9bgdI7UsS', 0);
+(10, 'Nimmersatt', '', '$2y$10$smulSLO9iqotH3oBhznGEOw81wniiqEyMAqwDfZiRQ7.9bgdI7UsS', 0),
+(11, 'Judyta', '', '$2y$10$osHSVjvFyn8.X9ISdBQLrut1Snfy.hwASOnU1qe2aLeaQzRsERRQe', 0);
 
 --
 -- Indizes der exportierten Tabellen
@@ -126,7 +129,7 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT für Tabelle `login_data`
 --
 ALTER TABLE `login_data`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
