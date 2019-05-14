@@ -40,7 +40,7 @@
 
 
 		<div id="slideshow-container" style="position:relative">
-			<div class="slideshow-current" >
+			<div class="slideshow-current">
 				<div class="mySlides fade">
 				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
 					
@@ -73,41 +73,29 @@
 
 			</div>
 
-			<div id="dots" style="text-align:center; padding-top:10px;">
+<!--			<div id="dots" style="text-align:center">
 			  <span class="dot" onclick="currentSlide(1)"></span>
 			  <span class="dot" onclick="currentSlide(2)"></span>
 			  <span class="dot" onclick="currentSlide(3)"></span>
 			  <span class="dot" onclick="currentSlide(4)"></span>
 			</div>
 		</div>
-
+-->
 	<script>
-	var slideIndex = 1;
-	showSlides(slideIndex);
+	var slideIndex = 0;
+showSlides();
 
-	function plusSlides(n) {
-	  showSlides(slideIndex += n);
-	}
-
-	function currentSlide(n) {
-	  showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-	  var i;
-	  var slides = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("dot");
-	  if (n > slides.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = slides.length}
-	  for (i = 0; i < slides.length; i++) {
-		  slides[i].style.display = "none";
-	  }
-	  for (i = 0; i < dots.length; i++) {
-		  dots[i].className = dots[i].className.replace(" active", "");
-	  }
-	  slides[slideIndex-1].style.display = "block";
-	  dots[slideIndex-1].className += " active";
-	}
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+} 
 	</script>
 
 	<div >
@@ -120,12 +108,15 @@
 
 				$data = file_get_contents($api_url);
 				$clean_data = json_decode($data,TRUE);
-				echo 'Current temperature: ';
-				echo $clean_data['currently']['temperature'];
-				echo ' °C';
-				//echo '<script>alert($data);</script>';
 				$temperature = $clean_data['currently']['temperature'];
 				$weather = $clean_data['currently']['icon'];
+				$roundTemp = round($temperature);
+				echo 'Current Temperature: ';
+				echo $roundTemp;
+				echo '°C';
+				
+				//echo '<script>alert($data);</script>';
+				
 
 				switch ($weather){
 					case 'clear-day':
@@ -223,12 +214,12 @@
 		
 			<section id="section2" style="max-width:100%">
 			
-			<div class="flex center">
-				<div class="row1">
+			<div class="flex center" style="border: 5px solid blue">
+				<div class="row1" style="border: 3px solid red">
 				<a href="calligraphy.php" style="margin: auto" ><img class="zoom"  alt="Calligraphy" src="Img/_gallery/gallery1.jpg" ></a>
 				</div>
 				
-				<div class="row1">
+				<div class="row1" style="border: 3px solid red">
 				<a href="zumba.php" style="margin: auto"><img class="zoom"  alt="Zumba" src="Img/_gallery/gallery2.jpg" ></a>
 				</div>
 			</div>
@@ -236,20 +227,20 @@
 				</br>
 				</br>
 
-			<div class="flex center">
-				<div class="row2">
+			<div class="flex center" style="border: 5px solid blue">
+				<div class="row2" style="border: 3px solid black;">
 				<a href="cooking.php" style="margin: auto" ><img class="zoom" border="0" alt="Cooking" src="Img/_gallery/gallery3.jpg"></a>
 				</div>
 				
-				<div class="row2">
+				<div class="row2" style="border: 3px solid black;">
 				<a href="demons.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
 				</div>
 				
-				<div class="row2">
+				<div class="row2" style="border: 3px solid black;">
 				<a href="photography.php" style="margin: auto"><img class="zoom" border="0" alt="Photography" src="Img/_gallery/gallery5.jpg"></a>
 				</div>
 				
-				<div class="row2">
+				<div class="row2" style="border: 3px solid yellow;">
 				<a href="origami.php" style="margin: auto"><img class="zoom" border="0" alt="Origami" src="Img/_gallery/gallery6.jpg"></a>
 				</div>
 			</div>
