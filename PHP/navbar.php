@@ -28,6 +28,7 @@
             <!-- if logged in myProfile is shown - if logged out it is not shown -->
             <?php if (isset($_SESSION['username']) && $_SESSION['username'] !== '') { ?>
 						<div id="mySidenav" class="sidenav" >
+                            <div class="sideitem">
 							  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 							  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
 							  <a href="_about.php">About</a>
@@ -36,18 +37,22 @@
 							  <a href="_contact.php">Contact</a>
 							  <a href="_prices.php">Prices</a>
 							  <a href="_impressum.php">Impressum</a>
+                             <a href="Img/logo.jpg"></a>
+                            </div>
 						</div>
 
             <?php } else { ?>
 
                         <div id="mySidenav" class="sidenav" >
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <a href="_about.php">About</a>
-                            <a href="-courses.php">Courses</a>
-                            <a href="_partners.php">Partners</a>
-                            <a href="_contact.php">Contact</a>
-                            <a href="_prices.php">Prices</a>
-                            <a href="_impressum.php">Impressum</a>
+                            <a href="javascript:void(0)" class="closebtn" style="color:#818181" onclick="closeNav()">&times;</a>
+                            <div class="sideitem">
+                                <a href="_about.php">About</a>
+                                <a href="-courses.php">Courses</a>
+                                <a href="_partners.php">Partners</a>
+                                <a href="_contact.php">Contact</a>
+                                <a href="_prices.php">Prices</a>
+                                <a href="_impressum.php">Impressum</a>
+                            </div>
                         </div>
 
             <?php } ?>
