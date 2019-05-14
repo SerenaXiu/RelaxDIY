@@ -245,12 +245,15 @@ img {
 
 				$data = file_get_contents($api_url);
 				$clean_data = json_decode($data,TRUE);
-				echo 'Current temperature: ';
-				echo $clean_data['currently']['temperature'];
-				echo ' °C';
-				//echo '<script>alert($data);</script>';
 				$temperature = $clean_data['currently']['temperature'];
 				$weather = $clean_data['currently']['icon'];
+				$roundTemp = round($temperature);
+				echo 'Current Temperature: ';
+				echo $roundTemp;
+				echo '°C';
+				
+				//echo '<script>alert($data);</script>';
+				
 
 				switch ($weather){
 					case 'clear-day':
