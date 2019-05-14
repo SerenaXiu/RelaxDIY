@@ -82,30 +82,41 @@
 	<div class="row center" style="margin-top:30px; margin-bottom:200px;">
 	
     <div class="column side">
-    <img src="Img/Coursespics/option111.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+	<div style="position:absolute">
+    <img src="Img/_coursepics/option111.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
 	<h2 style="text-align: center; margin-left:60px">Single Class</h2>
 	<div class="white-bgrnd" style="margin-bottom:70px; margin-left:70px; width:220px; height:150px;">
 	You pay a fixed price for one specific course - price depends on the course. 
 	</br>
-		<b>Single class:</b>  </br> &euro; 6.99
-	
+		<b>Single class:</b>  </br> &euro; 6.99 </br>
+		</br>
+		</br>
+		
+		<a id="goToid" class="goTo "href="_shoppingcart.php"><b>&#8702; Shop now</b></a>
+	</div>
 	</div>
 
   </div>
   
   <div class="column middle">  
- 
-  <img src="Img/Coursespics/option2.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+ <div style="position:absolute">
+  <img src="Img/_coursepics/option2.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
 	 <h2 style="text-align: center; margin-left:60px">Basic Package</h2>
 	 <div class="white-bgrnd" style="margin-bottom:70px; margin-left:70px; width:220px; height:150px;">
 	The basic package includes 10 single courses of your choice. 
+	</br><b>Basic package:</b>  </br> &euro; 34.99
 	</br>
-		<b>Yearly membership:</b>  </br> &euro; 34.99
+		</br>
+		</br>
+		</br>
+		<a id="goToid" class="goTo "href="_shoppingcart.php"><b>&#8702; Shop now</b></a>
+	</div>
 	</div>
   </div>
   
  <div class="column side">
-    <img src="Img/Coursespics/option3.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+ <div style="position:absolute">
+    <img src="Img/_coursepics/option3.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
 	<h2 style="text-align: center; margin-left:60px">All Inclusive</h2>
 	<div class="white-bgrnd" style="margin-bottom:70px; margin-left:70px; width:220px; height:150px;">
 	You pay a <b> monthly fee </b> or a <b> yearly fee </b> and get access to everything. 
@@ -114,6 +125,11 @@
 		<b>Monthly membership:</b> </br>&euro; 59.99
 		</br>
 		<b>Yearly membership:</b>  </br> &euro; 389.99 
+		</br>
+		</br>
+		
+		<a id="goToid" class="goTo "href="_shoppingcart.php"><b>&#8702; Shop now</b></a>
+	</div>
 	</div>
 
   </div>
