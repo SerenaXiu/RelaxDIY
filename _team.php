@@ -45,11 +45,11 @@
 		
 	<div id="content-desktop" class="people">
 		
+
 		<div class="row">	
 		
-			<div class="person float">
-			<a  id="anna">
-			<h2>Anna Kastlunger</h2>
+			<div id="anna" class="person float">
+			<h2>Anna Kastelungen</h2>
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
@@ -70,14 +70,14 @@
 			<br>
 			<div>
 			<table class="data"><tr>
-					<td><p> <b>Course:</b> <a href="course-Origami.html"> Origami </a> <br> <b>Email:</b> beispiel@email.com </p>
+					<td><p> <b>Course:</b> <a href="origami.php"> Origami </a> <br> <b>Email:</b> beispiel@email.com </p>
 					</td>
 			</tr></table>
 			</div>
 			</div>
-			
-	<!---------------------------------------------------------------------------------------------------------->
-			
+		
+<!---------------------------------------------------------------------------------------------------------->
+		
 			<div id="elisabeth" class="person float">
 			<h2>Elisabeth Kohlhofer</h2>
 			<div>
@@ -97,17 +97,16 @@
 				enthusiasm for the art of hand-lettering as well. Her lessons are easy to 
 				follow and there's no need for special equipment! Just give it a try.<p/>
 			</span>
-			
-		
+	
 			<div>
 			<table class="data"><tr>
-					<td><p> <b>Course:</b> <a href="course-Origami.html"> Calligraphy </a> <br> <b>Email:</b>  beispiel@email.com </p>
+					<td><p> <b>Course:</b> <a href="calligraphy.php"> Calligraphy </a> <br> <b>Email:</b> beispiel@email.com </p>
 					</td>
 			</tr></table>
 			</div>
 			</div>
 		</div>			
-<!---------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------->
 		<div class="row">	
 		
 			<div id="gaelle" class="person float">
@@ -130,7 +129,7 @@
 			<br>
 			<div>
 			<table class="data"><tr>
-					<td><p> <b>Course:</b> <a href="course-Origami.html"> Cooking </a> <br> <b>Email:</b> beispiel@email.com </p>
+					<td><p> <b>Course:</b> <a href="cooking.php"> Cooking </a> <br> <b>Email:</b> beispiel@email.com </p>
 					</td>
 			</tr></table>
 			</div>
@@ -159,7 +158,7 @@
 	
 			<div>
 			<table class="data"><tr>
-					<td><p> <b>Course:</b> <a href="course-Origami.html"> Zumba </a> <br> <b>Email:</b> beispiel@email.com </p>
+					<td><p> <b>Course:</b> <a href="zumba.php"> Zumba </a> <br> <b>Email:</b> beispiel@email.com </p>
 					</td>
 			</tr></table>
 			</div>
@@ -191,7 +190,7 @@
 		<br>
 			<div>
 			<table class="data"><tr>
-					<td><p> <b>Course:</b> <a href="course-Origami.html"> Photography </a> <br> <b>Email:</b> beispiel@email.com </p>
+					<td><p> <b>Course:</b> <a href="photography.php"> Photography </a> <br> <b>Email:</b> beispiel@email.com </p>
 					</td>
 			</tr></table>
 			</div>
@@ -220,7 +219,7 @@
 		
 			<div>
 			<table class="data"><tr>
-					<td><p> <b>Course:</b> <a href="course-Origami.html"> Demon </a> <br> <b>Email:</b> beispiel@email.com </p>
+					<td><p> <b>Course:</b> <a href="demon.php"> Demon </a> <br> <b>Email:</b> beispiel@email.com </p>
 					</td>
 			</tr></table>
 			</div>
@@ -257,7 +256,7 @@
 	<br>
 		<div>
 		<table class="data"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Origami </a> <br> <b>Email:</b> beispiel@email.com </p>
+				<td><p> <b>Course:</b> <a href="origami.php"> Origami </a> <br> <b>Email:</b> beispiel@email.com </p>
 				</td>
 		</tr></table>
 		</div>
@@ -288,7 +287,7 @@
 	
 		<div>
 		<table class="data"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Calligraphy </a> <br> <b>Email:</b> beispiel@email.com </p>
+				<td><p> <b>Course:</b> <a href="calligraphy.php"> Calligraphy </a> <br> <b>Email:</b> beispiel@email.com </p>
 				</td>
 		</tr></table>
 		</div>
@@ -317,7 +316,7 @@
 	<br>
 		<div>
 		<table class="data"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Cooking </a> <br> <b>Email:</b> beispiel@email.com </p>
+				<td><p> <b>Course:</b> <a href="cooking.php"> Cooking </a> <br> <b>Email:</b> beispiel@email.com </p>
 				</td>
 		</tr></table>
 		</div>
@@ -348,7 +347,7 @@
 	<br>
 		<div>
 		<table class="data"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Zumba </a> <br> <b>Email:</b> beispiel@email.com </p>
+				<td><p> <b>Course:</b> <a href="zumba.php"> Zumba </a> <br> <b>Email:</b> beispiel@email.com </p>
 				</td>
 		</tr></table>
 		</div>
@@ -379,7 +378,7 @@
 	<br>
 		<div>
 		<table class="data"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Calligraphy </a> <br> <b>Email:</b> beispiel@email.com </p>
+				<td><p> <b>Course:</b> <a href="photography.php"> Photography </a> <br> <b>Email:</b> beispiel@email.com </p>
 				</td>
 		</tr></table>
 		</div>
@@ -408,7 +407,7 @@
 	<br>
 		<div>
 		<table class="data"><tr>
-				<td><p> <b>Course:</b> <a href="course-Origami.html"> Calligraphy </a> <br> <b>Email:</b> beispiel@email.com </p>
+				<td><p> <b>Course:</b> <a href="demon.php"> Demon </a> <br> <b>Email:</b> beispiel@email.com </p>
 				</td>
 		</tr></table>
 		</div>
