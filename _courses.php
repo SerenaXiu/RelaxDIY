@@ -82,7 +82,7 @@
             </ul>
 			</br>
 			</br>
-            <a id="goToid" class="goTo" href="_zumba.php"><b>Check out Judyta's page!</b></a></br></br></br>       
+            <a id="goToid" class="goTo" href="zumba.php"><b>Check out Judyta's page!</b></a></br></br></br>       
 	</div>
 
 	<div class="column" style="margin-left:70px;">
@@ -105,7 +105,7 @@
             </ul>
 			</br>
 			</br>
-            <a id="goToid" class="goTo" href="writing.php"><b>Check out Elisabeth's page!</b></a></br></br></br>       
+            <a id="goToid" class="goTo" href="calligraphy.php"><b>Check out Elisabeth's page!</b></a></br></br></br>       
 	</div>
 
 	<div class="column" style="margin-left:70px;">
@@ -176,7 +176,7 @@
             </ul>
 			</br>
 			</br>
-            <a id="goToid" class="goTo" href="demons.php"><b>Check out Thomas' page!</b></a></br></br></br>      
+            <a id="goToid" class="goTo" href="demon.php"><b>Check out Thomas' page!</b></a></br></br></br>      
 	</div>
 
 	<div class="column" style="margin-left:70px;">
