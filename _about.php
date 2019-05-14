@@ -33,7 +33,7 @@
 
 							<a class="not-active" href="http://localhost:8081/RelaxDIY/_index.php" >   
 							<h4> About RelaxDIY </h4>
-							<img src="Img/_coursepics/about.jpg" style=" margin-left:auto; margin-right:auto; border-radius:40px;box-shadow: 0 6px 15px 0 grey;">
+							<img src="Img/_coursepics/about.jpg" style=" max-width:80%; width:700px; height:250px margin-left:auto; margin-right:auto; border-radius:40px;box-shadow: 0 6px 15px 0 grey;">
 							<p> Are you feeling stressed and exhausted? <br />
 								Are you having trouble concentrating throughout your day? <br />
 								Are you in desperate need of a break from the daily grind? <br />
@@ -47,7 +47,7 @@
 								back to yourself. <br />
 								</br>
 								
-							<img src="Img/_coursepics/about1.jpg" style="max-width:35%; margin-left:auto; margin-right:auto; border-radius:40px;box-shadow: 0 6px 15px 0 grey;">
+							<img src="Img/_coursepics/about1.jpg" style="max-width:35%; width:300px; height:300px; margin-left:auto; margin-right:auto; border-radius:40px;box-shadow: 0 6px 15px 0 grey;">
 							</br>
 							</br> <b>
 									Scroll through our one&#45;of&#45;a&#45;kind</br> 

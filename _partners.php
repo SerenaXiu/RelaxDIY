@@ -28,7 +28,7 @@
 	<header >
 	</header>
 
-	<main id="aboutText">  
+	<main id="aboutText" style="margin-bottom:70px;">  
 
 							<img src="Img/_coursepics/ptns.jpg" >
 							

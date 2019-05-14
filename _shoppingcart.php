@@ -75,7 +75,7 @@ else {
 	</head>
 <style>
   body {
-  	font-family: Arial;
+
   	color: #211a1a;
   	font-size: 0.9em;
   }
