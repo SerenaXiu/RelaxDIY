@@ -83,7 +83,7 @@
 							</div>
 						
 						
-						<a id="blog" href="blog.html" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+						<a id="blog" href="https://wundervollehobbies.blogspot.com/" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
 						
 						<div class="dropdown">
 							 <button id="team" class="dropbtn"  style="padding-top:12px"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
@@ -141,7 +141,7 @@
 						</div>
 					
 
-						<a id="blogM" href="blog.html" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i></a>
+						<a id="blogM" href="https://wundervollehobbies.blogspot.com/" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i></a>
 						
 						<div class="dropdown">
 							 <button class="dropbtn"  style="padding-top:12px"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
