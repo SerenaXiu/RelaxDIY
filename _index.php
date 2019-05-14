@@ -40,10 +40,10 @@
 	<main>
 
 
-		<div id="slideshow-container" style="position:relative; max-width:100%">
-			<div class="slideshow-current">
+		<div id="slideshow-container" style="position:relative; max-width:100%; ">
+			<div class="slideshow-current" style="">
 				<div class="mySlides fade">
-				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
+				  <img src="Img/_slideshow/slide11.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
 					
 					
 					<!--- desktop -->
@@ -64,7 +64,7 @@
 			
 
 			<div class="mySlides fade">
-			  <img src="Img/_slideshow/slide2.jpg" style="max-width: 100%; height: auto; border-radius:0;">
+			  <img src="Img/_slideshow/slide22.jpg" style="max-width: 100%; height: auto; border-radius:0;">
 
 			</div>			
 			
@@ -74,7 +74,7 @@
 			</div>
 
 			<div class="mySlides fade">
-			  <img src="Img/_slideshow/slide4.jpg" style="max-width: 100%; height: auto; border-radius:0;">
+			  <img src="Img/_slideshow/slide44.jpg" style="max-width: 100%; height: auto; border-radius:0;">
 
 			</div>
 

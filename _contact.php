@@ -38,7 +38,7 @@
 
 	<!-- Contact Form -->
 	<div class="container-contact" style="margin-bottom:70px;">
-		<form action="contactform_insert.php" method="post">
+		<form action="contactform_insert.php" method="post" name="contactform" enctype="text/plain">
 			<label for="fname">First Name</label>
 			<input type="text" id="fname" name="fname" required placeholder="Your name..">
 

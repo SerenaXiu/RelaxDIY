@@ -38,7 +38,7 @@
 		from exotic cooking classes to learning how to write neater than a computer, 
 		from preserving your most amazing memories by taking amazingly beautiful photographs to 
 		catching the demons in your life you always wanted to get rid of&hellip; 
-		<b>there is something incredible for everyone</b> 😊. 	
+		<b>there is something incredible for everyone</b>. 	
 		<p/>
 		<br>
 	
@@ -53,8 +53,8 @@
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
-						<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane"> </span>
-						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna with Crane"> </span>
+						<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane" style="box-shadow: 0 6px 15px 0 grey"> </span>
+						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna with Crane" style="box-shadow: 0 6px 15px 0 grey"> </span>
 					</span></td>
 				</tr></table>
 			</div>
@@ -83,8 +83,8 @@
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
-						<span id="person"> <img class="cImg" src="Img/Profilepics/Elisabeth.jpeg" alt="Photo of Elisabeth Kohlhofer"> </span>
-						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Elisabeth2.jpeg" alt = "Photo of Calligraphy"> </span>
+						<span id="person"> <img class="cImg" src="Img/Profilepics/Elisabeth.jpeg" alt="Photo of Elisabeth Kohlhofer" style="box-shadow: 0 6px 15px 0 grey"> </span>
+						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Elisabeth2.jpeg" alt = "Photo of Calligraphy" style="box-shadow: 0 6px 15px 0 grey"> </span>
 					</span></td>
 				</tr></table>
 			</div>
@@ -114,8 +114,8 @@
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
-						<span id="person"> <img class="cImg" src="Img/Profilepics/Gaelle.jpeg" alt="Photo of Gaelle Knibbeler"> </span>
-						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Gaelle2.jpeg" alt = "Photo of Gaelle's Breakfast"> </span>
+						<span id="person"> <img class="cImg" src="Img/Profilepics/Gaelle.jpeg" alt="Photo of Gaelle Knibbeler" style="box-shadow: 0 6px 15px 0 grey"> </span>
+						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Gaelle2.jpeg" alt = "Photo of Gaelle's Breakfast" style="box-shadow: 0 6px 15px 0 grey"> </span>
 					</span></td>
 				</tr></table>
 			</div>
@@ -142,8 +142,8 @@
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
-						<span id="person"> <img class="cImg" src="Img/Profilepics/Judyta.jpeg" alt="Photo of Judyta Krzyzak"> </span>
-						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Judyta2.jpeg" alt = "Photo of a dancing Judyta"> </span>
+						<span id="person"> <img class="cImg" src="Img/Profilepics/Judyta.jpeg" alt="Photo of Judyta Krzyzak" style="box-shadow: 0 6px 15px 0 grey"> </span>
+						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Judyta2.jpeg" alt = "Photo of a dancing Judyta" style="box-shadow: 0 6px 15px 0 grey"> </span>
 
 					</span></td>
 				</tr></table>
@@ -172,8 +172,8 @@
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
-						<span id="person"> <img class="cImg" src="Img/Profilepics/Serena.jpeg" alt="Photo of Serena Li"> </span>
-						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Serena2.jpeg" alt = "Photo of the sea"> </span>
+						<span id="person"> <img class="cImg" src="Img/Profilepics/Serena.jpeg" alt="Photo of Serena Li" style="box-shadow: 0 6px 15px 0 grey"> </span>
+						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Serena2.jpeg" alt = "Photo of the sea" style="box-shadow: 0 6px 15px 0 grey"> </span>
 					</span></td>
 				</tr></table>
 			</div>
@@ -203,8 +203,8 @@
 			<div>
 				<table class="tables float"><tr>
 					<td><span id="placeholderImg">
-						<span id="person"> <img class="cImg" src="Img/Profilepics/Thomas.jpeg" alt="Photo of normal Thomas Kellner"> </span>
-						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Thomas2.jpeg" alt = "Photo of Demon-Slayer Thomas"> </span>
+						<span id="person"> <img class="cImg" src="Img/Profilepics/Thomas.jpeg" alt="Photo of normal Thomas Kellner" style="box-shadow: 0 6px 15px 0 grey"> </span>
+						<span id="onhover"> <img class="cImg" src="Img/Profilepics/Thomas2.jpeg" alt = "Photo of Demon-Slayer Thomas" style="box-shadow: 0 6px 15px 0 grey"> </span>
 					</span></td>
 				</tr></table>
 			</div>
@@ -238,8 +238,8 @@
 		<div>
 			<table class="tables float"><tr>
 				<td><span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane"> </span>
-					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna with Crane"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Anna.jpeg" alt="Photo of Anna Kastelungen with Crane" style="box-shadow: 0 6px 15px 0 grey"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Anna2.jpeg" alt = "Photo of Anna with Crane" style="box-shadow: 0 6px 15px 0 grey"> </span>
 				</span></td>
 			</tr></table>
 		</div>
@@ -269,8 +269,8 @@
 		<div>
 			<table class="tables float"><tr>
 				<td><span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="Img/Profilepics/Elisabeth.jpeg" alt="Photo of Elisabeth Kohlhofer"> </span>
-					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Elisabeth2.jpeg" alt = "Photo of Calligraphy"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Elisabeth.jpeg" alt="Photo of Elisabeth Kohlhofer" style="box-shadow: 0 6px 15px 0 grey"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Elisabeth2.jpeg" alt = "Photo of Calligraphy" style="box-shadow: 0 6px 15px 0 grey"> </span>
 				</span></td>
 			</tr></table>
 		</div>
@@ -300,8 +300,8 @@
 		<div>
 			<table class="tables float"><tr>
 				<td><span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="Img/Profilepics/Gaelle.jpeg" alt="Photo of Gaelle Knibbeler"> </span>
-					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Gaelle2.jpeg" alt = "Photo of Gaelle's Breakfast"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Gaelle.jpeg" alt="Photo of Gaelle Knibbeler" style="box-shadow: 0 6px 15px 0 grey"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Gaelle2.jpeg" alt = "Photo of Gaelle's Breakfast" style="box-shadow: 0 6px 15px 0 grey"> </span>
 				</span></td>
 			</tr></table>
 		</div>
@@ -331,8 +331,8 @@
 		<div>
 			<table class="tables float"><tr>
 				<td><span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="Img/Profilepics/Judyta.jpeg" alt="Photo of Judyta Krzyzak"> </span>
-					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Judyta2.jpeg" alt = "Photo of a dancing Judyta"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Judyta.jpeg" alt="Photo of Judyta Krzyzak" style="box-shadow: 0 6px 15px 0 grey"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Judyta2.jpeg" alt = "Photo of a dancing Judyta" style="box-shadow: 0 6px 15px 0 grey"> </span>
 				</span></td>
 			</tr></table>
 		</div>
@@ -360,8 +360,8 @@
 		<div>
 			<table class="tables float"><tr>
 				<td><span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="Img/Profilepics/Serena.jpeg" alt="Photo of Serena Li"> </span>
-					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Serena2.jpeg" alt = "Photo of the sea"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Serena.jpeg" alt="Photo of Serena Li" style="box-shadow: 0 6px 15px 0 grey"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Serena2.jpeg" alt = "Photo of the sea" style="box-shadow: 0 6px 15px 0 grey"> </span>
 				</span></td>
 			</tr></table>
 		</div>
@@ -391,8 +391,8 @@
 		<div>
 			<table class="tables float"><tr>
 				<td><span id="placeholderImg">
-					<span id="person"> <img class="cImg" src="Img/Profilepics/Thomas.jpeg" alt="Photo of normal Thomas Kellner"> </span>
-					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Thomas2.jpeg" alt = "Photo of Demon-Slayer Thomas"> </span>
+					<span id="person"> <img class="cImg" src="Img/Profilepics/Thomas.jpeg" alt="Photo of normal Thomas Kellner" style="box-shadow: 0 6px 15px 0 grey"> </span>
+					<span id="onhover"> <img class="cImg" src="Img/Profilepics/Thomas2.jpeg" alt = "Photo of Demon-Slayer Thomas" style="box-shadow: 0 6px 15px 0 grey"> </span>
 				</span></td>
 			</tr></table>
 		</div>

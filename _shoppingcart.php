@@ -75,7 +75,7 @@ else {
 	</head>
 <style>
   body {
-  	font-family: Arial;
+  
   	color: #211a1a;
   	font-size: 0.9em;
   }
@@ -181,8 +181,9 @@ else {
   }
 
   .product-tile-footer {
-      padding: 15px 15px 0px 15px;
+      padding: 15px;
       overflow: auto;
+	  margin-left:-50px;
   }
 
   /* .cart-item-image {
@@ -205,11 +206,15 @@ else {
 
 	<header>
 	</header>
-<main class="white-bgrnd">
-    <div id="shopping-cart">
-    <div class="txt-heading">Shopping Cart</div>
+	<main id="shopping-cart">
+<section id="section1" class="white-bgrnd">
 
-    <a id="btnEmpty" href="_shoppingcart.php?action=empty">Empty Cart</a>
+
+   
+    <div  style="background-color:transparent; box-shadow:none; font-size:30px;">Shopping Cart</div>
+
+ 	 <a id="btnEmpty" href="_shoppingcart.php?action=empty" style="margin-top:30px">Empty Cart</a>
+
     <?php
     if(isset($_SESSION["cart_item"])){
         $total_quantity = 0;
@@ -263,35 +268,59 @@ else {
     } else {
     ?>
     <div class="no-records">Your Cart is Empty</div>
+
+	 
     <?php
     }
     ?>
-    </div>
+    </section>
 
+
+
+
+    <section id="section2" style="margin-bottom:70px">
+	
     <div id="product-grid">
-    	<div class="txt-heading">Our courses</div>
+    	
     	<?php
-      $product_array = $db_handle->runQuery("SELECT * FROM courses ORDER BY instructor ASC");
-    	if (!empty($product_array)) {
-    		foreach($product_array as $key=>$value){
+				$product_array = $db_handle->runQuery("SELECT * FROM courses ORDER BY instructor ASC");
+				if (!empty($product_array)) {
+				foreach($product_array as $key=>$value){
     	?>
-    		<div class="product-item">
-    			<form method="post" action="_shoppingcart.php?action=add&ID=<?php echo $product_array[$key]["ID"]; ?>">
-    			<div class="product-tile-footer">
-          <div class="product-title">Course: <a href = "./<?php echo $product_array[$key]["url"];?>"><?php echo $product_array[$key]["name"];?></a></div>
-          <div class="product-title">Instructor: <?php echo $product_array[$key]["instructor"]; ?></div>
-    			<div class="product-price">Price: <?php echo "€ ".$product_array[$key]["price"]; ?></div>
-    			<div class="cart-action">
+				<div class="product-item">
+					<form method="post" action="_shoppingcart.php?action=add&ID=<?php echo $product_array[$key]["ID"]; ?>">
+				</div>
+    </div>
+				
+				
+	
+				
+		
+			<div class="white-bgrnd" style="">
+		 <div class="product-title""><a href = "./<?php echo $product_array[$key]["url"];?>" 
+			style="font-size:20px; padding:5px; color: white; text-decoration: none; background-color: rgba(26,109,125, 0.60); 
+			border-radius:3px; box-shadow: 0 6px 15px -5px black;">
+		 <?php echo $product_array[$key]["name"];?></a>
+		 </div>
+         
+		 <div class="product-title">Instructor: <?php echo $product_array[$key]["instructor"]; ?>
+		 </div>
+		 <div class="product-price">Price: <?php echo "€ ".$product_array[$key]["price"]; ?>
+		 </div>
+		 
+    	
+    	<div class="cart-action">
                     <input type="hidden" class="product-quantity" name="quantity" value="1" size="2" />
-                    <input type="submit" value="Add to Cart" class="btnAddAction" /></div>
-    			</div>
+                    <input type="submit" value="Add to Cart" class="btnAddAction" />
+		</div>
+    	</div>		
     			</form>
-    		</div>
+    		
     	<?php
     		}
     	}
     	?>
-    </div>
+    </section>
 </main>
 </body>
 </html>
