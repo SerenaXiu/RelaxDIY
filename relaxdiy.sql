@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 12. Mai 2019 um 18:22
+-- Erstellungszeit: 14. Mai 2019 um 13:38
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -41,6 +41,7 @@ INSERT INTO `booked_courses` (`customer_id`, `course_id`) VALUES
 (6, 4),
 (6, 4),
 (6, 3),
+(6, 1),
 (6, 1);
 
 -- --------------------------------------------------------
@@ -53,20 +54,21 @@ CREATE TABLE `courses` (
   `ID` int(11) NOT NULL,
   `name` char(255) COLLATE latin1_german2_ci NOT NULL,
   `instructor` char(255) COLLATE latin1_german2_ci NOT NULL,
-  `price` int(11) NOT NULL
+  `price` int(11) NOT NULL,
+  `url` char(255) COLLATE latin1_german2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german2_ci;
 
 --
 -- Daten für Tabelle `courses`
 --
 
-INSERT INTO `courses` (`ID`, `name`, `instructor`, `price`) VALUES
-(1, 'Peanut butter rocks!', 'Gaelle', 99),
-(2, 'How to kill a demon - the basics', 'Thomas', 99),
-(3, 'Folding is fun - helpful things to know before you get started', 'Anna', 99),
-(4, 'How to find your own calligraphy style', 'Elisabeth', 99),
-(5, 'Zumba for nerds', 'Judyta', 99),
-(6, 'How to make the most of instagram filters', 'Serena', 99);
+INSERT INTO `courses` (`ID`, `name`, `instructor`, `price`, `url`) VALUES
+(1, 'Peanut butter rocks!', 'Gaelle', 99, '<a href = http://localhost:8081/RelaxDIY/cooking.php> Link zum Kurs </a>'),
+(2, 'How to kill a demon - the basics', 'Thomas', 99, '<a href = http://localhost:8081/RelaxDIY/demon.php> Link zum Kurs </a>'),
+(3, 'Folding is fun - helpful things to know before you get started', 'Anna', 99, '<a href = http://localhost:8081/RelaxDIY/origami.php> Link zum Kurs </a>'),
+(4, 'How to find your own calligraphy style', 'Elisabeth', 99, '<a href = http://localhost:8081/RelaxDIY/calligraphy.php>Link zum Kurs </a>'),
+(5, 'Zumba for nerds', 'Judyta', 99, '<a href = http://localhost:8081/RelaxDIY/zumba.php> Link zum Kurs </a>'),
+(6, 'How to make the most of instagram filters', 'Serena', 99, '<a href = http://localhost:8081/RelaxDIY/photography.php> Link zum Kurs </a>');
 
 -- --------------------------------------------------------
 

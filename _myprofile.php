@@ -26,11 +26,11 @@
 
 	<main class="white-bgrnd">
     <div id="booked_courses">
-    <div>Your courses</div>
+    <div>Your courses:</div>
 
     <?php
     if(isset($_SESSION["is_auth"]) && $_SESSION["is_auth"] == true){
-      $product_array = $db_handle->runQuery("SELECT courses.name, courses.instructor FROM courses INNER JOIN booked_courses
+      $product_array = $db_handle->runQuery("SELECT courses.name, courses.instructor, courses.url FROM courses INNER JOIN booked_courses
          ON courses.ID = booked_courses.course_id WHERE booked_courses.customer_id = '" . $_SESSION["user_id"] . "'");
     ?>
     <table class="tbl-cart" cellpadding="10" cellspacing="1">
@@ -43,8 +43,11 @@
     <?php
     foreach ($product_array as $item) { ?>
     <tr>
+        <!--  <a href = <?php echo $item["url"]; ?>>  -->
         <td><?php echo $item["name"]; ?></td>
         <td><?php echo $item["instructor"]; ?></td>
+        <td><?php echo $item["url"]; ?></td>
+        <!--  </a>  -->
     </tr>
   <?php } ?>
     </tbody>
