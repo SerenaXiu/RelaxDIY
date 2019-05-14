@@ -86,7 +86,7 @@
     <div class="column side">
 	<div style="position:absolute;">
 	<a href="_team.php" style="margin: auto">
-    <img src="Img/_coursepics/thomas2.jpeg" class="zoom" style="width:400px; height:400px; margin-left:40px; border-radius:50%; padding:0px;">
+    <img src="Img/_coursepics/thomas12.jpeg" class="zoom" style="width:400px; height:400px; margin-left:40px; border-radius:50%; padding:0px;">
 	<a id="goToidc" class="pos"href="_team.php"><b>&#8702; Trainer</b></a>
 	</div>
   </div>
