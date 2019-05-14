@@ -278,9 +278,7 @@ else {
     		<div class="product-item">
     			<form method="post" action="_shoppingcart.php?action=add&ID=<?php echo $product_array[$key]["ID"]; ?>">
     			<div class="product-tile-footer">
-    			<div class="product-title">Course: <?php echo $product_array[$key]["name"]; ?></div>
-          <div class="product-title">ID: <?php echo $product_array[$key]["ID"]; ?></div>
-          <div class="product-title"><?php echo $product_array[$key]["url"]; ?></div>
+          <div class="product-title">Course: <a href = "./<?php echo $product_array[$key]["url"];?>"><?php echo $product_array[$key]["name"];?></a></div>
           <div class="product-title">Instructor: <?php echo $product_array[$key]["instructor"]; ?></div>
     			<div class="product-price">Price: <?php echo "€ ".$product_array[$key]["price"]; ?></div>
     			<div class="cart-action">

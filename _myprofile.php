@@ -43,11 +43,8 @@
     <?php
     foreach ($product_array as $item) { ?>
     <tr>
-        <!--  <a href = <?php echo $item["url"]; ?>>  -->
-        <td><?php echo $item["name"]; ?></td>
+        <td><a href = "./<?php echo $item["url"];?>"><?php echo $item["name"];?></a></td>
         <td><?php echo $item["instructor"]; ?></td>
-        <td><?php echo $item["url"]; ?></td>
-        <!--  </a>  -->
     </tr>
   <?php } ?>
     </tbody>
