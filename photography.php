@@ -79,19 +79,23 @@
 	<div class="row center" style="margin-top:30px; margin-bottom:200px;">
 	
     <div class="column side">
-    <img src="Img/_coursepics/serena.jpeg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
-	<a id="goToidc" class="pos"href="_team.php"><b>&#8702; Trainer</b></a>
-
+	<div style="position:absolute;">
+	<a href="_team.php" style="margin: auto">
+    <img src="Img/_coursepics/serena1.jpeg" class="zoom" style="width:400px; height:400px; margin-left:50px; border-radius:50%; padding:0px;">
+	</br>
+	<a id="goToidc" class="pos"href="_team.php" ><b>&#8702; Trainer</b></a>
+    </div>
   </div>
   
   <div class="column middle">  
   <h2 style="text-align: center; margin-left:60px">About</h2>
-  <img src="Img/_coursepics/aboutphoto1.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+  <img src="Img/_coursepics/aboutphoto1.jpg" class="zoom" style="width:400px; height:400px; margin-left:40px; border-radius:50%; padding:0px;">
 	
   </div>
   
  <div class="column side">
-    <img src="Img/_coursepics/photopic11.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+ <a href="_shoppingcart.php" style="margin: auto">
+    <img src="Img/_coursepics/photopic11.jpg" class="zoom" style="width:400px; height:400px; margin-left:40px; border-radius:50%; padding:0px;">
 	<a id="goToidc" class="pos"href="_shoppingcart.php"><b>&#8702; Join!</b></a>
 
   </div>
