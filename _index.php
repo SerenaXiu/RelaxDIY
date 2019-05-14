@@ -137,7 +137,7 @@ function showSlides() {
 
 					case 'clear-night':
 						if ($temperature > 10) {
-						    echo '<p>It&#039;s a clear night! Perfect time to <a href="daemons.html"target= "blank">summon some demons</a>!</p>';
+						    echo '<p>It&#039;s a clear night! Perfect time to <a href="demon.html"target= "blank">summon some demons</a>!</p>';
                         } else {
 						    echo '<p>It&#039;s pretty cold this night! Why don&#039;t you stay inside and improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills?</p>';
                         } break;
@@ -178,7 +178,7 @@ function showSlides() {
                         }elseif ($temperature > 10){
                             echo '<p>It&#039;s foggy and rather cold! Why don&#039;t you stay inside and improve your <a href="calligraphy.html"target= "blank">calligraphy</a> skills?</p>';
                         }else{
-                            echo '<p>It&#039;s very cold today and so much fog! Why don&#039;t you try to summon some nice weather <a href="demons.html">demons</a> following Thomas&#039; instructions.</p>';
+                            echo '<p>It&#039;s very cold today and so much fog! Why don&#039;t you try to summon some nice weather <a href="demon.html">demons</a> following Thomas&#039; instructions.</p>';
                         }
                         break;
 
@@ -239,7 +239,7 @@ function showSlides() {
 				</div>
 				
 				<div class="row2">
-				<a href="demons.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
+				<a href="demon.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
 				</div>
 				
 				<div class="row2">
