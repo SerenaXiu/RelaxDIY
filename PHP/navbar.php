@@ -14,10 +14,10 @@
 @media screen and (max-width:900px)
 	{
 	#content-desktop{display:none;}
-	#content-mobile{display:block;}	
+	#content-mobile{display:block;}
 	}
-	
-	
+
+
 </style>
 
 </head>
@@ -65,12 +65,12 @@
 
 	<div id="content-desktop">
 						<a id="home" href="_index.php" style="padding-top:12px"><i class="fa fa-fw fa-home"></i> HOME</a>
-						
+
 						<style=" padding:0">
 							<div class="dropdown">
 								<button id="courses" class="dropbtn"  style="padding-top:12px"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
-								
+
 								  <a href="_courses.php">ALL</a>
 								  <a href="origami.php">Origami</a>
 								  <a href="zumba.php">Zumba</a>
@@ -80,10 +80,10 @@
 								  <a href="calligraphy.php">Writing</a>
 								</div>
 							</div>
-						
-						
+
+
 						<a id="blog" href="https://wundervollehobbies.blogspot.com/" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
-						
+
 						<div class="dropdown">
 							 <button id="team" class="dropbtn"  style="padding-top:12px"><i class="fa fa-users"></i> TEAM <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
@@ -94,10 +94,10 @@
 								</div>
 
 						</div>
-						
 
 
-			
+
+
 				<div id="search">
 					<div class="dropdown" style="float:right">
 						<button class="dropbtn"><i class="fa fa-search"></i></button>
@@ -110,25 +110,25 @@
 							</div>
 					</div>
 				</div>
-				
+
 				<div id="shoppingcart">
 					<a href="_shoppingcart.php"style="float:right"><i class="fa fa-shopping-cart"></i>SHOPPING CART</a>
-					
+
 				</div>
 
-		
-		
-	</div>
-		
 
-	
-	<div id="content-mobile">							
+
+	</div>
+
+
+
+	<div id="content-mobile">
 						<a id="homeM" href="_index.php" style="padding:12px;"><i class="fa fa-fw fa-home"></i></a>
-						
+
 						<div class="dropdown">
 							<button id="coursesM" class="dropbtn" style="padding-top:12px"><i class="fa fa-camera-retro"></i> <i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
-								
+
 								  <a href="_courses.php">ALL</a>
 								  <a href="origami.php">Origami</a>
 								  <a href="zumba.php">Zumba</a>
@@ -138,10 +138,10 @@
 								  <a href="calligraphy.php">Writing</a>
 								</div>
 						</div>
-					
+
 
 						<a id="blogM" href="https://wundervollehobbies.blogspot.com/" style="padding-top:12px"><i class="fa fa-book" aria-hidden="true"></i></a>
-						
+
 						<div class="dropdown">
 							 <button class="dropbtn"  style="padding-top:12px"><i class="fa fa-users"></i><i class="fa fa-caret-down"></i></button>
 								<div class="dropdown-content">
@@ -152,8 +152,8 @@
 								</div>
 
 						</div>
-						
-						
+
+
 				<div id="searchM">
 					<div class="dropdown" style="float:right">
 						<button class="dropbtn"><i class="fa fa-search"></i></button>
@@ -166,14 +166,14 @@
 							</div>
 					</div>
 				</div>
-				
+
 				<div id="shoppingcartM">
 					<a href="_shoppingcart.php" style="float:right;" ><i class="fa fa-shopping-cart"></i></a>
-					
+
 				</div>
 	</div>
-	
-	
+
+
 				<!--                toggle logout / login button-->
 					<div style="float:right">
 						<?php if (isset($_SESSION['is_auth']) && $_SESSION['is_auth'] == true): ?>
@@ -207,12 +207,12 @@
 
 									<button type="submit" formaction="login.inc.php" name="login_submit" id="login_submit">Login</button>
 									<button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
-									
+
 								</div>
 							  </form>
 
 							</div>
-							
+
 
 							<script>
 							// Get the modal
@@ -224,12 +224,16 @@
 								}
 							}
 							</script>
-					</div>	
-	
+					</div>
+
 		<!--            if user is logged in, write Welcome, else echo error message    -->
 		<div style="font-family: Bell MT; color:black; font-size:17px; letter-spacing:3px; margin-top: 10px; text-align: center">
 			<?php
-			if (isset($_SESSION['username']) && $_SESSION['username'] !== '') {
+			if (isset($_SESSION['message']) && $_SESSION['message'] !== '') {
+				echo $_SESSION['message'];
+				unset($_SESSION['message']);
+			}
+			else if (isset($_SESSION['username']) && $_SESSION['username'] !== '') {
 				echo "Welcome back, ".$_SESSION['username'];
 			}
 			else if (isset($_SESSION['error']) && $_SESSION['error'] !== '') {
@@ -244,13 +248,10 @@
 				echo $_SESSION['reg_check'];
 				unset($_SESSION['reg_check']);
 			}
-			else if (isset($_SESSION['message']) && $_SESSION['message'] !== '') {
-				echo $_SESSION['message'];
-				unset($_SESSION['message']);
-			}
+
 			?>
 		</div>
 		</nav>
-	
+
 </body>
 </HTML>
