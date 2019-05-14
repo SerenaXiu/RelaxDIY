@@ -46,6 +46,7 @@ body {
 	z-index:100;
 
 }
+
  
 .navbar {
   overflow: hidden;
@@ -72,20 +73,19 @@ body {
   position: fixed;
   z-index: 1;
   top: 0px;
-  left: 0;
+  left: 0px;
   background-color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: 0.5s;
   padding-top: 30px;
 }
 
-/*
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   color: #818181;
-  display: block;
+  display: inline-block;
   transition: 0.3s;
 }
 
@@ -96,11 +96,13 @@ body {
 
 .sidenav .closebtn {
   position: absolute;
-  top: -5px;
-  right: 0px;
   font-size: 25px;
-  left: 180px;
   overflow:visible;
+}
+
+.sidelist {
+	height: 100px;
+	border: 3px solid red;
 }
 
 /*
@@ -109,6 +111,7 @@ body {
   .sidenav a {font-size:30px;}
 } 
 */
+
 #navbar img:hover, #sidenavbtn{
   opacity: 10%;
 }

@@ -25,14 +25,13 @@
 
 <body>
 		<nav class="navbar">
-
             <!-- if logged in myProfile is shown - if logged out it is not shown -->
             <?php if (isset($_SESSION['username']) && $_SESSION['username'] !== '') { ?>
 						<div id="mySidenav" class="sidenav" >
 							  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 							  <a href="_myprofile.php" style="border-bottom:solid; border-width: thin;">My profile</a>
 							  <a href="_about.php">About</a>
-							  <a href="_courses.php">Courses</a>
+							  <a href="-courses.php">Courses</a>
 							  <a href="_partners.php">Partners</a>
 							  <a href="_contact.php">Contact</a>
 							  <a href="_prices.php">Prices</a>
@@ -44,7 +43,7 @@
                         <div id="mySidenav" class="sidenav" >
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <a href="_about.php">About</a>
-                            <a href="_courses.php">Courses</a>
+                            <a href="-courses.php">Courses</a>
                             <a href="_partners.php">Partners</a>
                             <a href="_contact.php">Contact</a>
                             <a href="_prices.php">Prices</a>
@@ -53,14 +52,14 @@
 
             <?php } ?>
 
-						<span id="sidenavbtn" style="font-size:24px;cursor:pointer; float:left; margin-left:10px; margin-top:3px;" onclick="openNav()">&#9776; </span>
+						<span id="sidenavbtn" style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
 
 								<script>
 								function openNav() {
-								  document.getElementById("mySidenav").style.width = "20%";
+								  document.getElementById("mySidenav").style.width = "250px";
 								}
 								function closeNav() {
-								  document.getElementById("mySidenav").style.width = "0%";
+								  document.getElementById("mySidenav").style.width = "0";
 								}
 								</script>
 
@@ -208,7 +207,7 @@
 
 									<button type="submit" formaction="login.inc.php" name="login_submit" id="login_submit">Login</button>
 									<button type="submit" formaction="register.inc.php" name="reg_submit" id="reg_submit">Register</button>
-									<label id="forgot"><span><a href="#">Forgot password?</a></span></label>
+									
 								</div>
 							  </form>
 
