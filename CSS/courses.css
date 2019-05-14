@@ -1,0 +1,26 @@
+.pos{
+	position:absolute;
+	margin: 10 -32;
+	background-color: rgba(26,109,125, 0.60);
+	color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    opacity: 70%;
+	
+}
+
+
+#goToidc:hover {
+  background-color: rgba(26,109,125, 0.90);
+  color: white;
+  opacity: 100%;
+}
+
+img {
+	width: 400px;
+	height: 400px;
+	max-width:100%;
+	height:auto;
+}

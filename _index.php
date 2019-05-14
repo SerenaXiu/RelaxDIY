@@ -18,147 +18,16 @@
 	</head>
 <style>
 
+#containerscroll{display:block;}
+#containerscrollM{display:none;}
 
-
-#dots {
-	margin: 10px;
-}
-
-.slideshow-container {
-  max-width: 100%; height: auto;
-  position: relative;
-  margin: auto;
-}
-
-.slideshow-container .btn {
-  position: absolute;
-  top: 74%;
-  left: 65%;
-  transform: translate(-60%, -60%);
-  -ms-transform: translate(-60%, -60%);
-  background-color: #fff;
-  opacity: 0.9;
-  color: grey;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 6px 25px 0 black;
-
-}
-
-.slideshow-container .btn:hover {
-  opacity:0.7;
-  filter: alpha(opacity=70);
-
-}
-
-.container .btn:hover {
-  background-color: black;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
- .mySlides {
-	display: none
+@media screen and (max-width:1023px)
+	{
+	#containerscroll{display:none;}
+	#containerscrollM{display:block;}	
 	}
 
-.fakeimg {
-  background-color: white;
-  width: 100%;
-}
 
-img {
-    max-width: 100%; height: auto;
-	border-radius:15px;
-	box-shadow: 0 6px 25px 0 black;
-}
-
-.zoom {
- padding:10px;
- background:rgba(255,255,255, 0.90);
-
-  transition: transform .2s;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-
-.zoom:hover {
-  -ms-transform: scale(1.01); /* IE 9 */
-  -webkit-transform: scale(1.01); /* Safari 3-8 */
-  transform: scale(1.01); 
-}
-
-
-
-}
-
-
-.center {
-
-  text-align: center;
-  width: 100%;
-  border: none;
-
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-/* scroll button */
-
-.scroll {
-  width: 49px;
-  height: 10px;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  padding-top: 300px;
-  z-index: 9;
-  border-radius: 50%;
-  -webkit-transition: background-color 0.25s ease-in-out;
-  transition: background-color 0.25s ease-in-out;
-}
 </style>
 
 <body>
@@ -170,41 +39,47 @@ img {
 	<main>
 
 
+		<div id="slideshow-container" style="position:relative">
+			<div class="slideshow-current">
+				<div class="mySlides fade">
+				  <img src="Img/_slideshow/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
+					
+					<!--- desktop -->
+					<div id="containerscroll" style="z-index:9; margin: auto; margin-top:-100px; margin-bottom:70px; width: auto; max-width:50px; max-height:50px; height:10%;">
+					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
+					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+					</div>
+					
+					<!--- mobile -->
+					<div id="containerscrollM" style="z-index:9; margin: auto; margin-top:-60px; margin-bottom:40px; width: auto; max-width:30px; max-height:30px; height:10%;">
+					 <a class="scroll" href="#section2"><img alt="scroll down" style=" border-radius:90%; max-height:100%; max-width: 100%;"
+					 src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="Img/_slideshow/slide2.jpg" style="max-width: 100%; height: auto; border-radius:0;">
+			</div>
 
-		<div class="slideshow-container">
+			<div class="mySlides fade">
+			  <img src="Img/_slideshow/slide3.jpg" style="max-width: 100%; height: auto; border-radius:0;">
 
-			<div class="mySlides fade col-md-12">
-			  <img src="Img/Slidegallery/slide1.jpg" style="max-width: 100%; height: auto; border-radius:0px;">
-			 
-			 <a class="scroll" href="#section2"><img alt="scroll down" style="height: 50px; width:60px;
-								margin-top:-80px; margin-right: 30px; position:absolute; border-radius: 30px; "src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
-			
-			
-			
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="Img/_slideshow/slide4.jpg" style="max-width: 100%; height: auto; border-radius:0;">
+
+			</div>
+
+			<div id="dots" style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			  <span class="dot" onclick="currentSlide(4)"></span>
 			</div>
 		</div>
-	
-	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slied21.jpg" style="width:100%">
-
-	</div>
-
-	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slidee31.jpg" style="width:100%">
-
-	</div>
-
-	<div class="mySlides fade">
-	  <img src="Img/Slidegallery/slide41.jpg" style="width:100%">
-
-	</div>
-
-	<div id="dots" style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span>
-	  <span class="dot" onclick="currentSlide(2)"></span>
-	  <span class="dot" onclick="currentSlide(3)"></span>
-	  <span class="dot" onclick="currentSlide(4)"></span>
-	</div>
 
 	<script>
 	var slideIndex = 1;
@@ -236,7 +111,7 @@ img {
 	</script>
 
 	<div >
-	<section id="section1" class="white-bgrnd" style="padding:5px; overflow:hidden">
+	<section id="section1" class="white-bgrnd" style="margin-top:20px;padding:5px; overflow:hidden">
 		<h3 style="margin:30px">
 					<?php
 
@@ -346,28 +221,37 @@ img {
 			</section>
 		
 		
-			<section id="section2">
-			<div class="center">
-				<a href="https://www.w3schools.com">
-				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/calligrslide123.jpg" style="width:45%; height:300px; margin-left:20px;">
+			<section id="section2" style="max-width:100%">
+			
+			<div class="flex center" style="border: 5px solid blue">
+				<div class="row1" style="border: 3px solid red">
+				<a href="calligraphy.php" style="margin: auto" ><img class="zoom"  alt="Calligraphy" src="Img/_gallery/gallery1.jpg" ></a>
+				</div>
 				
-				
-				<a href="https://www.w3schools.com">
-				<img class ="zoom" border="0" alt="Zumba" src="Img/Judyta/zumbaslidee1.jpg" style="width:45%; height:300px; margin-left:20px;">
+				<div class="row1" style="border: 3px solid red">
+				<a href="zumba.php" style="margin: auto"><img class="zoom"  alt="Zumba" src="Img/_gallery/gallery2.jpg" ></a>
+				</div>
 			</div>
 			
 				</br>
 				</br>
 
-			<div class="center">
-				<a href="https://www.w3schools.com">
-				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden33.jpg" style="width: 21%; height:300px; margin-left:none;">
-				<a href="https://www.w3schools.com">
-				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden444.jpg" style="width: 21%; height:300px; margin-left:15px;">
-				<a href="https://www.w3schools.com">
-				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden99999.jpg" style="width: 21%; height:300px; margin-left:20px;">
-				<a href="https://www.w3schools.com">
-				<img class="zoom" border="0" alt="Zumba" src="Img/Judyta/sliden7777.jpg" style="width: 21%; height:300px; margin-left:20px; margin-right:-10px;">
+			<div class="flex center" style="border: 5px solid blue">
+				<div class="row2" style="border: 3px solid black;">
+				<a href="cooking.php" style="margin: auto" ><img class="zoom" border="0" alt="Cooking" src="Img/_gallery/gallery3.jpg"></a>
+				</div>
+				
+				<div class="row2" style="border: 3px solid black;">
+				<a href="demons.php" style="margin: auto"><img class="zoom" border="0" alt="Demon" src="Img/_gallery/gallery4.jpg"></a>
+				</div>
+				
+				<div class="row2" style="border: 3px solid black;">
+				<a href="photography.php" style="margin: auto"><img class="zoom" border="0" alt="Photography" src="Img/_gallery/gallery5.jpg"></a>
+				</div>
+				
+				<div class="row2" style="border: 3px solid yellow;">
+				<a href="origami.php" style="margin: auto"><img class="zoom" border="0" alt="Origami" src="Img/_gallery/gallery6.jpg"></a>
+				</div>
 			</div>
 			</section>
 			
@@ -387,7 +271,7 @@ img {
 			});
 			</script>
 		
-<section id="section3">
+<section id="section3" style="clear:left">
 				<div class="white-bgrnd" style="margin-bottom:90px">
 				
 					<div id="aboutText">

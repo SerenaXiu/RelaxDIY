@@ -52,7 +52,7 @@
 
             <?php } ?>
 
-						<span id="sidenavbtn" style="font-size:24px;cursor:pointer; float:left; margin-left:10px" onclick="openNav()">&#9776; </span>
+						<span id="sidenavbtn" style="font-size:24px;cursor:pointer; float:left; margin-left:10px; margin-top:3px;" onclick="openNav()">&#9776; </span>
 
 								<script>
 								function openNav() {
@@ -69,16 +69,16 @@
 						<style=" padding:0">
 							<div class="dropdown">
 								<button id="courses" class="dropbtn"><i class="fa fa-camera-retro"></i> COURSES <i class="fa fa-caret-down"></i></button>
-									<div class="dropdown-content">
-									
-									  <a href="_courses.php">ALL</a>
-									  <a href="origami.php">Origami</a>
-									  <a href="_zumba.php" target= "blank">Zumba</a>
-									  <a href="photography.php"target= "blank">Photography</a>
-									  <a href="cooking.php"target= "blank">Cooking</a>
-									  <a href="demons.php"target= "blank">Demons</a>
-									  <a href="writing.php"target= "blank">Writing</a>
-									</div>
+								<div class="dropdown-content">
+								
+								  <a href="_courses.php">ALL</a>
+								  <a href="origami.php">Origami</a>
+								  <a href="zumba.php">Zumba</a>
+								  <a href="photography.php">Photography</a>
+								  <a href="cooking.php">Cooking</a>
+								  <a href="demons.php">Demons</a>
+								  <a href="calligraphy.php">Writing</a>
+								</div>
 							</div>
 						
 						
@@ -131,11 +131,11 @@
 								
 								  <a href="_courses.php">ALL</a>
 								  <a href="origami.php">Origami</a>
-								  <a href="_zumba.php" target= "blank">Zumba</a>
-								  <a href="photography.php"target= "blank">Photography</a>
-								  <a href="cooking.php"target= "blank">Cooking</a>
-								  <a href="demons.php"target= "blank">Demons</a>
-								  <a href="writing.php"target= "blank">Writing</a>
+								  <a href="zumba.php">Zumba</a>
+								  <a href="photography.php">Photography</a>
+								  <a href="cooking.php">Cooking</a>
+								  <a href="demons.php">Demons</a>
+								  <a href="calligraphy.php">Writing</a>
 								</div>
 						</div>
 					

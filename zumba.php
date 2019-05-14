@@ -10,7 +10,8 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="CSS/general.css" type="text/css" rel="stylesheet">
+		<link href="CSS/general.css" type="text/css" rel="stylesheet">		
+		<link href="CSS/courses.css" type="text/css" rel="stylesheet">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	</head>
@@ -71,37 +72,33 @@
 <body id="generalBackground">
 
 	<div class="header" style="box-shadow: 0 6px 15px 0 grey; height:200px;">
-  <h1 style="margin-top:70px">Calligraphy with Elisabeth</h1>
-  <p>Calligraphy is the flower of a man′ s soul.</p>
+  <h1 style="margin-top:70px">Zumba Fitness</h1>
+  <p>Let Zumba Fitness be your stress reliever!</p>
    </div>
 
 	<div class="row center" style="margin-top:30px; margin-bottom:200px;">
 	
     <div class="column side">
-    <img src="Img/Coursespics/elisabeth1.jpeg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
-	<h2 style="text-align: center; margin-left:60px"><a href="_team.php">Trainer</a></h2>
+    <img src="Img/_coursepics/judyta1.jpeg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+	<a id="goToidc" class="pos"href="_team.php"><b>&#8702; Trainer</b></a>
 
   </div>
   
   <div class="column middle">  
   <h2 style="text-align: center; margin-left:60px">About</h2>
-  <img src="Img/Coursespics/aboutcalli1.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+  <img src="Img/_coursepics/111.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
 	
   </div>
   
  <div class="column side">
-    <img src="Img/Coursespics/callipic.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
-	<h2 style="text-align: center; margin-left:60px"><a href="_courses.php">Join!</a></h2>
+    <img src="Img/_coursepics/zumbapic.jpg" style="width:400px; height:400px; margin-left:40px; border-radius:50%">
+	<a id="goToidc" class="pos"href="_shoppingcart.php"><b>&#8702; Join!</b></a>
 
   </div>
 </div>
 
 
 
-		<footer class="footer">
-			<strong>	&quot;<script src="http://numbersapi.com/random?write"></script>	&quot;</strong>
-			<br>
-			Copyright &copy; 2019 <a href="impressum.html">relaxDIY.com</a>
-		</footer>	
+
 </body>
 </html>

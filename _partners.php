@@ -13,6 +13,13 @@
 		<link href="CSS/general.css" type="text/css" rel="stylesheet">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+		
+		<style>
+			img {
+				max-width:75%;
+				height: auto;
+			}
+		</style>
 	</head>
 
 
@@ -23,7 +30,7 @@
 
 	<main id="aboutText">  
 
-							<img src="Img/Coursespics/ptns.jpg" style ="width:70%; height: 70%;">
+							<img src="Img/_coursepics/ptns.jpg" >
 							
 							
 						</a>
