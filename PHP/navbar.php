@@ -77,7 +77,7 @@
 								  <a href="zumba.php">Zumba</a>
 								  <a href="photography.php">Photography</a>
 								  <a href="cooking.php">Cooking</a>
-								  <a href="demons.php">Demons</a>
+								  <a href="demon.php">Demons</a>
 								  <a href="calligraphy.php">Writing</a>
 								</div>
 							</div>
